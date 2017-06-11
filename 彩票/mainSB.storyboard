@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="JqM-My-wn8">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="nir-7T-TbX">
+            <objects>
+                <viewController id="JqM-My-wn8" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="STS-MK-1SD"/>
+                        <viewControllerLayoutGuide type="bottom" id="KHQ-Lh-dxg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7LJ-ay-c4s">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1242x2208" translatesAutoresizingMaskIntoConstraints="NO" id="H28-KH-VBN">
+                                <rect key="frame" x="16" y="20" width="343" height="647"/>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="eTT-ju-EYs">
+                                <rect key="frame" x="177" y="323.5" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="H28-KH-VBN" firstAttribute="top" secondItem="STS-MK-1SD" secondAttribute="bottom" id="ELa-hf-7tq"/>
+                            <constraint firstItem="eTT-ju-EYs" firstAttribute="centerX" secondItem="7LJ-ay-c4s" secondAttribute="centerX" id="GAI-IY-aVJ"/>
+                            <constraint firstItem="KHQ-Lh-dxg" firstAttribute="top" secondItem="H28-KH-VBN" secondAttribute="bottom" id="Pln-wE-em3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="H28-KH-VBN" secondAttribute="trailing" id="Suu-Xp-tA9"/>
+                            <constraint firstItem="eTT-ju-EYs" firstAttribute="centerY" secondItem="7LJ-ay-c4s" secondAttribute="centerY" id="d2O-Ou-CHm"/>
+                            <constraint firstItem="H28-KH-VBN" firstAttribute="leading" secondItem="7LJ-ay-c4s" secondAttribute="leadingMargin" id="xhB-C0-L69"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mrx-GW-GaY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-215" y="260"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="1242x2208" width="1242" height="2208"/>
+    </resources>
+</document>
