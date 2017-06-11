@@ -42,9 +42,11 @@ PODS:
   - NJKWebViewProgress/ProgressView (0.2.3)
   - ODRefreshControl (1.2)
   - PureLayout (3.0.2)
-  - SDWebImage (3.7.6):
-    - SDWebImage/Core (= 3.7.6)
-  - SDWebImage/Core (3.7.6)
+  - SDCycleScrollView (1.66):
+    - SDWebImage (~> 4.0.0)
+  - SDWebImage (4.0.0):
+    - SDWebImage/Core (= 4.0.0)
+  - SDWebImage/Core (4.0.0)
   - SVProgressHUD (2.1.2)
   - UIView+FDCollapsibleConstraints (1.1)
 
@@ -58,7 +60,8 @@ DEPENDENCIES:
   - NJKWebViewProgress (= 0.2.3)
   - ODRefreshControl (= 1.2)
   - PureLayout
-  - SDWebImage (~> 3.7.4)
+  - SDCycleScrollView (~> 1.66)
+  - SDWebImage (~> 4.0.0)
   - SVProgressHUD
   - UIView+FDCollapsibleConstraints
 
@@ -72,10 +75,11 @@ SPEC CHECKSUMS:
   NJKWebViewProgress: f481fd424cb5ecc27eacae11b5397db92fba9a4d
   ODRefreshControl: 907e6149d72dde488d5917ccfabee5bd8d711a20
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
-  SDWebImage: c325cf02c30337336b95beff20a13df489ec0ec9
+  SDCycleScrollView: e3ade90e9b3159bec04330b208fbfd81c3f3b671
+  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
   UIView+FDCollapsibleConstraints: 9357eaf03b4e088263ab74a3b86a382a64ce38dd
 
-PODFILE CHECKSUM: ebefad113c5f5d0dbfb37bb62674cd71ec59e6e5
+PODFILE CHECKSUM: e43e492901b7a7182091b069c001e0cfd6f54026
 
 COCOAPODS: 1.2.0

@@ -287,6 +287,8 @@
 		0452F0E11E968EDE0006F3C4 /* 彩票 */ = {
 			isa = PBXGroup;
 			children = (
+				0452F0E51E968EDE0006F3C4 /* AppDelegate.h */,
+				0452F0E61E968EDE0006F3C4 /* AppDelegate.m */,
 				04D1EF9E1EEC078B004B02A3 /* Tool */,
 				04D1EF9D1EEBD96A004B02A3 /* Main */,
 				046D07F71E9CEAF700D6F5B6 /* 彩票.entitlements */,
@@ -298,8 +300,6 @@
 				0452F1751E96B5EC0006F3C4 /* GzwWebAdvertVC.m */,
 				0452F1181E9691D80006F3C4 /* IWNavigationController.h */,
 				0452F1191E9691D80006F3C4 /* IWNavigationController.m */,
-				0452F0E51E968EDE0006F3C4 /* AppDelegate.h */,
-				0452F0E61E968EDE0006F3C4 /* AppDelegate.m */,
 				0452F0E81E968EDE0006F3C4 /* ViewController.h */,
 				0452F0E91E968EDE0006F3C4 /* ViewController.m */,
 				0452F0F11E968EDE0006F3C4 /* Assets.xcassets */,
