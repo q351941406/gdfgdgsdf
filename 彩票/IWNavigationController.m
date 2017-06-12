@@ -28,13 +28,13 @@
 + (void)initialize
 {
     // 1.设置导航栏主题
-    [self setupNavBarTheme];
+//    [self setupNavBarTheme];
     
     // 2.设置导航栏按钮主题
-    [self setupBarButtonItemTheme];
+//    [self setupBarButtonItemTheme];
     // 全局的设置
-    [[UITextField appearance] setTintColor:[UIColor colorWithRed:246/255.0f green:59/255.0f blue:125/255.0f alpha:1]];
-    [[UITextView appearance] setTintColor:[UIColor colorWithRed:246/255.0f green:59/255.0f blue:125/255.0f alpha:1]];
+//    [[UITextField appearance] setTintColor:[UIColor colorWithRed:246/255.0f green:59/255.0f blue:125/255.0f alpha:1]];
+//    [[UITextView appearance] setTintColor:[UIColor colorWithRed:246/255.0f green:59/255.0f blue:125/255.0f alpha:1]];
 }
 - (void)viewDidLoad
 {

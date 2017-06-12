@@ -16,9 +16,14 @@
 +(UIColor *)tintTheme;
 +(UIColor *)textTheme;
 +(UIColor *)titleTextTheme;
++(UIColor *)subTitleTextTheme;
 +(UIColor *)titleTheme;
 +(UIColor *)positiveTheme;
 +(UIColor *)negativeTheme;
 +(UIColor *)clearTheme;
+
++(UIColor *)progressColor;
++(UIColor *)pageColor;
++(UIColor *)currentPageColor;
 
 @end

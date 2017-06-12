@@ -72,6 +72,14 @@
 		04D1EFEF1EEC3373004B02A3 /* SecurityStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D1EFD71EEC3373004B02A3 /* SecurityStrategy.m */; };
 		04D1EFF01EEC3373004B02A3 /* UIImage+BlurGlass.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D1EFD91EEC3373004B02A3 /* UIImage+BlurGlass.m */; };
 		73660D6DB104AEE1B58AE75E /* libPods-彩票.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B11A23295900A88492918E5C /* libPods-彩票.a */; };
+		CF91DEB41EEE6480005BEBC6 /* GzwCouponsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CF91DEB31EEE6480005BEBC6 /* GzwCouponsVC.m */; };
+		CF91DEB91EEE64C2005BEBC6 /* GzwCouponsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF91DEB71EEE64C2005BEBC6 /* GzwCouponsCell.m */; };
+		CF91DEBA1EEE64C2005BEBC6 /* GzwCouponsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF91DEB81EEE64C2005BEBC6 /* GzwCouponsCell.xib */; };
+		CF91DEBD1EEE64F6005BEBC6 /* GzwCouponsHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = CF91DEBC1EEE64F6005BEBC6 /* GzwCouponsHeadView.m */; };
+		CF91DEC11EEE6820005BEBC6 /* HomeM.m in Sources */ = {isa = PBXBuildFile; fileRef = CF91DEC01EEE6820005BEBC6 /* HomeM.m */; };
+		CF91DEC51EEE90D5005BEBC6 /* GzwNewsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CF91DEC41EEE90D5005BEBC6 /* GzwNewsVC.m */; };
+		CF91DEC81EEE9A2F005BEBC6 /* GzwNewsOneVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CF91DEC71EEE9A2F005BEBC6 /* GzwNewsOneVC.m */; };
+		CF91DECB1EEE9A3C005BEBC6 /* GzwNewsTwoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CF91DECA1EEE9A3C005BEBC6 /* GzwNewsTwoVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -196,6 +204,21 @@
 		04D1EFD91EEC3373004B02A3 /* UIImage+BlurGlass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+BlurGlass.m"; sourceTree = "<group>"; };
 		1C74087EBF3391D74774D052 /* Pods-彩票.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-彩票.release.xcconfig"; path = "Pods/Target Support Files/Pods-彩票/Pods-彩票.release.xcconfig"; sourceTree = "<group>"; };
 		B11A23295900A88492918E5C /* libPods-彩票.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-彩票.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF91DEB21EEE6480005BEBC6 /* GzwCouponsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GzwCouponsVC.h; sourceTree = "<group>"; };
+		CF91DEB31EEE6480005BEBC6 /* GzwCouponsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GzwCouponsVC.m; sourceTree = "<group>"; };
+		CF91DEB61EEE64C2005BEBC6 /* GzwCouponsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GzwCouponsCell.h; sourceTree = "<group>"; };
+		CF91DEB71EEE64C2005BEBC6 /* GzwCouponsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GzwCouponsCell.m; sourceTree = "<group>"; };
+		CF91DEB81EEE64C2005BEBC6 /* GzwCouponsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GzwCouponsCell.xib; sourceTree = "<group>"; };
+		CF91DEBB1EEE64F6005BEBC6 /* GzwCouponsHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GzwCouponsHeadView.h; sourceTree = "<group>"; };
+		CF91DEBC1EEE64F6005BEBC6 /* GzwCouponsHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GzwCouponsHeadView.m; sourceTree = "<group>"; };
+		CF91DEBF1EEE6820005BEBC6 /* HomeM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeM.h; sourceTree = "<group>"; };
+		CF91DEC01EEE6820005BEBC6 /* HomeM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeM.m; sourceTree = "<group>"; };
+		CF91DEC31EEE90D5005BEBC6 /* GzwNewsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GzwNewsVC.h; sourceTree = "<group>"; };
+		CF91DEC41EEE90D5005BEBC6 /* GzwNewsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GzwNewsVC.m; sourceTree = "<group>"; };
+		CF91DEC61EEE9A2F005BEBC6 /* GzwNewsOneVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GzwNewsOneVC.h; sourceTree = "<group>"; };
+		CF91DEC71EEE9A2F005BEBC6 /* GzwNewsOneVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GzwNewsOneVC.m; sourceTree = "<group>"; };
+		CF91DEC91EEE9A3C005BEBC6 /* GzwNewsTwoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GzwNewsTwoVC.h; sourceTree = "<group>"; };
+		CF91DECA1EEE9A3C005BEBC6 /* GzwNewsTwoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GzwNewsTwoVC.m; sourceTree = "<group>"; };
 		DC58D268C4370501D8884294 /* Pods-彩票.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-彩票.debug.xcconfig"; path = "Pods/Target Support Files/Pods-彩票/Pods-彩票.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -287,6 +310,10 @@
 		0452F0E11E968EDE0006F3C4 /* 彩票 */ = {
 			isa = PBXGroup;
 			children = (
+				CF91DEC21EEE90AE005BEBC6 /* News */,
+				CF91DEBE1EEE680F005BEBC6 /* ObjectModal */,
+				CF91DEB51EEE64B0005BEBC6 /* View */,
+				CF91DEA21EEE4810005BEBC6 /* Home */,
 				0452F0E51E968EDE0006F3C4 /* AppDelegate.h */,
 				0452F0E61E968EDE0006F3C4 /* AppDelegate.m */,
 				04D1EF9E1EEC078B004B02A3 /* Tool */,
@@ -467,6 +494,49 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CF91DEA21EEE4810005BEBC6 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				CF91DEB21EEE6480005BEBC6 /* GzwCouponsVC.h */,
+				CF91DEB31EEE6480005BEBC6 /* GzwCouponsVC.m */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		CF91DEB51EEE64B0005BEBC6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CF91DEBB1EEE64F6005BEBC6 /* GzwCouponsHeadView.h */,
+				CF91DEBC1EEE64F6005BEBC6 /* GzwCouponsHeadView.m */,
+				CF91DEB61EEE64C2005BEBC6 /* GzwCouponsCell.h */,
+				CF91DEB71EEE64C2005BEBC6 /* GzwCouponsCell.m */,
+				CF91DEB81EEE64C2005BEBC6 /* GzwCouponsCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CF91DEBE1EEE680F005BEBC6 /* ObjectModal */ = {
+			isa = PBXGroup;
+			children = (
+				CF91DEBF1EEE6820005BEBC6 /* HomeM.h */,
+				CF91DEC01EEE6820005BEBC6 /* HomeM.m */,
+			);
+			path = ObjectModal;
+			sourceTree = "<group>";
+		};
+		CF91DEC21EEE90AE005BEBC6 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				CF91DEC31EEE90D5005BEBC6 /* GzwNewsVC.h */,
+				CF91DEC41EEE90D5005BEBC6 /* GzwNewsVC.m */,
+				CF91DEC61EEE9A2F005BEBC6 /* GzwNewsOneVC.h */,
+				CF91DEC71EEE9A2F005BEBC6 /* GzwNewsOneVC.m */,
+				CF91DEC91EEE9A3C005BEBC6 /* GzwNewsTwoVC.h */,
+				CF91DECA1EEE9A3C005BEBC6 /* GzwNewsTwoVC.m */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -536,6 +606,7 @@
 			files = (
 				044D101F1E976466005C4AA0 /* LaunchScreen.storyboard in Resources */,
 				0450F3A31E9CE3E800D8E0D0 /* WMVenueTitle1CollectionViewCell.xib in Resources */,
+				CF91DEBA1EEE64C2005BEBC6 /* GzwCouponsCell.xib in Resources */,
 				0450F39E1E9CE3D600D8E0D0 /* WMBanerCollectionViewCell.xib in Resources */,
 				046D07F01E9CE77E00D6F5B6 /* PaiLieSan.plist in Resources */,
 				0452F0F21E968EDE0006F3C4 /* Assets.xcassets in Resources */,
@@ -624,6 +695,7 @@
 				04D1EFE91EEC3373004B02A3 /* UIImage+GzwColor.m in Sources */,
 				0450F3A71E9CE3FD00D8E0D0 /* WMVenueTitle2CollectionViewCell.m in Sources */,
 				0450F3B11E9CE41C00D8E0D0 /* WMProductsListCell.m in Sources */,
+				CF91DEC81EEE9A2F005BEBC6 /* GzwNewsOneVC.m in Sources */,
 				0450F3B91E9CE53C00D8E0D0 /* WMProductsListHeadView.m in Sources */,
 				0450F3AC1E9CE40900D8E0D0 /* WMVenueTitle3CollectionViewCell.m in Sources */,
 				04D1EFEA1EEC3373004B02A3 /* UILabel+Extended.m in Sources */,
@@ -639,6 +711,7 @@
 				04D1EFE11EEC3373004B02A3 /* NSMutableAttributedString+Extends.m in Sources */,
 				04D1EFEF1EEC3373004B02A3 /* SecurityStrategy.m in Sources */,
 				04D1EFDF1EEC3373004B02A3 /* NSDate+GZW.m in Sources */,
+				CF91DEC11EEE6820005BEBC6 /* HomeM.m in Sources */,
 				04D1EFF01EEC3373004B02A3 /* UIImage+BlurGlass.m in Sources */,
 				04D1EFDA1EEC3373004B02A3 /* GzwRegexTool.m in Sources */,
 				0450F3A21E9CE3E800D8E0D0 /* WMVenueTitle1CollectionViewCell.m in Sources */,
@@ -650,11 +723,16 @@
 				0450F3981E9CE3C300D8E0D0 /* WMProductsListVC.m in Sources */,
 				046D07F51E9CE94A00D6F5B6 /* GzwNotificationTool.m in Sources */,
 				0452F1721E9698D00006F3C4 /* GzwFlashSaleCell.m in Sources */,
+				CF91DEB41EEE6480005BEBC6 /* GzwCouponsVC.m in Sources */,
 				04D1EFE21EEC3373004B02A3 /* NSObject+Gzw.m in Sources */,
 				0452F0E71E968EDE0006F3C4 /* AppDelegate.m in Sources */,
 				04D1EFEB1EEC3373004B02A3 /* UINavigationController+Gzw.m in Sources */,
+				CF91DECB1EEE9A3C005BEBC6 /* GzwNewsTwoVC.m in Sources */,
+				CF91DEBD1EEE64F6005BEBC6 /* GzwCouponsHeadView.m in Sources */,
 				0450F3801E9CDAC600D8E0D0 /* WMBaseVC.m in Sources */,
+				CF91DEB91EEE64C2005BEBC6 /* GzwCouponsCell.m in Sources */,
 				0452F0E41E968EDE0006F3C4 /* main.m in Sources */,
+				CF91DEC51EEE90D5005BEBC6 /* GzwNewsVC.m in Sources */,
 				0452F11A1E9691D80006F3C4 /* IWNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

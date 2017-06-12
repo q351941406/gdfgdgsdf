@@ -41,7 +41,7 @@ static NSString *cellIdentifier = @"cellIdentifier";
         [_collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([WMVenueTitle1CollectionViewCell class]) bundle:nil] forCellWithReuseIdentifier:[WMVenueTitle1CollectionViewCell cellReuseIdentifier]];
         [_collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([WMVenueTitle2CollectionViewCell class]) bundle:nil] forCellWithReuseIdentifier:[WMVenueTitle2CollectionViewCell cellReuseIdentifier]];
         [_collectionView registerNib:[UINib nibWithNibName:NSStringFromClass([WMVenueTitle3CollectionViewCell class]) bundle:nil] forCellWithReuseIdentifier:[WMVenueTitle3CollectionViewCell cellReuseIdentifier]];
-
+        
 
     }
     return _collectionView;

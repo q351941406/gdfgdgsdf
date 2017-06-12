@@ -14,6 +14,8 @@
 #import "GzwNotificationTool.h"
 #import "GzwThemeTool.h"
 #import "GZWTool.h"
+#import "GzwCouponsVC.h"
+#import "GzwNewsVC.h"
 @interface AppDelegate ()
 
 @end
@@ -29,7 +31,7 @@
     [GzwNotificationTool registRemotePushNotification];
     [GzwNotificationTool application:application didFinishLaunchingWithOptions:launchOptions];
     [GzwNotificationTool cancelAllLocalNotifications];
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
+//    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault animated:YES];
     self.window                                    = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor                    = [UIColor whiteColor];
     
@@ -44,37 +46,36 @@
 
     //b.创建子控制器
 
-    UIViewController *c1=[[UIViewController alloc]init];
+    GzwCouponsVC *c1=[[GzwCouponsVC alloc]init];
     c1.view.backgroundColor=[UIColor grayColor];
-    c1.tabBarItem.title=@"消息";
-    c1.tabBarItem.image=[UIImage imageNamed:@"chats_icon"];
+    c1.title=@"大厅";
+    c1.tabBarItem.image=[UIImage imageNamed:@"icons8-Dog House_50"];
     IWNavigationController *nav1 = [[IWNavigationController alloc]initWithRootViewController:c1];
 
     
     
-    UIImage *i = [UIImage imageNamed:@"pai5"];
-    i = [i gzw_imageWithBlendColor:[UIColor redColor]];
-    UIImageView *g = [[UIImageView alloc]initWithImage:i];
-    g.frame = CGRectMake(10, 80, 300, 300);
-    [c1.view addSubview:g];
+//    UIImage *i = [UIImage imageNamed:@"pai5"];
+//    i = [i gzw_imageWithBlendColor:[UIColor redColor]];
+//    UIImageView *g = [[UIImageView alloc]initWithImage:i];
+//    g.frame = CGRectMake(10, 80, 300, 300);
+//    [c1.view addSubview:g];
     
-    UIViewController *c2=[[UIViewController alloc]init];
-    c2.view.backgroundColor=[UIColor brownColor];
-    c2.tabBarItem.title=@"联系人";
-    c2.tabBarItem.image=[UIImage imageNamed:@"chats_icon"];
+    GzwNewsVC *c2=[[GzwNewsVC alloc]init];
+    c2.title=@"资讯";
+    c2.tabBarItem.image=[UIImage imageNamed:@"icons8-News_50"];
     IWNavigationController *nav2 = [[IWNavigationController alloc]initWithRootViewController:c2];
 
 
 
     UIViewController *c3=[[UIViewController alloc]init];
-    c3.tabBarItem.title=@"动态";
-    c3.tabBarItem.image=[UIImage imageNamed:@"chats_icon"];
+    c3.tabBarItem.title=@"发现";
+    c3.tabBarItem.image=[UIImage imageNamed:@"icons8-Idea_50"];
     IWNavigationController *nav3 = [[IWNavigationController alloc]initWithRootViewController:c3];
     
     
     UIViewController *c4=[[UIViewController alloc]init];
-    c4.tabBarItem.title=@"设置";
-    c4.tabBarItem.image=[UIImage imageNamed:@"chats_icon"];
+    c4.tabBarItem.title=@"用户中心";
+    c4.tabBarItem.image=[UIImage imageNamed:@"icons8-User_50"];
     IWNavigationController *nav4 = [[IWNavigationController alloc]initWithRootViewController:c4];
 
     tb.viewControllers=@[nav1,nav2,nav3,nav4];
@@ -103,8 +104,8 @@
 //                    VC.LoadadvDesc = NO;
 //                    self.window.rootViewController = VC;
 //                }else {
-                    self.window.rootViewController                 = [[IWNavigationController alloc]initWithRootViewController:[[GzwTableView alloc] initWithStyle:UITableViewStyleGrouped]];
-                    
+//                    self.window.rootViewController                 = [[IWNavigationController alloc]initWithRootViewController:[[GzwTableView alloc] initWithStyle:UITableViewStyleGrouped]];
+    
                     self.window.rootViewController                 = tb;
 //                }
 //                

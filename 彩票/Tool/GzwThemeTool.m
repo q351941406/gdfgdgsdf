@@ -13,4 +13,32 @@
 {
     [Chameleon setGlobalThemeUsingPrimaryColor:FlatPurple withSecondaryColor:FlatBrown andContentStyle:UIContentStyleContrast];
 }
++(UIColor *)theme
+{
+    return FlatPurple;
+}
++(UIColor *)backgroudTheme
+{
+    return RandomFlatColor;
+}
++(UIColor *)titleTextTheme;
+{
+    return RandomFlatColor;
+}
++(UIColor *)subTitleTextTheme
+{
+    return FlatGrayDark;
+}
++(UIColor *)currentPageColor
+{
+    return RandomFlatColor;
+}
++(UIColor *)pageColor
+{
+    return RandomFlatColor;
+}
++(UIColor *)progressColor
+{
+    return RandomFlatColor;
+}
 @end

@@ -34,12 +34,14 @@ PODS:
     - ChameleonFramework/Default (= 2.1.0)
   - ChameleonFramework/Default (2.1.0)
   - JSONModel (1.7.0)
+  - Masonry (1.0.0)
   - MJRefresh (3.1.12)
   - NJKWebViewProgress (0.2.3):
     - NJKWebViewProgress/Core (= 0.2.3)
     - NJKWebViewProgress/ProgressView (= 0.2.3)
   - NJKWebViewProgress/Core (0.2.3)
   - NJKWebViewProgress/ProgressView (0.2.3)
+  - NYSegmentedControl (1.1.0)
   - ODRefreshControl (1.2)
   - PureLayout (3.0.2)
   - SDCycleScrollView (1.66):
@@ -56,8 +58,10 @@ DEPENDENCIES:
   - BmobSDK
   - ChameleonFramework (~> 2.1.0)
   - JSONModel (~> 1.1)
+  - Masonry (= 1.0.0)
   - MJRefresh (~> 3.1.12)
   - NJKWebViewProgress (= 0.2.3)
+  - NYSegmentedControl (~> 1.1.0)
   - ODRefreshControl (= 1.2)
   - PureLayout
   - SDCycleScrollView (~> 1.66)
@@ -71,8 +75,10 @@ SPEC CHECKSUMS:
   BmobSDK: 23cbfbde2a7cfaeb0c8a946953a266fe5211e7f6
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   JSONModel: 840bc0fcffb24b8454d2c026bf26fea454b8e98d
+  Masonry: b529bb169217897b6354d4b56b1fada6d475b13d
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   NJKWebViewProgress: f481fd424cb5ecc27eacae11b5397db92fba9a4d
+  NYSegmentedControl: a92726c9e459919549f94328389ffcdaecefebfe
   ODRefreshControl: 907e6149d72dde488d5917ccfabee5bd8d711a20
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
   SDCycleScrollView: e3ade90e9b3159bec04330b208fbfd81c3f3b671
@@ -80,6 +86,6 @@ SPEC CHECKSUMS:
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
   UIView+FDCollapsibleConstraints: 9357eaf03b4e088263ab74a3b86a382a64ce38dd
 
-PODFILE CHECKSUM: e43e492901b7a7182091b069c001e0cfd6f54026
+PODFILE CHECKSUM: d50ba36187e631674f31a54af7fca4274916919e
 
 COCOAPODS: 1.2.0

@@ -37,8 +37,6 @@
     menuButton.backgroundColor = [UIColor clearColor];
     [menuButton setImage:[UIImage imageNamed:@"menuButton"] forState:UIControlStateNormal];
     [menuButton addTarget:self action:@selector(menuButtonClick:) forControlEvents:UIControlEventTouchUpInside];
-    //self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:menuButton];
-    //[self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"clearPic"] forBarMetrics:UIBarMetricsDefault];
 }
 - (UIImageView *)backgroundImage{
     if (!_backgroundImage) {
