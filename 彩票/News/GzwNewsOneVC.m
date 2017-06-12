@@ -1,98 +1,122 @@
 //
-//  GzwNewsOneVC.m
-//  彩票
+//  GzwAddressVC.m
+//  pjh365
 //
-//  Created by Wang Jiang on 2017/6/12.
-//  Copyright © 2017年 彩票. All rights reserved.
+//  Created by mac on 16/4/11.
+//  Copyright © 2016年 bigkoo. All rights reserved.
 //
 
 #import "GzwNewsOneVC.h"
+#import "GzwAddressCell.h"
 #import "AFNetworking.h"
+static NSString *ID = @"GzwAddressCell";
+
 @interface GzwNewsOneVC ()
+@property (nonatomic, weak) UIView  *noDataView;
+@property (nonatomic, strong) NSMutableArray *data;
 
 @end
 
 @implementation GzwNewsOneVC
+#pragma mark Get
+-(NSMutableArray *)data
+{
+    if (!_data) {
+        _data = [NSMutableArray array];
+    }
+    return _data;
+}
 
+
+#pragma mark Life Cycle
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    //    self.gzw_Previous_nav_backgroundTransparent = YES;
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"添加" style:UIBarButtonItemStyleDone target:nil action:nil];
+    [self.tableView registerNib:[UINib nibWithNibName:ID bundle:nil] forCellReuseIdentifier:ID];
+    self.clearsSelectionOnViewWillAppear = YES;
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+
+    self.tableView.estimatedRowHeight = 44; // 设置估算高度
+    self.tableView.rowHeight = UITableViewAutomaticDimension; // 告诉tableView我们cell的高度是自动的
+
+    [self requst];
+}
+-(void)requst{
+    AFHTTPSessionManager *mar=[AFHTTPSessionManager manager];
+    mar.responseSerializer.acceptableContentTypes = [mar.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
+//    {
+//        "winner_list": {
+//            "page_index": "1",
+//            "page_size": "20"
+//        },
+//        "c_head": {
+//            "client_id": "BY003000000000000002",
+//            "client_os": "IOS"
+//        }
+//    }
+    
+    mar.requestSerializer=[AFJSONRequestSerializer serializer];//申明请求的数据是json类型
+    [mar POST:@"http://mycp.iplay78.com/trade-web/web/lottery/winners/list" parameters:@{@"winner_list":@{@"page_index":@"1",@"page_size":@"100"},@"c_head":@{@"client_id":@"BY003000000000000002",@"client_os":@"IOS"}} progress:^(NSProgress * _Nonnull uploadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSLog(@"%@",responseObject);
+        
+        self.data = responseObject[@"winner_list"][@"data"];
+        [self.tableView reloadData];
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"%@",error);
+        
+    }];
+}
+// cell分割线的左边到尽头
+-(void)viewDidLayoutSubviews {
+    // 判断有没有实现这个方法
+    if ([self.tableView respondsToSelector:@selector(setSeparatorInset:)]) {
+        // 然后清零。
+        [self.tableView setSeparatorInset:UIEdgeInsetsZero];
+        
+    }
+    if ([self.tableView respondsToSelector:@selector(setLayoutMargins:)])  {
+        [self.tableView setLayoutMargins:UIEdgeInsetsZero];
+    }
+}
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPat{
+    if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
+        [cell setLayoutMargins:UIEdgeInsetsZero];
+    }
+    if ([cell respondsToSelector:@selector(setSeparatorInset:)]){
+        [cell setSeparatorInset:UIEdgeInsetsZero];
+    }
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+#pragma mark Action
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    
+    return self.data.count;
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
+    GzwAddressCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+//    cell.delegate = self;
+//    cell.model = self.data[indexPath.row];
     return cell;
 }
-*/
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
 }
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    return 0.01;
 }
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
 
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

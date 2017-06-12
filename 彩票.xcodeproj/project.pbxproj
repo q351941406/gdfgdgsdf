@@ -71,6 +71,8 @@
 		04D1EFEE1EEC3373004B02A3 /* UIWebView+Gzw.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D1EFD31EEC3373004B02A3 /* UIWebView+Gzw.m */; };
 		04D1EFEF1EEC3373004B02A3 /* SecurityStrategy.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D1EFD71EEC3373004B02A3 /* SecurityStrategy.m */; };
 		04D1EFF01EEC3373004B02A3 /* UIImage+BlurGlass.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D1EFD91EEC3373004B02A3 /* UIImage+BlurGlass.m */; };
+		04FD1F871EEED4D60016AACF /* GzwAddressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FD1F851EEED4D60016AACF /* GzwAddressCell.m */; };
+		04FD1F881EEED4D60016AACF /* GzwAddressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04FD1F861EEED4D60016AACF /* GzwAddressCell.xib */; };
 		73660D6DB104AEE1B58AE75E /* libPods-彩票.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B11A23295900A88492918E5C /* libPods-彩票.a */; };
 		CF91DEB41EEE6480005BEBC6 /* GzwCouponsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CF91DEB31EEE6480005BEBC6 /* GzwCouponsVC.m */; };
 		CF91DEB91EEE64C2005BEBC6 /* GzwCouponsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF91DEB71EEE64C2005BEBC6 /* GzwCouponsCell.m */; };
@@ -202,6 +204,9 @@
 		04D1EFD71EEC3373004B02A3 /* SecurityStrategy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecurityStrategy.m; sourceTree = "<group>"; };
 		04D1EFD81EEC3373004B02A3 /* UIImage+BlurGlass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+BlurGlass.h"; sourceTree = "<group>"; };
 		04D1EFD91EEC3373004B02A3 /* UIImage+BlurGlass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+BlurGlass.m"; sourceTree = "<group>"; };
+		04FD1F841EEED4D60016AACF /* GzwAddressCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GzwAddressCell.h; sourceTree = "<group>"; };
+		04FD1F851EEED4D60016AACF /* GzwAddressCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GzwAddressCell.m; sourceTree = "<group>"; };
+		04FD1F861EEED4D60016AACF /* GzwAddressCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GzwAddressCell.xib; sourceTree = "<group>"; };
 		1C74087EBF3391D74774D052 /* Pods-彩票.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-彩票.release.xcconfig"; path = "Pods/Target Support Files/Pods-彩票/Pods-彩票.release.xcconfig"; sourceTree = "<group>"; };
 		B11A23295900A88492918E5C /* libPods-彩票.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-彩票.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF91DEB21EEE6480005BEBC6 /* GzwCouponsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GzwCouponsVC.h; sourceTree = "<group>"; };
@@ -506,6 +511,9 @@
 		CF91DEB51EEE64B0005BEBC6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				04FD1F841EEED4D60016AACF /* GzwAddressCell.h */,
+				04FD1F851EEED4D60016AACF /* GzwAddressCell.m */,
+				04FD1F861EEED4D60016AACF /* GzwAddressCell.xib */,
 				CF91DEBB1EEE64F6005BEBC6 /* GzwCouponsHeadView.h */,
 				CF91DEBC1EEE64F6005BEBC6 /* GzwCouponsHeadView.m */,
 				CF91DEB61EEE64C2005BEBC6 /* GzwCouponsCell.h */,
@@ -620,6 +628,7 @@
 				0450F3A81E9CE3FD00D8E0D0 /* WMVenueTitle2CollectionViewCell.xib in Resources */,
 				046D07F11E9CE77E00D6F5B6 /* PaiLieWu.plist in Resources */,
 				0452F1731E9698D00006F3C4 /* GzwFlashSaleCell.xib in Resources */,
+				04FD1F881EEED4D60016AACF /* GzwAddressCell.xib in Resources */,
 				046D07EB1E9CE77E00D6F5B6 /* SevenStarData.plist in Resources */,
 				046D07EE1E9CE77E00D6F5B6 /* FuCai3D.plist in Resources */,
 				0450F3BA1E9CE53C00D8E0D0 /* WMProductsListHeadView.xib in Resources */,
@@ -686,6 +695,7 @@
 				0452F1761E96B5EC0006F3C4 /* GzwWebAdvertVC.m in Sources */,
 				04D1EFED1EEC3373004B02A3 /* UIView+Extension.m in Sources */,
 				04D1EFE41EEC3373004B02A3 /* NSString+Gzw.m in Sources */,
+				04FD1F871EEED4D60016AACF /* GzwAddressCell.m in Sources */,
 				0450F3991E9CE3C300D8E0D0 /* WMProductsListVCData.m in Sources */,
 				0450F3871E9CE30800D8E0D0 /* OTSSize.m in Sources */,
 				0450F3931E9CE3A700D8E0D0 /* WMCollectionViewCell.m in Sources */,

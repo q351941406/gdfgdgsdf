@@ -39,9 +39,9 @@
     self.view.backgroundColor = [GzwThemeTool backgroudTheme];
     
     [self addChildViewController:self.one];
-    [self addChildViewController:self.two];
+//    [self addChildViewController:self.two];
     [self.view addSubview:self.one.view];
-    [self.view addSubview:self.two.view];
+//    [self.view addSubview:self.two.view];
     /*
      http://mycp.iplay78.com/trade-web/web/article_list // 足球
      {

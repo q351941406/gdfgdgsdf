@@ -72,26 +72,11 @@ static  NSString  * const headerID = @"GzwCouponsHeadView";
     
     
     [self getPoster];
-    [self refreshDown];
     
 }
 // 获取广告
 -(void)getPoster
 {
-//    GzwHomeRequstM *requstModel = [[GzwHomeRequstM alloc]init];
-//    requstModel.keyid = @"4";
-//    [GzwHomeHttpTool getPoster:requstModel progress:nil success:^(NSURLSessionDataTask *successTask, id JSON) {
-//        NSMutableArray *marray = [NSMutableArray array];
-//        for (NSDictionary *dict in JSON[@"imgList"]) {
-//            [marray addObject:[dict gzw_dictionaryByReplacingNullsWithStrings]];
-//        }
-//        self.adURL = [marray valueForKeyPath:@"actionurl"];
-//        self.headView.cycleScrollView.imageURLStringsGroup = [JSON[@"imgList"] valueForKeyPath:@"imgurl"];
-//        self.headView.cycleScrollView.autoScrollTimeInterval = [JSON[@"delaysecond"] floatValue];
-//    } failure:^(NSURLSessionDataTask *errorTask, id CallBackError) {
-//        [GzwHUDTool showErrorWithStatus:CallBackError[@"msg"]];
-//    } timeout:nil];
-    
     AFHTTPSessionManager *mar=[AFHTTPSessionManager manager];
     mar.responseSerializer.acceptableContentTypes = [mar.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
     [mar POST:@"http://mapi.yjcp.com/center/homePageInfo" parameters:nil progress:^(NSProgress * _Nonnull uploadProgress) {
@@ -109,76 +94,8 @@ static  NSString  * const headerID = @"GzwCouponsHeadView";
 }
 #pragma mark Action
 
-//-(void)refreshDown
-//{
-//    GzwHomeRequstM *model = [[GzwHomeRequstM alloc]init];
-//    model.pageno          = self.page;
-//    @weakify(self)
-//    [GzwHomeHttpTool activecard:model progress:nil success:^(NSURLSessionDataTask *successTask, id JSON) {
-//        @strongify(self)
-//        
-//        self.data = [GzwGoodsM mj_objectArrayWithKeyValuesArray:JSON[@"activeGoodsList"]];
-//        [self.collectionView.mj_header endRefreshing];
-//        [self.collectionView reloadData];
-//        
-//    } failure:^(NSURLSessionDataTask *errorTask, id CallBackError) {
-//        [GzwHUDTool showErrorWithStatus:CallBackError[@"msg"]];
-//    } timeout:^(NSError *timeoutError) {
-//        [self.collectionView.mj_header endRefreshing];
-//    }];
-//}
-// 上拉
--(void)refreshPullup
-{
-    [self requstDataPage:self.page refresh:NO];
-}
-// 下拉加载数据
--(void)refreshDown {
 
-    [self requstDataPage:1 refresh:YES];
-}
-/**
- *  加载数据
- *
- *  @param page          页码
- *  @param isDownRefresh 是否为下拉
- */
--(void)requstDataPage:(int)page refresh:(BOOL)isDownRefresh
-{
-//    GzwHomeRequstM *requstModel = [[GzwHomeRequstM alloc]init];
-//    requstModel.pageno          = page;
-//     
-//    [GzwHomeHttpTool activecard:requstModel progress:nil success:^(NSURLSessionDataTask *successTask, id JSON) {
-//        
-//        NSNumber *maxPage = JSON[@"totalPage"];
-//        if (isDownRefresh) {
-//            self.page = 2;
-//            self.data = [GzwGoodsM mj_objectArrayWithKeyValuesArray:JSON[@"activeGoodsList"]];
-//            [self.downRefresh endRefreshing];
-//            self.collectionView.mj_footer.hidden = NO;
-//            if (self.data.count == 0) {
-//                self.collectionView.mj_footer.hidden = YES;
-//            }
-//        }else{
-//            
-//            NSArray *array = [GzwGoodsM mj_objectArrayWithKeyValuesArray:JSON[@"activeGoodsList"]];
-//            [self.data addObjectsFromArray:array];
-//            [self.collectionView.mj_footer endRefreshing];
-//            if (array.count == 0 || page == [maxPage integerValue]) {// 没有更多数据了
-//                self.collectionView.mj_footer.hidden = YES;
-//            }
-//            self.page++;
-//        }
-//        [self.collectionView reloadData];
-//    } failure:^(NSURLSessionDataTask *errorTask, id CallBackError) {
-//        [GzwHUDTool showErrorWithStatus:CallBackError[@"msg"]];
-//        [self.downRefresh endRefreshing];
-//        [self.collectionView.mj_footer endRefreshing];
-//    } timeout:^(NSError *timeoutError) {
-//        [self.downRefresh endRefreshing];
-//        [self.collectionView.mj_footer endRefreshing];
-//    }];
-}
+
 
 #pragma mark <UICollectionViewDataSource>
 
