@@ -15,5 +15,6 @@ target '彩票' do
   pod 'SDCycleScrollView', '~> 1.66'
   pod 'Masonry', '1.0.0'
   pod 'NYSegmentedControl', '~> 1.1.0'
+  pod 'WMPageController'
 end
 

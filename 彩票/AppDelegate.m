@@ -66,8 +66,8 @@
     IWNavigationController *nav2 = [[IWNavigationController alloc]initWithRootViewController:c2];
 
 
-
-    UIViewController *c3=[[UIViewController alloc]init];
+    
+    UIViewController *c3=[UIStoryboard storyboardWithName:@"Discover" bundle:nil].instantiateInitialViewController;
     c3.tabBarItem.title=@"发现";
     c3.tabBarItem.image=[UIImage imageNamed:@"icons8-Idea_50"];
     IWNavigationController *nav3 = [[IWNavigationController alloc]initWithRootViewController:c3];

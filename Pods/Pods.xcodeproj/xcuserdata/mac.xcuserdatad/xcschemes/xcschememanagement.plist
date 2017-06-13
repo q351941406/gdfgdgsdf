@@ -64,6 +64,11 @@
 			<key>orderHint</key>
 			<integer>9</integer>
 		</dict>
+		<key>RKSwipeBetweenViewControllers.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>17</integer>
+		</dict>
 		<key>SDCycleScrollView.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -84,6 +89,11 @@
 			<key>orderHint</key>
 			<integer>10</integer>
 		</dict>
+		<key>WMPageController.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>18</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
@@ -97,7 +107,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>0F7D906EC4DD984332BD8EFD2617F17B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>0FF034EA429815FF56EBAED5E144565E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>114FFE242D0113779E9E0045EFE40126</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -108,6 +128,16 @@
 			<true/>
 		</dict>
 		<key>1F3863D171F24735AAE0A98341D381D1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1FB54AA6692E16A905F70328E1067808</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>205C87529D0332DFF0DC627BE7234932</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -132,7 +162,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>37083D8A7630116A1D72E0DAEF5C396F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>381B97851555CAE88A822ED4C040CFB6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>3B73143539FB8DFDC1A8FBDCA55B0A8E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>3C0FCE44212B333D0E090307322FA611</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -197,12 +242,37 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>644579A6C7966831AF376D6A19C329A5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>681E723634167656F8864CB666A35A69</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>7269FE34A86BF779708B344650FB22ED</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>7A08B6A91D118BF843100E6224715505</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>7CDE021A049264631F981C1221C6ECDA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7DED7BC8E4C78FFE4991BF276272E3E8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7F7358E1B5B85E89D6B1E3CB7400A2F8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -297,6 +367,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>C2F79FB0533FE465ADA95C3841B9F7FB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>C3391497A0271F4EEC361FBE98D5AB10</key>
 		<dict>
 			<key>primary</key>
@@ -338,6 +413,11 @@
 			<true/>
 		</dict>
 		<key>E88CEF856ACF931BAC58EA2838D1D7C0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F8338251B8034EC301B23E2A30C8BCC1</key>
 		<dict>
 			<key>primary</key>
 			<true/>

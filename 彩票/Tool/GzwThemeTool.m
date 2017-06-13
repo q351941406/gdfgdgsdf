@@ -12,6 +12,7 @@
 +(void)setup
 {
     [Chameleon setGlobalThemeUsingPrimaryColor:FlatPurple withSecondaryColor:FlatBrown andContentStyle:UIContentStyleContrast];
+    [[UIButton appearanceWhenContainedInInstancesOfClasses:@[[UITableView class]]] setBackgroundColor:[UIColor clearColor]];
 }
 +(UIColor *)theme
 {
@@ -38,6 +39,10 @@
     return RandomFlatColor;
 }
 +(UIColor *)progressColor
+{
+    return RandomFlatColor;
+}
++(UIColor *)random
 {
     return RandomFlatColor;
 }

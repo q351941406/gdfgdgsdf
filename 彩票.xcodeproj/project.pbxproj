@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		042E31701E978B5D0004F1DC /* mainSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 042E316F1E978B5D0004F1DC /* mainSB.storyboard */; };
+		044C46B91EF0461200C04D90 /* WMCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044C46B21EF0461100C04D90 /* WMCollectionViewController.m */; };
+		044C46BA1EF0461200C04D90 /* WMSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044C46B41EF0461200C04D90 /* WMSecondViewController.m */; };
+		044C46BB1EF0461200C04D90 /* WMTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044C46B61EF0461200C04D90 /* WMTableViewController.m */; };
+		044C46BC1EF0461200C04D90 /* WMViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044C46B81EF0461200C04D90 /* WMViewController.m */; };
+		044C46C21EF046A200C04D90 /* WMImageViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 044C46BF1EF046A200C04D90 /* WMImageViewCell.m */; };
+		044C46C31EF046A200C04D90 /* WMLoopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 044C46C11EF046A200C04D90 /* WMLoopView.m */; };
 		044D101F1E976466005C4AA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044D101E1E976466005C4AA0 /* LaunchScreen.storyboard */; };
 		0450F3801E9CDAC600D8E0D0 /* WMBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0450F37F1E9CDAC600D8E0D0 /* WMBaseVC.m */; };
 		0450F3831E9CDC6800D8E0D0 /* WMROOTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0450F3821E9CDC6800D8E0D0 /* WMROOTViewController.m */; };
@@ -73,8 +79,9 @@
 		04D1EFF01EEC3373004B02A3 /* UIImage+BlurGlass.m in Sources */ = {isa = PBXBuildFile; fileRef = 04D1EFD91EEC3373004B02A3 /* UIImage+BlurGlass.m */; };
 		04FD1F871EEED4D60016AACF /* GzwAddressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FD1F851EEED4D60016AACF /* GzwAddressCell.m */; };
 		04FD1F881EEED4D60016AACF /* GzwAddressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04FD1F861EEED4D60016AACF /* GzwAddressCell.xib */; };
+		04FD1F8B1EF036B80016AACF /* DiscoverVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FD1F8A1EF036B80016AACF /* DiscoverVC.m */; };
 		73660D6DB104AEE1B58AE75E /* libPods-彩票.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B11A23295900A88492918E5C /* libPods-彩票.a */; };
-		CF6FDC2F1EEFECBA005DCF6E /* discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF6FDC2E1EEFECBA005DCF6E /* discover.storyboard */; };
+		CF6FDC2F1EEFECBA005DCF6E /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF6FDC2E1EEFECBA005DCF6E /* Discover.storyboard */; };
 		CF91DEB41EEE6480005BEBC6 /* GzwCouponsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CF91DEB31EEE6480005BEBC6 /* GzwCouponsVC.m */; };
 		CF91DEB91EEE64C2005BEBC6 /* GzwCouponsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF91DEB71EEE64C2005BEBC6 /* GzwCouponsCell.m */; };
 		CF91DEBA1EEE64C2005BEBC6 /* GzwCouponsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF91DEB81EEE64C2005BEBC6 /* GzwCouponsCell.xib */; };
@@ -85,6 +92,18 @@
 
 /* Begin PBXFileReference section */
 		042E316F1E978B5D0004F1DC /* mainSB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = mainSB.storyboard; sourceTree = "<group>"; };
+		044C46B11EF0461100C04D90 /* WMCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMCollectionViewController.h; sourceTree = "<group>"; };
+		044C46B21EF0461100C04D90 /* WMCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMCollectionViewController.m; sourceTree = "<group>"; };
+		044C46B31EF0461100C04D90 /* WMSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMSecondViewController.h; sourceTree = "<group>"; };
+		044C46B41EF0461200C04D90 /* WMSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMSecondViewController.m; sourceTree = "<group>"; };
+		044C46B51EF0461200C04D90 /* WMTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMTableViewController.h; sourceTree = "<group>"; };
+		044C46B61EF0461200C04D90 /* WMTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMTableViewController.m; sourceTree = "<group>"; };
+		044C46B71EF0461200C04D90 /* WMViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMViewController.h; sourceTree = "<group>"; };
+		044C46B81EF0461200C04D90 /* WMViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMViewController.m; sourceTree = "<group>"; };
+		044C46BE1EF046A200C04D90 /* WMImageViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMImageViewCell.h; sourceTree = "<group>"; };
+		044C46BF1EF046A200C04D90 /* WMImageViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMImageViewCell.m; sourceTree = "<group>"; };
+		044C46C01EF046A200C04D90 /* WMLoopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMLoopView.h; sourceTree = "<group>"; };
+		044C46C11EF046A200C04D90 /* WMLoopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMLoopView.m; sourceTree = "<group>"; };
 		044D101E1E976466005C4AA0 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0450F37E1E9CDAC600D8E0D0 /* WMBaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMBaseVC.h; sourceTree = "<group>"; };
 		0450F37F1E9CDAC600D8E0D0 /* WMBaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMBaseVC.m; sourceTree = "<group>"; };
@@ -206,9 +225,11 @@
 		04FD1F841EEED4D60016AACF /* GzwAddressCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GzwAddressCell.h; sourceTree = "<group>"; };
 		04FD1F851EEED4D60016AACF /* GzwAddressCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GzwAddressCell.m; sourceTree = "<group>"; };
 		04FD1F861EEED4D60016AACF /* GzwAddressCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GzwAddressCell.xib; sourceTree = "<group>"; };
+		04FD1F891EF036B80016AACF /* DiscoverVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiscoverVC.h; sourceTree = "<group>"; };
+		04FD1F8A1EF036B80016AACF /* DiscoverVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverVC.m; sourceTree = "<group>"; };
 		1C74087EBF3391D74774D052 /* Pods-彩票.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-彩票.release.xcconfig"; path = "Pods/Target Support Files/Pods-彩票/Pods-彩票.release.xcconfig"; sourceTree = "<group>"; };
 		B11A23295900A88492918E5C /* libPods-彩票.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-彩票.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CF6FDC2E1EEFECBA005DCF6E /* discover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = discover.storyboard; sourceTree = "<group>"; };
+		CF6FDC2E1EEFECBA005DCF6E /* Discover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Discover.storyboard; sourceTree = "<group>"; };
 		CF91DEB21EEE6480005BEBC6 /* GzwCouponsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GzwCouponsVC.h; sourceTree = "<group>"; };
 		CF91DEB31EEE6480005BEBC6 /* GzwCouponsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GzwCouponsVC.m; sourceTree = "<group>"; };
 		CF91DEB61EEE64C2005BEBC6 /* GzwCouponsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GzwCouponsCell.h; sourceTree = "<group>"; };
@@ -235,6 +256,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		044C46AF1EF03E0A00C04D90 /* 开奖结果 */ = {
+			isa = PBXGroup;
+			children = (
+				044C46BD1EF046A200C04D90 /* View */,
+				044C46B01EF0461100C04D90 /* Controller */,
+			);
+			path = "开奖结果";
+			sourceTree = "<group>";
+		};
+		044C46B01EF0461100C04D90 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				044C46B11EF0461100C04D90 /* WMCollectionViewController.h */,
+				044C46B21EF0461100C04D90 /* WMCollectionViewController.m */,
+				044C46B31EF0461100C04D90 /* WMSecondViewController.h */,
+				044C46B41EF0461200C04D90 /* WMSecondViewController.m */,
+				044C46B51EF0461200C04D90 /* WMTableViewController.h */,
+				044C46B61EF0461200C04D90 /* WMTableViewController.m */,
+				044C46B71EF0461200C04D90 /* WMViewController.h */,
+				044C46B81EF0461200C04D90 /* WMViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		044C46BD1EF046A200C04D90 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				044C46BE1EF046A200C04D90 /* WMImageViewCell.h */,
+				044C46BF1EF046A200C04D90 /* WMImageViewCell.m */,
+				044C46C01EF046A200C04D90 /* WMLoopView.h */,
+				044C46C11EF046A200C04D90 /* WMLoopView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		0450F3881E9CE32100D8E0D0 /* New Group */ = {
 			isa = PBXGroup;
 			children = (
@@ -499,7 +555,10 @@
 		CF6FDC2D1EEFEC3F005DCF6E /* Discover */ = {
 			isa = PBXGroup;
 			children = (
-				CF6FDC2E1EEFECBA005DCF6E /* discover.storyboard */,
+				044C46AF1EF03E0A00C04D90 /* 开奖结果 */,
+				CF6FDC2E1EEFECBA005DCF6E /* Discover.storyboard */,
+				04FD1F891EF036B80016AACF /* DiscoverVC.h */,
+				04FD1F8A1EF036B80016AACF /* DiscoverVC.m */,
 			);
 			path = Discover;
 			sourceTree = "<group>";
@@ -628,7 +687,7 @@
 				0450F3B21E9CE41C00D8E0D0 /* WMProductsListCell.xib in Resources */,
 				0450F3A81E9CE3FD00D8E0D0 /* WMVenueTitle2CollectionViewCell.xib in Resources */,
 				046D07F11E9CE77E00D6F5B6 /* PaiLieWu.plist in Resources */,
-				CF6FDC2F1EEFECBA005DCF6E /* discover.storyboard in Resources */,
+				CF6FDC2F1EEFECBA005DCF6E /* Discover.storyboard in Resources */,
 				0452F1731E9698D00006F3C4 /* GzwFlashSaleCell.xib in Resources */,
 				04FD1F881EEED4D60016AACF /* GzwAddressCell.xib in Resources */,
 				046D07EB1E9CE77E00D6F5B6 /* SevenStarData.plist in Resources */,
@@ -699,6 +758,7 @@
 				04D1EFE41EEC3373004B02A3 /* NSString+Gzw.m in Sources */,
 				04FD1F871EEED4D60016AACF /* GzwAddressCell.m in Sources */,
 				0450F3991E9CE3C300D8E0D0 /* WMProductsListVCData.m in Sources */,
+				044C46C31EF046A200C04D90 /* WMLoopView.m in Sources */,
 				0450F3871E9CE30800D8E0D0 /* OTSSize.m in Sources */,
 				0450F3931E9CE3A700D8E0D0 /* WMCollectionViewCell.m in Sources */,
 				04D1EFEC1EEC3373004B02A3 /* UITextField+Gzw.m in Sources */,
@@ -718,6 +778,7 @@
 				04D1EFDD1EEC3373004B02A3 /* NSArray+Gzw.m in Sources */,
 				04D1EFE01EEC3373004B02A3 /* NSDictionary+Gzw.m in Sources */,
 				04D1EFE51EEC3373004B02A3 /* UIBarButtonItem+MJ.m in Sources */,
+				044C46B91EF0461200C04D90 /* WMCollectionViewController.m in Sources */,
 				0452F16E1E9697D80006F3C4 /* GzwTableView.m in Sources */,
 				04D1EFE11EEC3373004B02A3 /* NSMutableAttributedString+Extends.m in Sources */,
 				04D1EFEF1EEC3373004B02A3 /* SecurityStrategy.m in Sources */,
@@ -725,6 +786,7 @@
 				CF91DEC11EEE6820005BEBC6 /* HomeM.m in Sources */,
 				04D1EFF01EEC3373004B02A3 /* UIImage+BlurGlass.m in Sources */,
 				04D1EFDA1EEC3373004B02A3 /* GzwRegexTool.m in Sources */,
+				044C46C21EF046A200C04D90 /* WMImageViewCell.m in Sources */,
 				0450F3A21E9CE3E800D8E0D0 /* WMVenueTitle1CollectionViewCell.m in Sources */,
 				0450F3831E9CDC6800D8E0D0 /* WMROOTViewController.m in Sources */,
 				0452F0EA1E968EDE0006F3C4 /* ViewController.m in Sources */,
@@ -732,10 +794,14 @@
 				0450F3B51E9CE44700D8E0D0 /* ProductModel.m in Sources */,
 				0450F39D1E9CE3D600D8E0D0 /* WMBanerCollectionViewCell.m in Sources */,
 				0450F3981E9CE3C300D8E0D0 /* WMProductsListVC.m in Sources */,
+				044C46BC1EF0461200C04D90 /* WMViewController.m in Sources */,
+				044C46BB1EF0461200C04D90 /* WMTableViewController.m in Sources */,
+				044C46BA1EF0461200C04D90 /* WMSecondViewController.m in Sources */,
 				046D07F51E9CE94A00D6F5B6 /* GzwNotificationTool.m in Sources */,
 				0452F1721E9698D00006F3C4 /* GzwFlashSaleCell.m in Sources */,
 				CF91DEB41EEE6480005BEBC6 /* GzwCouponsVC.m in Sources */,
 				04D1EFE21EEC3373004B02A3 /* NSObject+Gzw.m in Sources */,
+				04FD1F8B1EF036B80016AACF /* DiscoverVC.m in Sources */,
 				0452F0E71E968EDE0006F3C4 /* AppDelegate.m in Sources */,
 				04D1EFEB1EEC3373004B02A3 /* UINavigationController+Gzw.m in Sources */,
 				CF91DEBD1EEE64F6005BEBC6 /* GzwCouponsHeadView.m in Sources */,

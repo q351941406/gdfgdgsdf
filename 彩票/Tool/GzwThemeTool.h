@@ -26,4 +26,5 @@
 +(UIColor *)pageColor;
 +(UIColor *)currentPageColor;
 
++(UIColor *)random;
 @end

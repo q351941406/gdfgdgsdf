@@ -21,7 +21,7 @@
     self.decorationView.backgroundColor = [GzwThemeTool backgroudTheme];
     self.region.textColor = [GzwThemeTool subTitleTextTheme];
     self.accessoryView.backgroundColor = [UIColor blackColor];
-    [[UIButton appearanceWhenContainedInInstancesOfClasses:@[[UITableView class]]] setBackgroundColor:[UIColor clearColor]];
+    
 }
 -(void)layoutSubviews
 {
