@@ -20,7 +20,6 @@
 #import "NSDictionary+Gzw.h"
 #import "NSArray+Gzw.h"
 #import "NSObject+Gzw.h"
-
 // block里面用的弱self
 #define WEAKSELF typeof(self) __weak weakSelf = self;
 #define Gzw_WeakSelf(type)  __weak typeof(type) weak##type = type;

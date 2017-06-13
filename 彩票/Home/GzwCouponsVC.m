@@ -82,9 +82,7 @@ static  NSString  * const headerID = @"GzwCouponsHeadView";
     [mar POST:@"http://mapi.yjcp.com/center/homePageInfo" parameters:nil progress:^(NSProgress * _Nonnull uploadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSLog(@"%@",responseObject);
         self.adURL = [responseObject[@"lunboList"] valueForKeyPath:@"linkAddress"];
-        
         NSArray *dd = [responseObject[@"lunboList"] valueForKeyPath:@"linkAddress"];
         self.headView.cycleScrollView.imageURLStringsGroup = [responseObject[@"lunboList"] valueForKeyPath:@"mapAddress"];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {

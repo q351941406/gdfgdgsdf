@@ -21,8 +21,8 @@
 @end
 
 @implementation AppDelegate
-// 广告 http://mapi.yjcp.com/center/homePageInfo
-// 资讯用掌上彩票里的
+
+
 // 开奖记录彩客彩票2017、掌上彩票里的
 // 专家推荐用彩客彩票2017
 

@@ -7,25 +7,62 @@
 //
 
 #import "GzwAddressCell.h"
-
-
+#import "GzwThemeTool.h"
+#import "GZWTool.h"
 @interface GzwAddressCell ()
 @property (weak, nonatomic) IBOutlet UILabel *name;
 @property (weak, nonatomic) IBOutlet UILabel *region;
+@property (weak, nonatomic) IBOutlet UIView *decorationView;
 
 @end
 @implementation GzwAddressCell
 
 - (void)awakeFromNib {
-    // Initialization code
+    self.decorationView.backgroundColor = [GzwThemeTool backgroudTheme];
+    self.region.textColor = [GzwThemeTool subTitleTextTheme];
+    self.accessoryView.backgroundColor = [UIColor blackColor];
+    [[UIButton appearanceWhenContainedInInstancesOfClasses:@[[UITableView class]]] setBackgroundColor:[UIColor clearColor]];
+}
+-(void)layoutSubviews
+{
+    [super layoutSubviews];
 }
 #pragma mark Set
 -(void)setModel:(NSDictionary *)model
 {
     _model = model;
-//    self.name.text = [NSString stringWithFormat:@"%@  %@",model.name,model.phone];
-//    self.region.text = model.address;
-//    self.normalImage.hidden = ([model.isdefault intValue] == 1) ? NO : YES;
+    
+    
+    
+    if ([[model allKeys] containsObject:@"w_title_template"]){
+        
+        self.name.text = [self flattenHTML:model[@"w_title_template"] trimWhiteSpace:NO];
+        self.region.text = [NSString stringWithFormat:@"%@%@期",model[@"w_lot_name"],model[@"w_expert"]];
+        
+    }else {
+        self.name.text = [self flattenHTML:model[@"article_title"] trimWhiteSpace:NO];
+        
+        NSDate *currentTime = [NSDate dateWithTimeIntervalSince1970:[model[@"crt_time"] integerValue]/1000];
+        self.region.text = [NSString stringWithFormat:@"%@",currentTime];
+    }
 }
-
+-(NSString *)flattenHTML:(NSString *)html trimWhiteSpace:(BOOL)trim
+{
+    NSScanner *theScanner = [NSScanner scannerWithString:html];
+    NSString *text = nil;
+    
+    while ([theScanner isAtEnd] == NO) {
+        // find start of tag
+        [theScanner scanUpToString:@"<" intoString:NULL] ;
+        // find end of tag
+        [theScanner scanUpToString:@">" intoString:&text] ;
+        // replace the found tag with a space
+        //(you can filter multi-spaces out later if you wish)
+        html = [html stringByReplacingOccurrencesOfString:
+                [ NSString stringWithFormat:@"%@>", text]
+                                               withString:@""];
+    }
+    
+    return trim ? [html stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] : html;
+}
 @end

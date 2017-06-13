@@ -9,10 +9,12 @@
 #import "GzwNewsOneVC.h"
 #import "GzwAddressCell.h"
 #import "AFNetworking.h"
+#import "GzwThemeTool.h"
+#import "GzwWebAdvertVC.h"
 static NSString *ID = @"GzwAddressCell";
 
 @interface GzwNewsOneVC ()
-@property (nonatomic, weak) UIView  *noDataView;
+
 @property (nonatomic, strong) NSMutableArray *data;
 
 @end
@@ -37,7 +39,7 @@ static NSString *ID = @"GzwAddressCell";
     [self.tableView registerNib:[UINib nibWithNibName:ID bundle:nil] forCellReuseIdentifier:ID];
     self.clearsSelectionOnViewWillAppear = YES;
     
-
+    self.view.backgroundColor = [GzwThemeTool backgroudTheme];
     self.tableView.estimatedRowHeight = 44; // 设置估算高度
     self.tableView.rowHeight = UITableViewAutomaticDimension; // 告诉tableView我们cell的高度是自动的
 
@@ -46,17 +48,7 @@ static NSString *ID = @"GzwAddressCell";
 -(void)requst{
     AFHTTPSessionManager *mar=[AFHTTPSessionManager manager];
     mar.responseSerializer.acceptableContentTypes = [mar.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
-//    {
-//        "winner_list": {
-//            "page_index": "1",
-//            "page_size": "20"
-//        },
-//        "c_head": {
-//            "client_id": "BY003000000000000002",
-//            "client_os": "IOS"
-//        }
-//    }
-    
+
     mar.requestSerializer=[AFJSONRequestSerializer serializer];//申明请求的数据是json类型
     [mar POST:@"http://mycp.iplay78.com/trade-web/web/lottery/winners/list" parameters:@{@"winner_list":@{@"page_index":@"1",@"page_size":@"100"},@"c_head":@{@"client_id":@"BY003000000000000002",@"client_os":@"IOS"}} progress:^(NSProgress * _Nonnull uploadProgress) {
         
@@ -103,13 +95,16 @@ static NSString *ID = @"GzwAddressCell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     GzwAddressCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
-//    cell.delegate = self;
-//    cell.model = self.data[indexPath.row];
+    cell.model = self.data[indexPath.row];
     return cell;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    GzwWebAdvertVC *VC = [[GzwWebAdvertVC alloc]init];
+    VC.progressColor = [GzwThemeTool progressColor];
+    VC.webUrl = self.data[indexPath.row][@"w_info_absolute_url"];
+    VC.LoadadvDesc = NO;
+    [self.navigationController pushViewController:VC animated:YES];
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
