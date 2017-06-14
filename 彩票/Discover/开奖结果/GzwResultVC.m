@@ -1,34 +1,29 @@
 //
-//  GzwNewsVC.m
-//  彩票
+//  GzwAddressVC.m
+//  pjh365
 //
-//  Created by Wang Jiang on 2017/6/12.
-//  Copyright © 2017年 彩票. All rights reserved.
+//  Created by mac on 16/4/11.
+//  Copyright © 2016年 bigkoo. All rights reserved.
 //
 
-#import "GzwNewsVC.h"
-#import "NYSegmentedControl.h"
-#import "GzwThemeTool.h"
-#import "GzwNewsTwoVC.h"
-#import "GzwNewsOneVC.h"
-#import "GZWTool.h"
-#import "Masonry.h"
-
-#import "GzwAddressCell.h"
+#import "GzwResultVC.h"
+#import "GzwResutCell.h"
 #import "AFNetworking.h"
 #import "GzwThemeTool.h"
 #import "GzwWebAdvertVC.h"
+#import "Masonry.h"
+#import "NYSegmentedControl.h"
 
-static NSString *ID = @"GzwAddressCell";
-@interface GzwNewsVC () <UITableViewDelegate,UITableViewDataSource>
+static NSString *ID = @"GzwResutCell";
+@interface GzwResultVC ()<UITableViewDelegate,UITableViewDataSource>
+
 @property(nonatomic,strong)UITableView *one;
 @property(nonatomic,strong)UITableView *two;
 @property (nonatomic, strong) NSMutableArray *data;
 @property (nonatomic, strong) NSMutableArray *dataTwo;
 @end
 
-@implementation GzwNewsVC
-#pragma mark Get
+@implementation GzwResultVC
 -(NSMutableArray *)data
 {
     if (!_data) {
@@ -49,7 +44,7 @@ static NSString *ID = @"GzwAddressCell";
         _two = [[UITableView alloc]initWithFrame:CGRectZero style:UITableViewStylePlain];
         [_two registerNib:[UINib nibWithNibName:ID bundle:nil] forCellReuseIdentifier:ID];
         _two.backgroundColor = [GzwThemeTool backgroudTheme];
-        _two.estimatedRowHeight = 44; // 设置估算高度
+        _two.estimatedRowHeight = 70; // 设置估算高度
         _two.rowHeight = UITableViewAutomaticDimension; // 告诉tableView我们cell的高度是自动的
         _two.delegate = self;
         _two.dataSource = self;
@@ -77,8 +72,8 @@ static NSString *ID = @"GzwAddressCell";
     self.navigationItem.titleView = [self blueSegmentedControl];
     
     
-//    self.one.frame = self.view.frame;
-//    self.two.frame = self.view.frame;
+    //    self.one.frame = self.view.frame;
+    //    self.two.frame = self.view.frame;
     
     [self.view addSubview:self.two];
     [self.view addSubview:self.one];
@@ -90,7 +85,7 @@ static NSString *ID = @"GzwAddressCell";
     [self requst];
     [self requstTwo];
     [self.view setNeedsUpdateConstraints];// 标记更新约束
-
+    
 }
 -(void)updateViewConstraints
 {
@@ -108,45 +103,79 @@ static NSString *ID = @"GzwAddressCell";
         make.right.equalTo(self.view.mas_right);
         make.bottom.equalTo(self.view.mas_bottom);
     }];
-
+    
     [super updateViewConstraints];
 }
 -(void)requst{
+    
+    
     AFHTTPSessionManager *mar=[AFHTTPSessionManager manager];
     mar.responseSerializer.acceptableContentTypes = [mar.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
     
-    mar.requestSerializer=[AFJSONRequestSerializer serializer];//申明请求的数据是json类型
-    [mar POST:@"http://mycp.iplay78.com/trade-web/web/lottery/winners/list" parameters:@{@"winner_list":@{@"page_index":@"1",@"page_size":@"100"},@"c_head":@{@"client_id":@"BY003000000000000002",@"client_os":@"IOS"}} progress:^(NSProgress * _Nonnull uploadProgress) {
+    [mar POST:@"http://api.caipiao.163.com/award_home.html?product=caipiao_client&mobileType=iphone&ver=4.33&channel=appstore&apiVer=1.1&apiLevel=27&deviceId=51D4039B-590F-4817-9298-6D4DC44324F9&product=caipiao_client&mobileType=iphone&ver=4.33&channel=appstore&apiVer=1.1&apiLevel=27&deviceId=51D4039B-590F-4817-9298-6D4DC44324F9" parameters:nil progress:^(NSProgress * _Nonnull uploadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSLog(@"%@",responseObject);
         
-        self.data = responseObject[@"winner_list"][@"data"];
+        
+//        [self.data addObjectsFromArray:responseObject[@"data"]];
+        [responseObject[@"data"] enumerateObjectsUsingBlock:^(NSDictionary   *obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            NSString *str = obj[@"totalSale"];
+            if (!(str.integerValue < 1)) {
+                [self.data addObject:obj];
+            }
+        }];
         [self.one reloadData];
-        
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"%@",error);
         
     }];
+
 }
 -(void)requstTwo{
-    AFHTTPSessionManager *mar=[AFHTTPSessionManager manager];
-    mar.responseSerializer.acceptableContentTypes = [mar.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
-    mar.requestSerializer=[AFJSONRequestSerializer serializer];//申明请求的数据是json类型
-    [mar POST:@"http://mycp.iplay78.com/trade-web/web/article_list" parameters:@{@"article_list":@{@"category_code":@"1",@"page_index":@"0",@"page_size":@"100"},@"c_head":@{@"client_id":@"BY003000000000000002",@"client_os":@"IOS"}} progress:^(NSProgress * _Nonnull uploadProgress) {
-        
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        //        NSLog(@"%@",responseObject);
-        
-        self.dataTwo = responseObject[@"article_list"][@"comm_article"];
-        [self.two reloadData];
-        
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"%@",error);
-        
-    }];
+    //
+    //
+    //    [mar POST:@"http://api.caipiao.163.com/award_awardInfoNew.html?product=caipiao_client&mobileType=iphone&ver=4.33&channel=appstore&apiVer=1.1&apiLevel=27&deviceId=51D4039B-590F-4817-9298-6D4DC44324F9&product=caipiao_client&mobileType=iphone&ver=4.33&channel=appstore&apiVer=1.1&apiLevel=27&deviceId=51D4039B-590F-4817-9298-6D4DC44324F9" parameters:nil progress:^(NSProgress * _Nonnull uploadProgress) {
+    //
+    //    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    //        NSLog(@"%@",responseObject);
+    //        self.NumOfServer--;
+    //        [responseObject enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+    //            [self.data addObject:obj];
+    //        }];
+    ////        [self.data addObjectsFromArray:responseObject[@"data"]];
+    //        if (!self.NumOfServer) {
+    //            [self.tableView reloadData];
+    //        }
+    //
+    //    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+    //        NSLog(@"%@",error);
+    //        
+    //    }];
 }
 
+
+//// cell分割线的左边到尽头
+//-(void)viewDidLayoutSubviews {
+//    // 判断有没有实现这个方法
+//    if ([self.tableView respondsToSelector:@selector(setSeparatorInset:)]) {
+//        // 然后清零。
+//        [self.tableView setSeparatorInset:UIEdgeInsetsZero];
+//        
+//    }
+//    if ([self.tableView respondsToSelector:@selector(setLayoutMargins:)])  {
+//        [self.tableView setLayoutMargins:UIEdgeInsetsZero];
+//    }
+//}
+//-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPat{
+//    if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
+//        [cell setLayoutMargins:UIEdgeInsetsZero];
+//    }
+//    if ([cell respondsToSelector:@selector(setSeparatorInset:)]){
+//        [cell setSeparatorInset:UIEdgeInsetsZero];
+//    }
+//}
+
+#pragma mark Action
 
 #pragma mark - Table view data source
 
@@ -160,26 +189,15 @@ static NSString *ID = @"GzwAddressCell";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    GzwAddressCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
-    if (tableView == self.one) {
-        cell.model = self.data[indexPath.row];
-    }else {
-        cell.model = self.dataTwo[indexPath.row];
-    }
-    
+    GzwResutCell *cell = [tableView dequeueReusableCellWithIdentifier:GzwResutCell.description];
+    cell.model = self.data[indexPath.row];
     return cell;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     GzwWebAdvertVC *VC = [[GzwWebAdvertVC alloc]init];
     VC.progressColor = [GzwThemeTool progressColor];
-    if (tableView == self.one) {
-        VC.webUrl = self.data[indexPath.row][@"w_info_absolute_url"];
-    }else {
-        VC.webUrl = self.dataTwo[indexPath.row][@"article_detail_url"];
-    }
-    
+    VC.webUrl = self.data[indexPath.row][@"w_info_absolute_url"];
     VC.LoadadvDesc = NO;
     [self.navigationController pushViewController:VC animated:YES];
 }
@@ -187,12 +205,15 @@ static NSString *ID = @"GzwAddressCell";
 {
     return 0.01;
 }
+
+
+
 -(void)action:(NYSegmentedControl *)btn
 {
     
     if (!btn.selectedSegmentIndex) {
-//        [self.two removeFromSuperview];
-//        [self.view addSubview:self.one];
+        //        [self.two removeFromSuperview];
+        //        [self.view addSubview:self.one];
         
         self.one.hidden = NO;
         self.two.hidden = YES;
@@ -200,13 +221,13 @@ static NSString *ID = @"GzwAddressCell";
     }else{
         self.one.hidden = YES;
         self.two.hidden = NO;
-//
-//        [self.one removeFromSuperview];
-//        [self.view addSubview:self.two];
+        //
+        //        [self.one removeFromSuperview];
+        //        [self.view addSubview:self.two];
     }
 }
 - (NYSegmentedControl *)blueSegmentedControl {
-    NYSegmentedControl *blueSegmentedControl = [[NYSegmentedControl alloc] initWithItems:@[@"中奖福地", @"足球资讯"]];
+    NYSegmentedControl *blueSegmentedControl = [[NYSegmentedControl alloc] initWithItems:@[@"彩票", @"体育"]];
     blueSegmentedControl.titleTextColor = [UIColor colorWithRed:0.38f green:0.68f blue:0.93f alpha:1.0f];
     blueSegmentedControl.selectedTitleTextColor = [UIColor whiteColor];
     blueSegmentedControl.segmentIndicatorBackgroundColor = [GzwThemeTool theme];// 滑块背景
@@ -221,5 +242,4 @@ static NSString *ID = @"GzwAddressCell";
     [blueSegmentedControl addTarget:self action:@selector(action:) forControlEvents:UIControlEventValueChanged];
     return blueSegmentedControl;
 }
-
 @end

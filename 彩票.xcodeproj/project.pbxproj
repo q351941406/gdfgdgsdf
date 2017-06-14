@@ -81,6 +81,9 @@
 		04FD1F881EEED4D60016AACF /* GzwAddressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04FD1F861EEED4D60016AACF /* GzwAddressCell.xib */; };
 		04FD1F8B1EF036B80016AACF /* DiscoverVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FD1F8A1EF036B80016AACF /* DiscoverVC.m */; };
 		73660D6DB104AEE1B58AE75E /* libPods-彩票.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B11A23295900A88492918E5C /* libPods-彩票.a */; };
+		CF68FD241EF0D48100748711 /* GzwResultVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CF68FD231EF0D48100748711 /* GzwResultVC.m */; };
+		CF68FD281EF11A5B00748711 /* GzwResutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF68FD261EF11A5A00748711 /* GzwResutCell.m */; };
+		CF68FD291EF11A5B00748711 /* GzwResutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF68FD271EF11A5B00748711 /* GzwResutCell.xib */; };
 		CF6FDC2F1EEFECBA005DCF6E /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF6FDC2E1EEFECBA005DCF6E /* Discover.storyboard */; };
 		CF91DEB41EEE6480005BEBC6 /* GzwCouponsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CF91DEB31EEE6480005BEBC6 /* GzwCouponsVC.m */; };
 		CF91DEB91EEE64C2005BEBC6 /* GzwCouponsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF91DEB71EEE64C2005BEBC6 /* GzwCouponsCell.m */; };
@@ -229,6 +232,11 @@
 		04FD1F8A1EF036B80016AACF /* DiscoverVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverVC.m; sourceTree = "<group>"; };
 		1C74087EBF3391D74774D052 /* Pods-彩票.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-彩票.release.xcconfig"; path = "Pods/Target Support Files/Pods-彩票/Pods-彩票.release.xcconfig"; sourceTree = "<group>"; };
 		B11A23295900A88492918E5C /* libPods-彩票.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-彩票.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF68FD221EF0D48100748711 /* GzwResultVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GzwResultVC.h; sourceTree = "<group>"; };
+		CF68FD231EF0D48100748711 /* GzwResultVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GzwResultVC.m; sourceTree = "<group>"; };
+		CF68FD251EF11A5A00748711 /* GzwResutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GzwResutCell.h; sourceTree = "<group>"; };
+		CF68FD261EF11A5A00748711 /* GzwResutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GzwResutCell.m; sourceTree = "<group>"; };
+		CF68FD271EF11A5B00748711 /* GzwResutCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GzwResutCell.xib; sourceTree = "<group>"; };
 		CF6FDC2E1EEFECBA005DCF6E /* Discover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Discover.storyboard; sourceTree = "<group>"; };
 		CF91DEB21EEE6480005BEBC6 /* GzwCouponsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GzwCouponsVC.h; sourceTree = "<group>"; };
 		CF91DEB31EEE6480005BEBC6 /* GzwCouponsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GzwCouponsVC.m; sourceTree = "<group>"; };
@@ -261,6 +269,8 @@
 			children = (
 				044C46BD1EF046A200C04D90 /* View */,
 				044C46B01EF0461100C04D90 /* Controller */,
+				CF68FD221EF0D48100748711 /* GzwResultVC.h */,
+				CF68FD231EF0D48100748711 /* GzwResultVC.m */,
 			);
 			path = "开奖结果";
 			sourceTree = "<group>";
@@ -583,6 +593,9 @@
 				CF91DEB61EEE64C2005BEBC6 /* GzwCouponsCell.h */,
 				CF91DEB71EEE64C2005BEBC6 /* GzwCouponsCell.m */,
 				CF91DEB81EEE64C2005BEBC6 /* GzwCouponsCell.xib */,
+				CF68FD251EF11A5A00748711 /* GzwResutCell.h */,
+				CF68FD261EF11A5A00748711 /* GzwResutCell.m */,
+				CF68FD271EF11A5B00748711 /* GzwResutCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -676,6 +689,7 @@
 				0450F3A31E9CE3E800D8E0D0 /* WMVenueTitle1CollectionViewCell.xib in Resources */,
 				CF91DEBA1EEE64C2005BEBC6 /* GzwCouponsCell.xib in Resources */,
 				0450F39E1E9CE3D600D8E0D0 /* WMBanerCollectionViewCell.xib in Resources */,
+				CF68FD291EF11A5B00748711 /* GzwResutCell.xib in Resources */,
 				046D07F01E9CE77E00D6F5B6 /* PaiLieSan.plist in Resources */,
 				0452F0F21E968EDE0006F3C4 /* Assets.xcassets in Resources */,
 				0450F3901E9CE39600D8E0D0 /* WMVenueCollectionViewCell.xib in Resources */,
@@ -781,6 +795,7 @@
 				044C46B91EF0461200C04D90 /* WMCollectionViewController.m in Sources */,
 				0452F16E1E9697D80006F3C4 /* GzwTableView.m in Sources */,
 				04D1EFE11EEC3373004B02A3 /* NSMutableAttributedString+Extends.m in Sources */,
+				CF68FD241EF0D48100748711 /* GzwResultVC.m in Sources */,
 				04D1EFEF1EEC3373004B02A3 /* SecurityStrategy.m in Sources */,
 				04D1EFDF1EEC3373004B02A3 /* NSDate+GZW.m in Sources */,
 				CF91DEC11EEE6820005BEBC6 /* HomeM.m in Sources */,
@@ -788,6 +803,7 @@
 				04D1EFDA1EEC3373004B02A3 /* GzwRegexTool.m in Sources */,
 				044C46C21EF046A200C04D90 /* WMImageViewCell.m in Sources */,
 				0450F3A21E9CE3E800D8E0D0 /* WMVenueTitle1CollectionViewCell.m in Sources */,
+				CF68FD281EF11A5B00748711 /* GzwResutCell.m in Sources */,
 				0450F3831E9CDC6800D8E0D0 /* WMROOTViewController.m in Sources */,
 				0452F0EA1E968EDE0006F3C4 /* ViewController.m in Sources */,
 				04D1EFDE1EEC3373004B02A3 /* NSData+Gzw.m in Sources */,

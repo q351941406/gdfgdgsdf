@@ -13,6 +13,9 @@
 #import "WMTableViewController.h"
 #import "WMViewController.h"
 #import "WMCollectionViewController.h"
+
+#import "GzwResultVC.h"
+
 @interface DiscoverVC ()
 @property (weak, nonatomic) IBOutlet UITableViewCell *historyCell;
 @property (weak, nonatomic) IBOutlet UITableViewCell *expertCell;
@@ -51,6 +54,12 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
+    
+    [self.navigationController pushViewController:[[GzwResultVC alloc]init] animated:YES];
+    return;
+    
+    
     WMPageController *pageController = [self p_defaultController];
 //    // 网易新闻
 //    pageController = [self pageControllerStyleFlood];
@@ -78,7 +87,7 @@
         NSString *title;
         switch (i % 3) {
             case 0:
-                vcClass = [WMTableViewController class];
+                vcClass = [GzwResultVC class];
                 title = @"Greetings";
                 break;
             case 1:
