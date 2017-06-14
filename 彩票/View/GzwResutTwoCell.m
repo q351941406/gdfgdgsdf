@@ -6,18 +6,18 @@
 //  Copyright (c) 2015年 paotui. All rights reserved.
 //
 
-#import "GzwResutCell.h"
+#import "GzwResutTwoCell.h"
 #import "GzwThemeTool.h"
 #import "GZWTool.h"
 #import "Chameleon.h"
-@interface GzwResutCell ()
+@interface GzwResutTwoCell ()
 @property (weak, nonatomic) IBOutlet UILabel *name;
 @property (weak, nonatomic) IBOutlet UILabel *region;
 @property (weak, nonatomic) IBOutlet UIView *decorationView;
 @property (weak, nonatomic) IBOutlet UILabel *number;
 
 @end
-@implementation GzwResutCell
+@implementation GzwResutTwoCell
 
 - (void)awakeFromNib {
     self.decorationView.backgroundColor = [GzwThemeTool backgroudTheme];

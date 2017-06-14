@@ -15,6 +15,8 @@
 		044C46C21EF046A200C04D90 /* WMImageViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 044C46BF1EF046A200C04D90 /* WMImageViewCell.m */; };
 		044C46C31EF046A200C04D90 /* WMLoopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 044C46C11EF046A200C04D90 /* WMLoopView.m */; };
 		044D101F1E976466005C4AA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044D101E1E976466005C4AA0 /* LaunchScreen.storyboard */; };
+		0450BCDE1EF1974D00AD4BF3 /* GzwResutTwoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0450BCDC1EF1974D00AD4BF3 /* GzwResutTwoCell.m */; };
+		0450BCDF1EF1974D00AD4BF3 /* GzwResutTwoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0450BCDD1EF1974D00AD4BF3 /* GzwResutTwoCell.xib */; };
 		0450F3801E9CDAC600D8E0D0 /* WMBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0450F37F1E9CDAC600D8E0D0 /* WMBaseVC.m */; };
 		0450F3831E9CDC6800D8E0D0 /* WMROOTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0450F3821E9CDC6800D8E0D0 /* WMROOTViewController.m */; };
 		0450F3871E9CE30800D8E0D0 /* OTSSize.m in Sources */ = {isa = PBXBuildFile; fileRef = 0450F3861E9CE30800D8E0D0 /* OTSSize.m */; };
@@ -108,6 +110,9 @@
 		044C46C01EF046A200C04D90 /* WMLoopView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMLoopView.h; sourceTree = "<group>"; };
 		044C46C11EF046A200C04D90 /* WMLoopView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMLoopView.m; sourceTree = "<group>"; };
 		044D101E1E976466005C4AA0 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0450BCDB1EF1974D00AD4BF3 /* GzwResutTwoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GzwResutTwoCell.h; sourceTree = "<group>"; };
+		0450BCDC1EF1974D00AD4BF3 /* GzwResutTwoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GzwResutTwoCell.m; sourceTree = "<group>"; };
+		0450BCDD1EF1974D00AD4BF3 /* GzwResutTwoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GzwResutTwoCell.xib; sourceTree = "<group>"; };
 		0450F37E1E9CDAC600D8E0D0 /* WMBaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMBaseVC.h; sourceTree = "<group>"; };
 		0450F37F1E9CDAC600D8E0D0 /* WMBaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMBaseVC.m; sourceTree = "<group>"; };
 		0450F3811E9CDC6800D8E0D0 /* WMROOTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMROOTViewController.h; sourceTree = "<group>"; };
@@ -596,6 +601,9 @@
 				CF68FD251EF11A5A00748711 /* GzwResutCell.h */,
 				CF68FD261EF11A5A00748711 /* GzwResutCell.m */,
 				CF68FD271EF11A5B00748711 /* GzwResutCell.xib */,
+				0450BCDB1EF1974D00AD4BF3 /* GzwResutTwoCell.h */,
+				0450BCDC1EF1974D00AD4BF3 /* GzwResutTwoCell.m */,
+				0450BCDD1EF1974D00AD4BF3 /* GzwResutTwoCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -686,6 +694,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				044D101F1E976466005C4AA0 /* LaunchScreen.storyboard in Resources */,
+				0450BCDF1EF1974D00AD4BF3 /* GzwResutTwoCell.xib in Resources */,
 				0450F3A31E9CE3E800D8E0D0 /* WMVenueTitle1CollectionViewCell.xib in Resources */,
 				CF91DEBA1EEE64C2005BEBC6 /* GzwCouponsCell.xib in Resources */,
 				0450F39E1E9CE3D600D8E0D0 /* WMBanerCollectionViewCell.xib in Resources */,
@@ -777,6 +786,7 @@
 				0450F3931E9CE3A700D8E0D0 /* WMCollectionViewCell.m in Sources */,
 				04D1EFEC1EEC3373004B02A3 /* UITextField+Gzw.m in Sources */,
 				04D1EFE81EEC3373004B02A3 /* UIImage+Gzw.m in Sources */,
+				0450BCDE1EF1974D00AD4BF3 /* GzwResutTwoCell.m in Sources */,
 				0450F38B1E9CE34200D8E0D0 /* OTSColor.m in Sources */,
 				04D1EFE91EEC3373004B02A3 /* UIImage+GzwColor.m in Sources */,
 				0450F3A71E9CE3FD00D8E0D0 /* WMVenueTitle2CollectionViewCell.m in Sources */,

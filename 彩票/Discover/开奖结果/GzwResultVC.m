@@ -13,8 +13,13 @@
 #import "GzwWebAdvertVC.h"
 #import "Masonry.h"
 #import "NYSegmentedControl.h"
+#import "GzwResutTwoCell.h"
+
+
 
 static NSString *ID = @"GzwResutCell";
+static NSString *IDTwo = @"GzwResutTwoCell";
+
 @interface GzwResultVC ()<UITableViewDelegate,UITableViewDataSource>
 
 @property(nonatomic,strong)UITableView *one;
@@ -42,12 +47,13 @@ static NSString *ID = @"GzwResutCell";
 {
     if (!_two) {
         _two = [[UITableView alloc]initWithFrame:CGRectZero style:UITableViewStylePlain];
-        [_two registerNib:[UINib nibWithNibName:ID bundle:nil] forCellReuseIdentifier:ID];
+        [_two registerNib:[UINib nibWithNibName:IDTwo bundle:nil] forCellReuseIdentifier:IDTwo];
         _two.backgroundColor = [GzwThemeTool backgroudTheme];
         _two.estimatedRowHeight = 70; // 设置估算高度
         _two.rowHeight = UITableViewAutomaticDimension; // 告诉tableView我们cell的高度是自动的
         _two.delegate = self;
         _two.dataSource = self;
+        _two.tableFooterView = [UIView new];
         
     }
     return _two;
@@ -62,8 +68,9 @@ static NSString *ID = @"GzwResutCell";
         _one.rowHeight = UITableViewAutomaticDimension; // 告诉tableView我们cell的高度是自动的
         _one.delegate = self;
         _one.dataSource = self;
-        _one.contentInset               = UIEdgeInsetsMake(64, 0, 49, 0);
-        _one.scrollIndicatorInsets = UIEdgeInsetsMake(64, 0, 49, 0);
+        _one.contentInset               = UIEdgeInsetsMake(64, 0, 0, 0);
+        _one.scrollIndicatorInsets = UIEdgeInsetsMake(64, 0, 0, 0);
+        _one.tableFooterView = [UIView new];
     }
     return _one;
 }
@@ -129,28 +136,27 @@ static NSString *ID = @"GzwResutCell";
         NSLog(@"%@",error);
         
     }];
-
 }
 -(void)requstTwo{
-    //
-    //
-    //    [mar POST:@"http://api.caipiao.163.com/award_awardInfoNew.html?product=caipiao_client&mobileType=iphone&ver=4.33&channel=appstore&apiVer=1.1&apiLevel=27&deviceId=51D4039B-590F-4817-9298-6D4DC44324F9&product=caipiao_client&mobileType=iphone&ver=4.33&channel=appstore&apiVer=1.1&apiLevel=27&deviceId=51D4039B-590F-4817-9298-6D4DC44324F9" parameters:nil progress:^(NSProgress * _Nonnull uploadProgress) {
-    //
-    //    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-    //        NSLog(@"%@",responseObject);
-    //        self.NumOfServer--;
-    //        [responseObject enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-    //            [self.data addObject:obj];
-    //        }];
-    ////        [self.data addObjectsFromArray:responseObject[@"data"]];
-    //        if (!self.NumOfServer) {
-    //            [self.tableView reloadData];
-    //        }
-    //
-    //    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-    //        NSLog(@"%@",error);
-    //        
-    //    }];
+    
+    AFHTTPSessionManager *mar=[AFHTTPSessionManager manager];
+    mar.responseSerializer.acceptableContentTypes = [mar.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
+    [mar POST:@"http://api.caipiao.163.com/award_awardInfoNew.html?product=caipiao_client&mobileType=iphone&ver=4.33&channel=appstore&apiVer=1.1&apiLevel=27&deviceId=51D4039B-590F-4817-9298-6D4DC44324F9&product=caipiao_client&mobileType=iphone&ver=4.33&channel=appstore&apiVer=1.1&apiLevel=27&deviceId=51D4039B-590F-4817-9298-6D4DC44324F9" parameters:nil progress:^(NSProgress * _Nonnull uploadProgress) {
+
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSLog(@"%@",responseObject);
+        [responseObject enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
+            if (![key isEqualToString:@"result"]) {
+                [self.dataTwo addObject:obj];
+            }
+        }];
+        
+        [self.two reloadData];
+
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"%@",error);
+        
+    }];
 }
 
 
@@ -189,23 +195,32 @@ static NSString *ID = @"GzwResutCell";
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    GzwResutCell *cell = [tableView dequeueReusableCellWithIdentifier:GzwResutCell.description];
-    cell.model = self.data[indexPath.row];
-    return cell;
+    if (tableView == self.one) {
+        GzwResutCell *cell = [tableView dequeueReusableCellWithIdentifier:GzwResutCell.description];
+        cell.model = self.data[indexPath.row];
+        return cell;
+    }else {
+        GzwResutTwoCell *cell = [tableView dequeueReusableCellWithIdentifier:GzwResutTwoCell.description];
+        cell.model = self.dataTwo[indexPath.row];
+        return cell;
+    }
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    GzwWebAdvertVC *VC = [[GzwWebAdvertVC alloc]init];
-    VC.progressColor = [GzwThemeTool progressColor];
-    VC.webUrl = self.data[indexPath.row][@"w_info_absolute_url"];
-    VC.LoadadvDesc = NO;
-    [self.navigationController pushViewController:VC animated:YES];
+//    GzwWebAdvertVC *VC = [[GzwWebAdvertVC alloc]init];
+//    VC.progressColor = [GzwThemeTool progressColor];
+//    VC.webUrl = self.data[indexPath.row][@"w_info_absolute_url"];
+//    VC.LoadadvDesc = NO;
+//    [self.navigationController pushViewController:VC animated:YES];
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     return 0.01;
 }
-
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 70;
+}
 
 
 -(void)action:(NYSegmentedControl *)btn
