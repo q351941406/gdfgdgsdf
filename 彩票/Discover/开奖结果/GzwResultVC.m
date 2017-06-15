@@ -14,7 +14,7 @@
 #import "Masonry.h"
 #import "NYSegmentedControl.h"
 #import "GzwResutTwoCell.h"
-
+#import "GzwResultLotteryVC.h"
 
 
 static NSString *ID = @"GzwResutCell";
@@ -143,12 +143,14 @@ static NSString *IDTwo = @"GzwResutTwoCell";
     mar.responseSerializer.acceptableContentTypes = [mar.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
     [mar POST:@"http://api.caipiao.163.com/award_awardInfoNew.html?product=caipiao_client&mobileType=iphone&ver=4.33&channel=appstore&apiVer=1.1&apiLevel=27&deviceId=51D4039B-590F-4817-9298-6D4DC44324F9&product=caipiao_client&mobileType=iphone&ver=4.33&channel=appstore&apiVer=1.1&apiLevel=27&deviceId=51D4039B-590F-4817-9298-6D4DC44324F9" parameters:nil progress:^(NSProgress * _Nonnull uploadProgress) {
 
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    } success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary  *responseObject) {
         NSLog(@"%@",responseObject);
+//        [responseObject removeObjectForKey:@"result"];
         [responseObject enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
-            if (![key isEqualToString:@"result"]) {
-                [self.dataTwo addObject:obj];
+            if (![key isEqualToString:@"result"] && ![key isEqualToString:@"dcspfPeriods"] && ![key isEqualToString:@"dcsfggPeriods"]) {
+                [self.dataTwo addObject:@{key:obj}];
             }
+            
         }];
         
         [self.two reloadData];
@@ -212,6 +214,8 @@ static NSString *IDTwo = @"GzwResutTwoCell";
 //    VC.webUrl = self.data[indexPath.row][@"w_info_absolute_url"];
 //    VC.LoadadvDesc = NO;
 //    [self.navigationController pushViewController:VC animated:YES];
+    GzwResultLotteryVC *vc = [[GzwResultLotteryVC alloc]initWithStyle:0];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {

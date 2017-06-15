@@ -16,6 +16,7 @@
 #import "GZWTool.h"
 #import "GzwCouponsVC.h"
 #import "GzwNewsVC.h"
+#import "AFNetworking.h"
 @interface AppDelegate ()
 
 @end
@@ -115,9 +116,49 @@
     
     
     [GzwThemeTool setup];
+    [AppDelegate getCookie];
     return YES;
 }
-
++(void)getCookie
+{
+    
+    AFHTTPSessionManager *mar=[AFHTTPSessionManager manager];
+    mar.responseSerializer.acceptableContentTypes = [mar.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
+    
+    
+    
+    
+    
+    NSString *yy = [self dddd:@{@"appInfo":@{@"clientType":@2,@"clientName":@"com.228cai.iphone.lottery",@"agent":@"f376",@"version":@{@"name":@"4.5",@"code":@2158}},
+                                @"deviceId":@"1265177",
+                                @"systemInfo":@{@"os":@"iOS 10.3.2",@"networkType":@"Unknown"},
+                                @"ignoreAppVersion":@"false",
+                                @"baseDataStructureVersion":@"3.9",
+                                @"trackInfo":@{@"iosIdfa":@"58C5D00C-3445-460C-A9A5-78C2D83D657A",@"iosIdfv":@"3E1EC34B-D56F-4EF5-8602-BEB4FBE09B34"},
+                                }
+                    ];
+    yy = [yy stringByReplacingOccurrencesOfString:@" " withString:@""];
+    yy = [yy stringByReplacingOccurrencesOfString:@"\n" withString:@""];
+    yy = [yy stringByReplacingOccurrencesOfString:@"iOS" withString:@"iOS "];
+    [mar POST:@"http://client.310win.com/Default.aspx?transcode=1001&deviceid=1265177&client=2&version=3.9" parameters:@{@"baseinfoversion":@"2_3.9|G1H1I1J1K1L1M1N1O1P1Q1R1S1T1U1V1W1",@"key":@"d28b8c206d84dc07f91cd234f249f8a8",@"msg":yy} progress:^(NSProgress * _Nonnull uploadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        NSHTTPURLResponse *rre = (NSHTTPURLResponse *)task.response;
+        //        NSLog(@"%@----%@",task.currentRequest.allHTTPHeaderFields,rre.allHeaderFields[@"Set-Cookie"]);
+        [[NSUserDefaults standardUserDefaults] setObject:rre.allHeaderFields[@"Set-Cookie"] forKey:@"Cookie"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"OK" object:nil userInfo:nil];
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"%@",error);
+        
+    }];
+}
++ (NSString*)dddd:(NSDictionary *)dic
+{
+    NSError *parseError = nil;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:&parseError];
+    return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+}
 
 
 // 系统获取到deviceToken

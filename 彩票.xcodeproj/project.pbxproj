@@ -83,6 +83,7 @@
 		04FD1F881EEED4D60016AACF /* GzwAddressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04FD1F861EEED4D60016AACF /* GzwAddressCell.xib */; };
 		04FD1F8B1EF036B80016AACF /* DiscoverVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FD1F8A1EF036B80016AACF /* DiscoverVC.m */; };
 		73660D6DB104AEE1B58AE75E /* libPods-彩票.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B11A23295900A88492918E5C /* libPods-彩票.a */; };
+		CF61BF631EF26EB900B2A17B /* GzwResultLotteryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CF61BF621EF26EB900B2A17B /* GzwResultLotteryVC.m */; };
 		CF68FD241EF0D48100748711 /* GzwResultVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CF68FD231EF0D48100748711 /* GzwResultVC.m */; };
 		CF68FD281EF11A5B00748711 /* GzwResutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF68FD261EF11A5A00748711 /* GzwResutCell.m */; };
 		CF68FD291EF11A5B00748711 /* GzwResutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF68FD271EF11A5B00748711 /* GzwResutCell.xib */; };
@@ -237,6 +238,8 @@
 		04FD1F8A1EF036B80016AACF /* DiscoverVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiscoverVC.m; sourceTree = "<group>"; };
 		1C74087EBF3391D74774D052 /* Pods-彩票.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-彩票.release.xcconfig"; path = "Pods/Target Support Files/Pods-彩票/Pods-彩票.release.xcconfig"; sourceTree = "<group>"; };
 		B11A23295900A88492918E5C /* libPods-彩票.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-彩票.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF61BF611EF26EB900B2A17B /* GzwResultLotteryVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GzwResultLotteryVC.h; sourceTree = "<group>"; };
+		CF61BF621EF26EB900B2A17B /* GzwResultLotteryVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GzwResultLotteryVC.m; sourceTree = "<group>"; };
 		CF68FD221EF0D48100748711 /* GzwResultVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GzwResultVC.h; sourceTree = "<group>"; };
 		CF68FD231EF0D48100748711 /* GzwResultVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GzwResultVC.m; sourceTree = "<group>"; };
 		CF68FD251EF11A5A00748711 /* GzwResutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GzwResutCell.h; sourceTree = "<group>"; };
@@ -276,6 +279,8 @@
 				044C46B01EF0461100C04D90 /* Controller */,
 				CF68FD221EF0D48100748711 /* GzwResultVC.h */,
 				CF68FD231EF0D48100748711 /* GzwResultVC.m */,
+				CF61BF611EF26EB900B2A17B /* GzwResultLotteryVC.h */,
+				CF61BF621EF26EB900B2A17B /* GzwResultLotteryVC.m */,
 			);
 			path = "开奖结果";
 			sourceTree = "<group>";
@@ -803,6 +808,7 @@
 				04D1EFE01EEC3373004B02A3 /* NSDictionary+Gzw.m in Sources */,
 				04D1EFE51EEC3373004B02A3 /* UIBarButtonItem+MJ.m in Sources */,
 				044C46B91EF0461200C04D90 /* WMCollectionViewController.m in Sources */,
+				CF61BF631EF26EB900B2A17B /* GzwResultLotteryVC.m in Sources */,
 				0452F16E1E9697D80006F3C4 /* GzwTableView.m in Sources */,
 				04D1EFE11EEC3373004B02A3 /* NSMutableAttributedString+Extends.m in Sources */,
 				CF68FD241EF0D48100748711 /* GzwResultVC.m in Sources */,

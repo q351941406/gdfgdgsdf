@@ -17,6 +17,6 @@
 
 
 
-
++(void)getCookie;
 @end
 

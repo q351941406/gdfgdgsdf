@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *region;
 @property (weak, nonatomic) IBOutlet UIView *decorationView;
 @property (weak, nonatomic) IBOutlet UILabel *number;
+@property (weak, nonatomic) IBOutlet UIView *bgView;
 
 @end
 @implementation GzwResutTwoCell
@@ -23,6 +24,9 @@
     self.decorationView.backgroundColor = [GzwThemeTool backgroudTheme];
     self.region.textColor = [GzwThemeTool subTitleTextTheme];
     self.number.textColor = FlatRed;
+    self.bgView.backgroundColor = [GzwThemeTool backgroudTheme];
+    self.bgView.layer.cornerRadius = 13;
+    self.bgView.layer.masksToBounds = YES;
 }
 -(void)layoutSubviews
 {
@@ -35,46 +39,54 @@
     
 
     NSString *str;
-    NSString *n = model[@"awardNo"];
-    self.number.text = n;
-    
-    
-    if ([model[@"gameEn"] isEqualToString:@"football_9"]) {
-        str = @"任选九";
+//    NSString *n = model[@"awardNo"];
+//    self.number.text = n;
+//    
+//    
+    if ([[model allKeys] containsObject:@"dcspf"]){
+        str = @"足球单场";
         self.number.textColor = FlatGreen;
-    }
-    if ([model[@"gameEn"] isEqualToString:@"qxc"]) {
-        str = @"七星彩";
-    }
-    if ([model[@"gameEn"] isEqualToString:@"football_sfc"]) {
-        str = @"胜负彩票";
-        self.number.textColor = FlatGreen;
-    }
-    if ([model[@"gameEn"] isEqualToString:@"ssq"]) {
-        str = @"双色球";
         
-        [self attributedString:model];
+        self.region.text = [NSString stringWithFormat:@"第%@期",model[@"dcspf"][@"period"]];
+        self.number.text = [NSString stringWithFormat:@"%@      %@      %@",model[@"dcspf"][@"teamA"],model[@"dcspf"][@"scores"],model[@"dcspf"][@"teamB"]];
     }
-    if ([model[@"gameEn"] isEqualToString:@"dlt"]) {
-        str = @"大乐透";
-        
-        [self attributedString:model];
+    if ([[model allKeys] containsObject:@"dcsfgg"]){
+        str = @"胜负过关";
+        self.region.text = [NSString stringWithFormat:@"第%@期",model[@"dcsfgg"][@"period"]];
+        self.number.text = [NSString stringWithFormat:@"%@      %@      %@",model[@"dcsfgg"][@"teamA"],model[@"dcsfgg"][@"scores"],model[@"dcsfgg"][@"teamB"]];
     }
-    if ([model[@"gameEn"] isEqualToString:@"x3d"]) {
-        str = @"3D";
+    if ([[model allKeys] containsObject:@"jclq"]){
+        str = @"竞彩篮球";
+//        self.number.textColor = FlatGreen;
+        self.region.text = [NSString stringWithFormat:@"客队VS主队 %@",model[@"jclq"][@"matchDay"]];
+        self.number.text = [NSString stringWithFormat:@"%@      %@      %@",model[@"jclq"][@"teamA"],model[@"jclq"][@"scores"],model[@"jclq"][@"teamB"]];
     }
-    if ([model[@"gameEn"] isEqualToString:@"pl5"]) {
-        str = @"排列5";
+    if ([[model allKeys] containsObject:@"jczq"]){
+        str = @"竞彩足球";
+        self.region.text = [NSString stringWithFormat:@"客队VS主队 %@",model[@"jczq"][@"matchDay"]];
+        self.number.text = [NSString stringWithFormat:@"%@      %@      %@",model[@"jczq"][@"teamA"],model[@"jczq"][@"scores"],model[@"jczq"][@"teamB"]];
+//        [self attributedString:model];
     }
-    if ([model[@"gameEn"] isEqualToString:@"qlc"]) {
-        str = @"七乐彩";
-    }
-    if ([model[@"gameEn"] isEqualToString:@"qlc"]) {
-        str = @"排列3";
-        [self attributedString:model];
-    }
+//    if ([model[@"gameEn"] isEqualToString:@"dlt"]) {
+//        str = @"大乐透";
+//        
+//        [self attributedString:model];
+//    }
+//    if ([model[@"gameEn"] isEqualToString:@"x3d"]) {
+//        str = @"3D";
+//    }
+//    if ([model[@"gameEn"] isEqualToString:@"pl5"]) {
+//        str = @"排列5";
+//    }
+//    if ([model[@"gameEn"] isEqualToString:@"qlc"]) {
+//        str = @"七乐彩";
+//    }
+//    if ([model[@"gameEn"] isEqualToString:@"qlc"]) {
+//        str = @"排列3";
+//        [self attributedString:model];
+//    }
     self.name.text = str;
-    self.region.text = [NSString stringWithFormat:@"第%@期%@",model[@"periodName"],model[@"awardTime"]];
+    
 //    if ([[model allKeys] containsObject:@"w_title_template"]){
 //        
 //        self.name.text = [self flattenHTML:model[@"w_title_template"] trimWhiteSpace:NO];
