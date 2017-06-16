@@ -39,52 +39,29 @@
     
 
     NSString *str;
-//    NSString *n = model[@"awardNo"];
-//    self.number.text = n;
-//    
-//    
-    if ([[model allKeys] containsObject:@"dcspf"]){
+    if ([model[@"type"] isEqualToString:@"dcspf"]){
         str = @"足球单场";
         self.number.textColor = FlatGreen;
         
-        self.region.text = [NSString stringWithFormat:@"第%@期",model[@"dcspf"][@"period"]];
-        self.number.text = [NSString stringWithFormat:@"%@      %@      %@",model[@"dcspf"][@"teamA"],model[@"dcspf"][@"scores"],model[@"dcspf"][@"teamB"]];
+        self.region.text = [NSString stringWithFormat:@"第%@期",model[@"period"]];
+        self.number.text = [NSString stringWithFormat:@"%@      %@      %@",model[@"teamA"],model[@"scores"],model[@"teamB"]];
     }
-    if ([[model allKeys] containsObject:@"dcsfgg"]){
+    if ([model[@"type"] isEqualToString:@"dcsfgg"]){
         str = @"胜负过关";
-        self.region.text = [NSString stringWithFormat:@"第%@期",model[@"dcsfgg"][@"period"]];
-        self.number.text = [NSString stringWithFormat:@"%@      %@      %@",model[@"dcsfgg"][@"teamA"],model[@"dcsfgg"][@"scores"],model[@"dcsfgg"][@"teamB"]];
+        self.region.text = [NSString stringWithFormat:@"第%@期",model[@"period"]];
+        self.number.text = [NSString stringWithFormat:@"%@      %@      %@",model[@"teamA"],model[@"scores"],model[@"teamB"]];
     }
-    if ([[model allKeys] containsObject:@"jclq"]){
+    if ([model[@"type"] isEqualToString:@"jclq"]){
         str = @"竞彩篮球";
-//        self.number.textColor = FlatGreen;
-        self.region.text = [NSString stringWithFormat:@"客队VS主队 %@",model[@"jclq"][@"matchDay"]];
-        self.number.text = [NSString stringWithFormat:@"%@      %@      %@",model[@"jclq"][@"teamA"],model[@"jclq"][@"scores"],model[@"jclq"][@"teamB"]];
+        self.region.text = [NSString stringWithFormat:@"客队VS主队 %@",model[@"matchDay"]];
+        self.number.text = [NSString stringWithFormat:@"%@      %@      %@",model[@"teamA"],model[@"scores"],model[@"teamB"]];
     }
-    if ([[model allKeys] containsObject:@"jczq"]){
+    if ([model[@"type"] isEqualToString:@"jczq"]){
         str = @"竞彩足球";
-        self.region.text = [NSString stringWithFormat:@"客队VS主队 %@",model[@"jczq"][@"matchDay"]];
-        self.number.text = [NSString stringWithFormat:@"%@      %@      %@",model[@"jczq"][@"teamA"],model[@"jczq"][@"scores"],model[@"jczq"][@"teamB"]];
-//        [self attributedString:model];
+        self.region.text = [NSString stringWithFormat:@"客队VS主队 %@",model[@"matchDay"]];
+        self.number.text = [NSString stringWithFormat:@"%@      %@      %@",model[@"teamA"],model[@"scores"],model[@"teamB"]];
+
     }
-//    if ([model[@"gameEn"] isEqualToString:@"dlt"]) {
-//        str = @"大乐透";
-//        
-//        [self attributedString:model];
-//    }
-//    if ([model[@"gameEn"] isEqualToString:@"x3d"]) {
-//        str = @"3D";
-//    }
-//    if ([model[@"gameEn"] isEqualToString:@"pl5"]) {
-//        str = @"排列5";
-//    }
-//    if ([model[@"gameEn"] isEqualToString:@"qlc"]) {
-//        str = @"七乐彩";
-//    }
-//    if ([model[@"gameEn"] isEqualToString:@"qlc"]) {
-//        str = @"排列3";
-//        [self attributedString:model];
-//    }
     self.name.text = str;
     
 //    if ([[model allKeys] containsObject:@"w_title_template"]){
@@ -100,16 +77,4 @@
 //    }
 }
 
--(void)attributedString:(NSDictionary *)model
-{
-    NSString *buyday                                       = model[@"awardNo"];
-    NSRange buydayRange=[buyday rangeOfString:@":"];//指定的字符串从左往右匹配（系统默认）。
-    //        NSRange range1=[@"sdfs:1233444444444" rangeOfString:@":" options:NSBackwardsSearch];//指定的字符串从右往左匹配
-    NSString *ddd = [buyday substringFromIndex:buydayRange.location];//截取下标2之后的字符串
-    NSString *strUrl = [buyday stringByReplacingOccurrencesOfString:@":" withString:@" "];
-    NSMutableAttributedString *timeAttributedString        = [[NSMutableAttributedString alloc]initWithString:strUrl];
-    //        [timeAttributedString setAttributes:@{NSForegroundColorAttributeName:[UIColor blueColor]} range:NSMakeRange(buydayRange.location, 1)];
-    [timeAttributedString addAttributes:@{NSForegroundColorAttributeName:FlatSkyBlue} range:NSMakeRange(buydayRange.location, ddd.length)];
-    self.number.attributedText  = timeAttributedString;
-}
 @end

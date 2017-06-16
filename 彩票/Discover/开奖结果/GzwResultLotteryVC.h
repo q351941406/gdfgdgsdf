@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface GzwResultLotteryVC : UITableViewController
-
+@property(nonatomic,copy)NSString *lotteryType;
 @end

@@ -57,9 +57,9 @@ static NSString *ID = @"GzwResutCell";
     
     AFHTTPSessionManager *mar=[AFHTTPSessionManager manager];
     mar.responseSerializer.acceptableContentTypes = [mar.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
-    NSString *str = [self convertToJsonData:@{@"pageindex":@"1",@"params":@{@"lotteryType":@30011}}];
+    NSString *str = [self convertToJsonData:@{@"pageindex":@"1",@"params":@{@"lotteryType":@10052}}];
     [mar.requestSerializer setValue:[[NSUserDefaults standardUserDefaults] objectForKey:@"Cookie"] forHTTPHeaderField:@"Cookie"];
-    [mar POST:@"http://client.310win.com/Default.aspx?transcode=503&deviceid=1265177&client=2&version=3.9" parameters:@{@"baseinfoversion":@"2_3.9|G1H1I1J1K1L1M1N1O1P1Q1R1S1T1U1V1W1",@"key":@"5d33ff665974d1936096719089161c84",@"msg":str} progress:^(NSProgress * _Nonnull uploadProgress) {
+    [mar POST:@"http://client.310win.com/Default.aspx?transcode=503&deviceid=1265177&client=2&version=3.9" parameters:@{@"baseinfoversion":@"2_3.9|G1H1I1J1K1L1M1N1O1P1Q1R1S1T1U1V1W1",@"key":@"8f577b3e7aa6d1e20b26902b4140941d",@"msg":str} progress:^(NSProgress * _Nonnull uploadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSLog(@"%@",responseObject);

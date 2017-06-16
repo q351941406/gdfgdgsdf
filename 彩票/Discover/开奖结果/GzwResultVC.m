@@ -33,6 +33,76 @@ static NSString *IDTwo = @"GzwResutTwoCell";
 {
     if (!_data) {
         _data = [NSMutableArray array];
+        NSArray *array = @[
+        @{
+            @"awardNo":@"1 3 3 3 1 1 1 0 3 1 3 3 3 1",
+            @"awardTime":@"2017-06-15 14:41:01",
+            @"extra":@"<null>",
+            @"gameEn":@"football_9",
+            @"html":@"http://client.310win.com/Info/Result/DigitResult.aspx?issueid=1797002&_t=1497537623.004345",
+            @"luckyBlue":@"",
+            @"periodName":@"17085",
+            @"totalPool":@"0.00",
+            @"totalSale":@"11354122.00",
+        },
+        @{
+            @"awardNo":@"3 6 3 5 3 1 8",
+            @"awardTime":@"2017-06-13 20:35:38",
+            @"extra":@"<null>",
+            @"gameEn":@"qxc",
+            @"html":@"http://client.310win.com/Info/Result/DigitResult.aspx?issueid=1788454&_t=1497537071.420757",
+            @"luckyBlue":@"",
+            @"periodName":@"17068",
+            @"totalPool":@"1000000.00",
+            @"totalSale":@"11004592.00",
+        },
+        @{
+            @"awardNo":@"02 11 12 23 29 31:05",
+            @"awardTime":@"2017-06-15 21:23:15",
+            @"extra":@"<null>",
+            @"gameEn":@"ssq",
+            @"html":@"http://client.310win.com/Info/Result/DigitResult.aspx?issueid=1789174&_t=1497536736.877167",
+            @"luckyBlue":@"",
+            @"periodName":@"2017069",
+            @"totalPool":@"683978436.00",
+            @"totalSale":@"326172358.00",
+        },
+        @{
+            @"awardNo":@"07 08 19 24 27:06 07",
+            @"awardTime":@"2017-06-14 20:35:24",
+            @"extra":@"<null>",
+            @"gameEn":@"dlt",
+            @"html":@"http://client.310win.com/Info/Result/DigitResult.aspx?issueid=1788807&_t=1497536835.361406",
+            @"luckyBlue":@"",
+            @"periodName":@"17068",
+            @"totalPool":@"3622286671.83",
+            @"totalSale":@"209829116.00",
+        },
+        @{
+            @"awardNo":@"8 7 2",
+            @"awardTime":@"2017-06-15 21:26:03",
+            @"extra":@"6 3 4",
+            @"gameEn":@"x3d",
+            @"html":@"http://client.310win.com/Info/Result/DigitResult.aspx?issueid=1795231&_t=1497536913.339654",
+            @"luckyBlue":@"",
+            @"periodName":@"2017159",
+            @"totalPool":@"0.00",
+            @"totalSale":@"44772604.00",
+        },
+        @{
+            @"awardNo":@"1 2 3 8 6",
+            @"awardTime":@"2017-06-15 20:33:37",
+            @"extra":@"<null>",
+            @"gameEn":@"pl5",
+            @"html":@"http://client.310win.com/Info/Result/DigitResult.aspx?issueid=1795230&_t=1497537029.081689",
+            @"luckyBlue":@"",
+            @"periodName":@"17159",
+            @"totalPool":@"268472453.44",
+            @"totalSale":@"9144622.00",
+        },
+          ];
+        
+        [_data addObjectsFromArray:array];
     }
     return _data;
 }
@@ -40,6 +110,42 @@ static NSString *IDTwo = @"GzwResutTwoCell";
 {
     if (!_dataTwo) {
         _dataTwo = [NSMutableArray array];
+        
+        
+        
+        NSArray *array = @[
+            @{
+                @"type":@"jczq",
+                @"matchDay":@"2017-06-14",
+                @"teamA":@"桑托斯",
+                @"teamB":@"帕梅拉斯",
+                @"scoreA": @"1",
+                @"scoreB": @"0",
+                @"scores":@"1:0",
+                @"concedeBall":@"-1"
+            },
+            @{
+                @"type":@"dcsfgg",
+                @"period":@"70603",
+                @"teamA":@"科林蒂安",
+                @"teamB":@"克鲁塞罗",
+                @"scoreA": @"1",
+                @"scoreB": @"0",
+                @"scores":@"1:0",
+                @"concedeBall":@"-0.5"
+            },
+            @{
+                @"type":@"jclq",
+                @"matchDay":@"2017-06-14",
+                @"teamA":@"太阳",
+                @"teamB":@"自由",
+                @"scoreA": @"96",
+                @"scoreB": @"76",
+                @"scores":@"96:76",
+                @"concedeBall":@"0"
+            },
+        ];
+        [_dataTwo addObjectsFromArray:array];
     }
     return _dataTwo;
 }
@@ -76,21 +182,10 @@ static NSString *IDTwo = @"GzwResutTwoCell";
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"开奖结果";
     self.navigationItem.titleView = [self blueSegmentedControl];
-    
-    
-    //    self.one.frame = self.view.frame;
-    //    self.two.frame = self.view.frame;
-    
     [self.view addSubview:self.two];
     [self.view addSubview:self.one];
-    
-    
-    
-    
-    
-    [self requst];
-    [self requstTwo];
     [self.view setNeedsUpdateConstraints];// 标记更新约束
     
 }
@@ -113,53 +208,7 @@ static NSString *IDTwo = @"GzwResutTwoCell";
     
     [super updateViewConstraints];
 }
--(void)requst{
-    
-    
-    AFHTTPSessionManager *mar=[AFHTTPSessionManager manager];
-    mar.responseSerializer.acceptableContentTypes = [mar.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
-    
-    [mar POST:@"http://api.caipiao.163.com/award_home.html?product=caipiao_client&mobileType=iphone&ver=4.33&channel=appstore&apiVer=1.1&apiLevel=27&deviceId=51D4039B-590F-4817-9298-6D4DC44324F9&product=caipiao_client&mobileType=iphone&ver=4.33&channel=appstore&apiVer=1.1&apiLevel=27&deviceId=51D4039B-590F-4817-9298-6D4DC44324F9" parameters:nil progress:^(NSProgress * _Nonnull uploadProgress) {
-        
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
-        
-//        [self.data addObjectsFromArray:responseObject[@"data"]];
-        [responseObject[@"data"] enumerateObjectsUsingBlock:^(NSDictionary   *obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            NSString *str = obj[@"totalSale"];
-            if (!(str.integerValue < 1)) {
-                [self.data addObject:obj];
-            }
-        }];
-        [self.one reloadData];
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"%@",error);
-        
-    }];
-}
--(void)requstTwo{
-    
-    AFHTTPSessionManager *mar=[AFHTTPSessionManager manager];
-    mar.responseSerializer.acceptableContentTypes = [mar.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
-    [mar POST:@"http://api.caipiao.163.com/award_awardInfoNew.html?product=caipiao_client&mobileType=iphone&ver=4.33&channel=appstore&apiVer=1.1&apiLevel=27&deviceId=51D4039B-590F-4817-9298-6D4DC44324F9&product=caipiao_client&mobileType=iphone&ver=4.33&channel=appstore&apiVer=1.1&apiLevel=27&deviceId=51D4039B-590F-4817-9298-6D4DC44324F9" parameters:nil progress:^(NSProgress * _Nonnull uploadProgress) {
 
-    } success:^(NSURLSessionDataTask * _Nonnull task, NSDictionary  *responseObject) {
-        NSLog(@"%@",responseObject);
-//        [responseObject removeObjectForKey:@"result"];
-        [responseObject enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
-            if (![key isEqualToString:@"result"] && ![key isEqualToString:@"dcspfPeriods"] && ![key isEqualToString:@"dcsfggPeriods"]) {
-                [self.dataTwo addObject:@{key:obj}];
-            }
-            
-        }];
-        
-        [self.two reloadData];
-
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"%@",error);
-        
-    }];
-}
 
 
 //// cell分割线的左边到尽头
@@ -209,13 +258,17 @@ static NSString *IDTwo = @"GzwResutTwoCell";
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    GzwWebAdvertVC *VC = [[GzwWebAdvertVC alloc]init];
-//    VC.progressColor = [GzwThemeTool progressColor];
-//    VC.webUrl = self.data[indexPath.row][@"w_info_absolute_url"];
-//    VC.LoadadvDesc = NO;
-//    [self.navigationController pushViewController:VC animated:YES];
-    GzwResultLotteryVC *vc = [[GzwResultLotteryVC alloc]initWithStyle:0];
-    [self.navigationController pushViewController:vc animated:YES];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    GzwWebAdvertVC *VC = [[GzwWebAdvertVC alloc]init];
+    VC.progressColor = [GzwThemeTool progressColor];
+    if (tableView == self.one) {
+        VC.webUrl = self.data[indexPath.row][@"html"];
+    }else {
+        VC.webUrl = self.dataTwo[indexPath.row][@"html"];
+    }
+    
+    VC.LoadadvDesc = NO;
+    [self.navigationController pushViewController:VC animated:YES];
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
