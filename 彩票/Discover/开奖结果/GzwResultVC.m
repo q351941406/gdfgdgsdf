@@ -15,17 +15,23 @@
 #import "NYSegmentedControl.h"
 #import "GzwResutTwoCell.h"
 #import "GzwResultLotteryVC.h"
-
-
+#import "GzwDetaillVC.h"
+#import "GzwEventsVC.h"
+#import "GZWTool.h"
+#import "ReactiveCocoa.h"
 static NSString *ID = @"GzwResutCell";
 static NSString *IDTwo = @"GzwResutTwoCell";
 
-@interface GzwResultVC ()<UITableViewDelegate,UITableViewDataSource>
+@interface GzwResultVC ()<UITableViewDelegate,UITableViewDataSource,ARSegmentControllerDelegate>
 
 @property(nonatomic,strong)UITableView *one;
 @property(nonatomic,strong)UITableView *two;
 @property (nonatomic, strong) NSMutableArray *data;
 @property (nonatomic, strong) NSMutableArray *dataTwo;
+
+@property (nonatomic, strong) GzwDetaillVC *pager;
+@property (nonatomic, strong) UIImage *defaultImage;
+@property (nonatomic, strong) UIImage *blurImage;
 @end
 
 @implementation GzwResultVC
@@ -186,20 +192,25 @@ static NSString *IDTwo = @"GzwResutTwoCell";
     self.navigationItem.titleView = [self blueSegmentedControl];
     [self.view addSubview:self.two];
     [self.view addSubview:self.one];
+    
+    self.defaultImage = [UIImage imageNamed:@"1"];
+    self.blurImage = [[UIImage imageNamed:@"1"] applyDarkEffect];
+    
     [self.view setNeedsUpdateConstraints];// 标记更新约束
     
 }
 -(void)updateViewConstraints
 {
-    
+    @weakify(self)
     [self.one mas_makeConstraints:^(MASConstraintMaker *make) {
+        @strongify(self)
         make.top.equalTo(self.view.mas_top);
         make.left.equalTo(self.view.mas_left);
         make.right.equalTo(self.view.mas_right);
         make.bottom.equalTo(self.view.mas_bottom);
     }];
     [self.two mas_makeConstraints:^(MASConstraintMaker *make) {
-        
+        @strongify(self)
         make.top.equalTo(self.view.mas_top);
         make.left.equalTo(self.view.mas_left);
         make.right.equalTo(self.view.mas_right);
@@ -209,8 +220,10 @@ static NSString *IDTwo = @"GzwResutTwoCell";
     [super updateViewConstraints];
 }
 
-
-
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    
+}
 //// cell分割线的左边到尽头
 //-(void)viewDidLayoutSubviews {
 //    // 判断有没有实现这个方法
@@ -259,16 +272,39 @@ static NSString *IDTwo = @"GzwResutTwoCell";
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    GzwWebAdvertVC *VC = [[GzwWebAdvertVC alloc]init];
-    VC.progressColor = [GzwThemeTool progressColor];
     if (tableView == self.one) {
-        VC.webUrl = self.data[indexPath.row][@"html"];
+        
+        GzwWebAdvertVC *VC = [[GzwWebAdvertVC alloc]init];
+        VC.progressColor = [GzwThemeTool progressColor];
+        if (tableView == self.one) {
+            VC.webUrl = self.data[indexPath.row][@"html"];
+        }else {
+            VC.webUrl = self.dataTwo[indexPath.row][@"html"];
+        }
+        
+        VC.LoadadvDesc = NO;
+        [self.navigationController pushViewController:VC animated:YES];
     }else {
-        VC.webUrl = self.dataTwo[indexPath.row][@"html"];
+        
+
+        GzwEventsVC *vc = [[GzwEventsVC alloc]initWithStyle:0];
+        GzwDetaillVC *pager = [[GzwDetaillVC alloc] init];
+        [pager setViewControllers:@[vc,vc,vc]];
+        pager.segmentMiniTopInset = 64;
+        pager.headerHeight = 200;
+        pager.freezenHeaderWhenReachMaxHeaderHeight = YES;
+        @weakify(self)
+        [RACObserve(pager, segmentToInset) subscribeNext:^(id x) {
+            @strongify(self)
+            if (!pager.headerView.imageView.image) {
+                pager.headerView.imageView.image = self.defaultImage;
+                UIButton *btn = [UIButton buttonWithType:5];
+                btn.y = 100;
+                [pager.headerView.imageView addSubview:btn];
+            }
+        }];
+        [self.navigationController pushViewController:pager animated:YES];
     }
-    
-    VC.LoadadvDesc = NO;
-    [self.navigationController pushViewController:VC animated:YES];
 }
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
@@ -280,24 +316,7 @@ static NSString *IDTwo = @"GzwResutTwoCell";
 }
 
 
--(void)action:(NYSegmentedControl *)btn
-{
-    
-    if (!btn.selectedSegmentIndex) {
-        //        [self.two removeFromSuperview];
-        //        [self.view addSubview:self.one];
-        
-        self.one.hidden = NO;
-        self.two.hidden = YES;
-        
-    }else{
-        self.one.hidden = YES;
-        self.two.hidden = NO;
-        //
-        //        [self.one removeFromSuperview];
-        //        [self.view addSubview:self.two];
-    }
-}
+
 - (NYSegmentedControl *)blueSegmentedControl {
     NYSegmentedControl *blueSegmentedControl = [[NYSegmentedControl alloc] initWithItems:@[@"彩票", @"体育"]];
     blueSegmentedControl.titleTextColor = [UIColor colorWithRed:0.38f green:0.68f blue:0.93f alpha:1.0f];
@@ -311,7 +330,17 @@ static NSString *IDTwo = @"GzwResutTwoCell";
     blueSegmentedControl.cornerRadius = blueSegmentedControl.intrinsicContentSize.height / 2.0f;
     blueSegmentedControl.usesSpringAnimations = YES;
     blueSegmentedControl.frame = CGRectMake(0, 0, 100, 30);
-    [blueSegmentedControl addTarget:self action:@selector(action:) forControlEvents:UIControlEventValueChanged];
+    @weakify(self)
+    [[blueSegmentedControl rac_signalForControlEvents:UIControlEventValueChanged] subscribeNext:^(NYSegmentedControl *btn) {
+        @strongify(self)
+        if (!btn.selectedSegmentIndex) {
+            self.one.hidden = NO;
+            self.two.hidden = YES;
+        }else{
+            self.one.hidden = YES;
+            self.two.hidden = NO;
+        }
+    }];
     return blueSegmentedControl;
 }
 @end

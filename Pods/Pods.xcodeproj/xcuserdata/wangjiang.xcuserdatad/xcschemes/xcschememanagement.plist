@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
+		<key>ARSegmentPager.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>17</integer>
+		</dict>
 		<key>BlocksKit.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -59,6 +64,11 @@
 			<key>orderHint</key>
 			<integer>9</integer>
 		</dict>
+		<key>ReactiveCocoa.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>18</integer>
+		</dict>
 		<key>SDCycleScrollView.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -97,6 +107,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>062356C2A2CDB46E1555E95DF040CF46</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>0AC55E754182E1FCF070AC7F74379523</key>
 		<dict>
 			<key>primary</key>
@@ -122,6 +137,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>289B0CD3965253BCA2129DCF2287623B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>29E2169B0B4D7210B80C64F4141DBC3C</key>
 		<dict>
 			<key>primary</key>
@@ -132,7 +152,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>52A910BA814C2AC48D1417E4B778C4A6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>55E3CFFEDC2629EE0C17B343EC00595B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5997514F339DD394FB688EC350E80C63</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -147,6 +177,21 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>61E1CED0F9A22309897B0799E6A603D9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>647C5B9C2CDAB7C8B7AAE9563C276B33</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>70F4803A8C031D387B60D18851E6F63E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>7269FE34A86BF779708B344650FB22ED</key>
 		<dict>
 			<key>primary</key>
@@ -157,12 +202,37 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>822DCE2B80F1C1A2FEF1F1312D217ED4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>829E23E78BAB3829F49262C42A355B1A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>846341FCE792E5FA4204396A8539C761</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8835D0BCCD3C0203AB49C4A2F49D7E3D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8C6DB5948C6D7ECE6967E396C4644CF6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>8D30EA187E1E8B5BDDA0E2FADB4AA35F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9124BBD013DBD4B33D99A9917A3BAE92</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -192,6 +262,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>A34012A826DE7C69C36B2E32E2B4AF87</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>A5F605A82C9568064AE63295EEECE975</key>
 		<dict>
 			<key>primary</key>
@@ -202,12 +277,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>B31A50D3D8A740FD15C65A1C1962A527</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>BF9EBA189070402FF49E76E5C848BB24</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>C2F79FB0533FE465ADA95C3841B9F7FB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C956B9DD5672314DF21286C30CDCE5CD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -228,6 +313,11 @@
 			<true/>
 		</dict>
 		<key>DD226367AB90B03927D59F9FB0DC148E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E642B626000F8BC380A20D54D951DB1F</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -16,5 +16,7 @@ target '彩票' do
   pod 'Masonry', '1.0.0'
   pod 'NYSegmentedControl', '~> 1.1.0'
   pod 'WMPageController'
+  pod 'ARSegmentPager', '~> 1.1.2'
+  pod 'ReactiveCocoa', '2.5'
 end
 

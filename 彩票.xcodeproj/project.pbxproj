@@ -88,6 +88,9 @@
 		CF68FD281EF11A5B00748711 /* GzwResutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF68FD261EF11A5A00748711 /* GzwResutCell.m */; };
 		CF68FD291EF11A5B00748711 /* GzwResutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF68FD271EF11A5B00748711 /* GzwResutCell.xib */; };
 		CF6FDC2F1EEFECBA005DCF6E /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF6FDC2E1EEFECBA005DCF6E /* Discover.storyboard */; };
+		CF7E96471EF3D3D90095CE22 /* GzwEventsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CF7E96461EF3D3D90095CE22 /* GzwEventsVC.m */; };
+		CF7E964A1EF3D90F0095CE22 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = CF7E96491EF3D90F0095CE22 /* UIImage+ImageEffects.m */; };
+		CF7E964D1EF3E8690095CE22 /* GzwDetaillVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CF7E964C1EF3E8690095CE22 /* GzwDetaillVC.m */; };
 		CF91DEB41EEE6480005BEBC6 /* GzwCouponsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CF91DEB31EEE6480005BEBC6 /* GzwCouponsVC.m */; };
 		CF91DEB91EEE64C2005BEBC6 /* GzwCouponsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF91DEB71EEE64C2005BEBC6 /* GzwCouponsCell.m */; };
 		CF91DEBA1EEE64C2005BEBC6 /* GzwCouponsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF91DEB81EEE64C2005BEBC6 /* GzwCouponsCell.xib */; };
@@ -246,6 +249,12 @@
 		CF68FD261EF11A5A00748711 /* GzwResutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GzwResutCell.m; sourceTree = "<group>"; };
 		CF68FD271EF11A5B00748711 /* GzwResutCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GzwResutCell.xib; sourceTree = "<group>"; };
 		CF6FDC2E1EEFECBA005DCF6E /* Discover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Discover.storyboard; sourceTree = "<group>"; };
+		CF7E96451EF3D3D90095CE22 /* GzwEventsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GzwEventsVC.h; sourceTree = "<group>"; };
+		CF7E96461EF3D3D90095CE22 /* GzwEventsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GzwEventsVC.m; sourceTree = "<group>"; };
+		CF7E96481EF3D90F0095CE22 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		CF7E96491EF3D90F0095CE22 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		CF7E964B1EF3E8690095CE22 /* GzwDetaillVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GzwDetaillVC.h; sourceTree = "<group>"; };
+		CF7E964C1EF3E8690095CE22 /* GzwDetaillVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GzwDetaillVC.m; sourceTree = "<group>"; };
 		CF91DEB21EEE6480005BEBC6 /* GzwCouponsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GzwCouponsVC.h; sourceTree = "<group>"; };
 		CF91DEB31EEE6480005BEBC6 /* GzwCouponsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GzwCouponsVC.m; sourceTree = "<group>"; };
 		CF91DEB61EEE64C2005BEBC6 /* GzwCouponsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GzwCouponsCell.h; sourceTree = "<group>"; };
@@ -387,6 +396,7 @@
 		0452F0E11E968EDE0006F3C4 /* 彩票 */ = {
 			isa = PBXGroup;
 			children = (
+				CF7E96441EF3CFD90095CE22 /* Detaill */,
 				CF6FDC2D1EEFEC3F005DCF6E /* Discover */,
 				CF91DEC21EEE90AE005BEBC6 /* News */,
 				CF91DEBE1EEE680F005BEBC6 /* ObjectModal */,
@@ -532,6 +542,8 @@
 				04D1EFC71EEC3373004B02A3 /* UIImage+Gzw.m */,
 				04D1EFC81EEC3373004B02A3 /* UIImage+GzwColor.h */,
 				04D1EFC91EEC3373004B02A3 /* UIImage+GzwColor.m */,
+				CF7E96481EF3D90F0095CE22 /* UIImage+ImageEffects.h */,
+				CF7E96491EF3D90F0095CE22 /* UIImage+ImageEffects.m */,
 			);
 			path = UIImage;
 			sourceTree = "<group>";
@@ -581,6 +593,17 @@
 				04FD1F8A1EF036B80016AACF /* DiscoverVC.m */,
 			);
 			path = Discover;
+			sourceTree = "<group>";
+		};
+		CF7E96441EF3CFD90095CE22 /* Detaill */ = {
+			isa = PBXGroup;
+			children = (
+				CF7E96451EF3D3D90095CE22 /* GzwEventsVC.h */,
+				CF7E96461EF3D3D90095CE22 /* GzwEventsVC.m */,
+				CF7E964B1EF3E8690095CE22 /* GzwDetaillVC.h */,
+				CF7E964C1EF3E8690095CE22 /* GzwDetaillVC.m */,
+			);
+			path = Detaill;
 			sourceTree = "<group>";
 		};
 		CF91DEA21EEE4810005BEBC6 /* Home */ = {
@@ -780,6 +803,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF7E964A1EF3D90F0095CE22 /* UIImage+ImageEffects.m in Sources */,
 				0450F38F1E9CE39600D8E0D0 /* WMVenueCollectionViewCell.m in Sources */,
 				0452F1761E96B5EC0006F3C4 /* GzwWebAdvertVC.m in Sources */,
 				04D1EFED1EEC3373004B02A3 /* UIView+Extension.m in Sources */,
@@ -797,6 +821,7 @@
 				0450F3A71E9CE3FD00D8E0D0 /* WMVenueTitle2CollectionViewCell.m in Sources */,
 				0450F3B11E9CE41C00D8E0D0 /* WMProductsListCell.m in Sources */,
 				0450F3B91E9CE53C00D8E0D0 /* WMProductsListHeadView.m in Sources */,
+				CF7E964D1EF3E8690095CE22 /* GzwDetaillVC.m in Sources */,
 				0450F3AC1E9CE40900D8E0D0 /* WMVenueTitle3CollectionViewCell.m in Sources */,
 				04D1EFEA1EEC3373004B02A3 /* UILabel+Extended.m in Sources */,
 				04D1EFEE1EEC3373004B02A3 /* UIWebView+Gzw.m in Sources */,
@@ -819,6 +844,7 @@
 				04D1EFDA1EEC3373004B02A3 /* GzwRegexTool.m in Sources */,
 				044C46C21EF046A200C04D90 /* WMImageViewCell.m in Sources */,
 				0450F3A21E9CE3E800D8E0D0 /* WMVenueTitle1CollectionViewCell.m in Sources */,
+				CF7E96471EF3D3D90095CE22 /* GzwEventsVC.m in Sources */,
 				CF68FD281EF11A5B00748711 /* GzwResutCell.m in Sources */,
 				0450F3831E9CDC6800D8E0D0 /* WMROOTViewController.m in Sources */,
 				0452F0EA1E968EDE0006F3C4 /* ViewController.m in Sources */,
