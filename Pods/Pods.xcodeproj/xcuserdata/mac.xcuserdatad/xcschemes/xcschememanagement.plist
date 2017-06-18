@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
+		<key>ARSegmentPager.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>19</integer>
+		</dict>
 		<key>BlocksKit.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -69,6 +74,11 @@
 			<key>orderHint</key>
 			<integer>17</integer>
 		</dict>
+		<key>ReactiveCocoa.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>20</integer>
+		</dict>
 		<key>SDCycleScrollView.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -98,6 +108,11 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>04CF549EBEEE7BC87AEAE35397184D94</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>062356C2A2CDB46E1555E95DF040CF46</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -143,6 +158,11 @@
 			<true/>
 		</dict>
 		<key>2420236C6A9F085209B73B7DEB64F014</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>289B0CD3965253BCA2129DCF2287623B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -237,6 +257,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>61E1CED0F9A22309897B0799E6A603D9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>6284D885ECCCAA24DE517F44252511F9</key>
 		<dict>
 			<key>primary</key>
@@ -282,7 +307,27 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>822DCE2B80F1C1A2FEF1F1312D217ED4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>846341FCE792E5FA4204396A8539C761</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8835D0BCCD3C0203AB49C4A2F49D7E3D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>8C55199D0C2C9565642CEC97B052F7D3</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8C6DB5948C6D7ECE6967E396C4644CF6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -293,6 +338,11 @@
 			<true/>
 		</dict>
 		<key>8F11388768AFCFB7E1A71A459EC89886</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9124BBD013DBD4B33D99A9917A3BAE92</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -328,6 +378,11 @@
 			<true/>
 		</dict>
 		<key>9E033EDB5EC0819481B0546434FA577B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A34012A826DE7C69C36B2E32E2B4AF87</key>
 		<dict>
 			<key>primary</key>
 			<true/>

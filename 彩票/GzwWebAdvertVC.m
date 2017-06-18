@@ -57,6 +57,10 @@
     [self.view addSubview:self.webView];
     [self.view setNeedsUpdateConstraints];// 标记更新约束
 }
+- (BOOL)canPerformAction:(SEL)action withSender:(id)sender
+{
+    return NO;
+}
 -(void)updateViewConstraints
 {
 //    @weakify(self);
@@ -109,36 +113,39 @@
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
     //    [IDProgressHUD IDPlaceViewHideDirect:self.view];
     
-    //这里是js，主要目的实现对url的获取
-    static  NSString * const jsGetImages =
-    @"function getImages(){\
-    var objs = document.getElementsByTagName(\"img\");\
-    var imgScr = '';\
-    for(var i=0;i<objs.length;i++){\
-    imgScr = imgScr + objs[i].src + '+';\
-    };\
-    return imgScr;\
-    };";
     
-    [webView stringByEvaluatingJavaScriptFromString:jsGetImages];//注入js方法
-    NSString *urlResurlt = [webView stringByEvaluatingJavaScriptFromString:@"getImages()"];
-    self.mUrlArray = [NSMutableArray arrayWithArray:[urlResurlt componentsSeparatedByString:@"+"]];
-    if (self.mUrlArray.count >= 2) {
-        [self.mUrlArray removeLastObject];
-    }
-    //urlResurlt 就是获取到得所有图片的url的拼接；mUrlArray就是所有Url的数组
+    [webView stringByEvaluatingJavaScriptFromString:@"document.documentElement.style.webkitUserSelect='none';"];
     
-    //添加图片可点击js
-    [webView stringByEvaluatingJavaScriptFromString:@"function registerImageClickAction(){\
-     var imgs=document.getElementsByTagName('img');\
-     var length=imgs.length;\
-     for(var i=0;i<length;i++){\
-     img=imgs[i];\
-     img.onclick=function(){\
-     window.location.href='image-preview:'+this.src}\
-     }\
-     }"];
-    [webView stringByEvaluatingJavaScriptFromString:@"registerImageClickAction();"];
+//    //这里是js，主要目的实现对url的获取
+//    static  NSString * const jsGetImages =
+//    @"function getImages(){\
+//    var objs = document.getElementsByTagName(\"img\");\
+//    var imgScr = '';\
+//    for(var i=0;i<objs.length;i++){\
+//    imgScr = imgScr + objs[i].src + '+';\
+//    };\
+//    return imgScr;\
+//    };";
+//    
+//    [webView stringByEvaluatingJavaScriptFromString:jsGetImages];//注入js方法
+//    NSString *urlResurlt = [webView stringByEvaluatingJavaScriptFromString:@"getImages()"];
+//    self.mUrlArray = [NSMutableArray arrayWithArray:[urlResurlt componentsSeparatedByString:@"+"]];
+//    if (self.mUrlArray.count >= 2) {
+//        [self.mUrlArray removeLastObject];
+//    }
+//    //urlResurlt 就是获取到得所有图片的url的拼接；mUrlArray就是所有Url的数组
+//    
+//    //添加图片可点击js
+//    [webView stringByEvaluatingJavaScriptFromString:@"function registerImageClickAction(){\
+//     var imgs=document.getElementsByTagName('img');\
+//     var length=imgs.length;\
+//     for(var i=0;i<length;i++){\
+//     img=imgs[i];\
+//     img.onclick=function(){\
+//     window.location.href='image-preview:'+this.src}\
+//     }\
+//     }"];
+//    [webView stringByEvaluatingJavaScriptFromString:@"registerImageClickAction();"];
 }
 ////在这个方法中捕获到图片的点击事件和被点击图片的url
 //- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {

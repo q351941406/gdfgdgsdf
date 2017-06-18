@@ -9,7 +9,7 @@
 #import "GzwEventsVC.h"
 
 @interface GzwEventsVC ()
-
+@property(nonatomic,strong)UIWebView *webView;
 @end
 
 @implementation GzwEventsVC
@@ -18,21 +18,29 @@
     [super viewDidLoad];
     
     
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
-    
+//    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+    UIWebView *view = [[UIWebView alloc]init];
+    NSURLRequest *requst = [NSURLRequest requestWithURL:[NSURL URLWithString:self.url]];
+    view.frame = self.view.frame;
+    self.webView = view;
+    [view loadRequest:requst];
+    [self.view addSubview:view];
    
 }
 
-
+//"name": "积分",
+//"url": "http://client.310win.com/aspx/data/Standings/1365169.html"
+//"name": "情报",
+//"url": "http://www.fox008.com/html5/analyse/index_notop.html?id=20170614010"
 
 -(NSString *)segmentTitle
 {
-    return @"TableView";
+    return self.titleText;
 }
 
 -(UIScrollView *)streachScrollView
 {
-    return self.tableView;
+    return self.webView.scrollView;
 }
 
 #pragma mark - Table view data source

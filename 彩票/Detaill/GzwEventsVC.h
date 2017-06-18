@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "ARSegmentPageController.h"
 
-@interface GzwEventsVC : UITableViewController<ARSegmentControllerDelegate>
-
+@interface GzwEventsVC : UIViewController<ARSegmentControllerDelegate>
+@property(nonatomic,copy) NSString *url;
+@property(nonatomic,copy) NSString *titleText;
+@property(nonatomic,copy) NSString *bg;
 @end

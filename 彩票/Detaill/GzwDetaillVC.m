@@ -8,6 +8,7 @@
 
 #import "GzwDetaillVC.h"
 
+#import "ARSegmentPageController.h"
 @interface GzwDetaillVC ()
 
 @end
@@ -25,6 +26,8 @@
 {
     [super viewWillAppear:animated];
     [self.navigationController.navigationBar setBackgroundImage:[self createImageWithColor:[UIColor clearColor]] forBarMetrics:UIBarMetricsDefault];
+    
+    self.segmentView.barTintColor = [UIColor blackColor];
 }
 -(void)viewWillDisappear:(BOOL)animated
 {

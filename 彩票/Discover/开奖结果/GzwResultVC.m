@@ -40,19 +40,19 @@ static NSString *IDTwo = @"GzwResutTwoCell";
     if (!_data) {
         _data = [NSMutableArray array];
         NSArray *array = @[
+//        @{
+//            @"awardNo":@"1,3,3,3,1,1,1,0,3,1,3,3,3,1",
+//            @"awardTime":@"2017-06-15 14:41:01",
+//            @"extra":@"<null>",
+//            @"gameEn":@"football_9",
+//            @"html":@"http://client.310win.com/Info/Result/DigitResult.aspx?issueid=1797002&_t=1497537623.004345",
+//            @"luckyBlue":@"",
+//            @"periodName":@"17085",
+//            @"totalPool":@"0.00",
+//            @"totalSale":@"11354122.00",
+//        },
         @{
-            @"awardNo":@"1 3 3 3 1 1 1 0 3 1 3 3 3 1",
-            @"awardTime":@"2017-06-15 14:41:01",
-            @"extra":@"<null>",
-            @"gameEn":@"football_9",
-            @"html":@"http://client.310win.com/Info/Result/DigitResult.aspx?issueid=1797002&_t=1497537623.004345",
-            @"luckyBlue":@"",
-            @"periodName":@"17085",
-            @"totalPool":@"0.00",
-            @"totalSale":@"11354122.00",
-        },
-        @{
-            @"awardNo":@"3 6 3 5 3 1 8",
+            @"awardNo":@"36,3,5,3,1,8",
             @"awardTime":@"2017-06-13 20:35:38",
             @"extra":@"<null>",
             @"gameEn":@"qxc",
@@ -63,7 +63,7 @@ static NSString *IDTwo = @"GzwResutTwoCell";
             @"totalSale":@"11004592.00",
         },
         @{
-            @"awardNo":@"02 11 12 23 29 31:05",
+            @"awardNo":@"02,11,12,23,29,31|05",
             @"awardTime":@"2017-06-15 21:23:15",
             @"extra":@"<null>",
             @"gameEn":@"ssq",
@@ -74,7 +74,7 @@ static NSString *IDTwo = @"GzwResutTwoCell";
             @"totalSale":@"326172358.00",
         },
         @{
-            @"awardNo":@"07 08 19 24 27:06 07",
+            @"awardNo":@"07,08,19,24,27|06,07",
             @"awardTime":@"2017-06-14 20:35:24",
             @"extra":@"<null>",
             @"gameEn":@"dlt",
@@ -85,7 +85,7 @@ static NSString *IDTwo = @"GzwResutTwoCell";
             @"totalSale":@"209829116.00",
         },
         @{
-            @"awardNo":@"8 7 2",
+            @"awardNo":@"8,7,2",
             @"awardTime":@"2017-06-15 21:26:03",
             @"extra":@"6 3 4",
             @"gameEn":@"x3d",
@@ -96,7 +96,7 @@ static NSString *IDTwo = @"GzwResutTwoCell";
             @"totalSale":@"44772604.00",
         },
         @{
-            @"awardNo":@"1 2 3 8 6",
+            @"awardNo":@"1,2,3,8,6",
             @"awardTime":@"2017-06-15 20:33:37",
             @"extra":@"<null>",
             @"gameEn":@"pl5",
@@ -122,34 +122,46 @@ static NSString *IDTwo = @"GzwResutTwoCell";
         NSArray *array = @[
             @{
                 @"type":@"jczq",
-                @"matchDay":@"2017-06-14",
+                @"matchDay":@"2017-06-15",
                 @"teamA":@"桑托斯",
                 @"teamB":@"帕梅拉斯",
                 @"scoreA": @"1",
                 @"scoreB": @"0",
                 @"scores":@"1:0",
-                @"concedeBall":@"-1"
+                @"concedeBall":@"-1",
+                @"bg":@"match_analysis_header_football",
+                @"detail":@[@{@"html":@"http://client.310win.com/aspx/data/Analysis/1365169.html",@"title":@"分析"},
+                          @{@"html":@"http://client.310win.com/aspx/data/Standings/1365169.html",@"title":@"积分"},
+                          @{@"html":@"http://www.fox008.com/html5/analyse/index_notop.html?id=20170614010",@"title":@"情报"},],
             },
-            @{
-                @"type":@"dcsfgg",
-                @"period":@"70603",
-                @"teamA":@"科林蒂安",
-                @"teamB":@"克鲁塞罗",
-                @"scoreA": @"1",
-                @"scoreB": @"0",
-                @"scores":@"1:0",
-                @"concedeBall":@"-0.5"
-            },
+            
             @{
                 @"type":@"jclq",
-                @"matchDay":@"2017-06-14",
+                @"matchDay":@"2017-06-15",
                 @"teamA":@"太阳",
                 @"teamB":@"自由",
                 @"scoreA": @"96",
                 @"scoreB": @"76",
                 @"scores":@"96:76",
-                @"concedeBall":@"0"
+                @"concedeBall":@"0",
+                @"bg":@"match_analysis_header_basketball",
+                @"detail":@[@{@"html":@"http://client.310win.com/aspx/data/BasketAnalysis/281306.html",@"title":@"分析"},],
+                
             },
+            @{
+                @"type":@"dcsfgg",
+                @"period":@"170603",
+                @"teamA":@"科林蒂安",
+                @"teamB":@"克鲁塞罗",
+                @"scoreA": @"1",
+                @"scoreB": @"0",
+                @"scores":@"1:0",
+                @"concedeBall":@"-0.5",
+                @"bg":@"match_analysis_header_football",
+                @"detail":@[@{@"html":@"http://client.310win.com/aspx/data/Analysis/1365176.html",@"title":@"分析"},
+                            @{@"html":@"http://client.310win.com/aspx/data/Standings/1365176.html",@"title":@"积分"},
+                            @{@"html":@"http://www.fox008.com/html5/analyse/index_notop.html?id=20170614009",@"title":@"情报"},],
+                },
         ];
         [_dataTwo addObjectsFromArray:array];
     }
@@ -193,10 +205,16 @@ static NSString *IDTwo = @"GzwResutTwoCell";
     [self.view addSubview:self.two];
     [self.view addSubview:self.one];
     
-    self.defaultImage = [UIImage imageNamed:@"1"];
-    self.blurImage = [[UIImage imageNamed:@"1"] applyDarkEffect];
+    self.defaultImage = [UIImage imageNamed:@"match_analysis_header_football"];
+    self.blurImage = [[UIImage imageNamed:@"match_analysis_header_football"] applyDarkEffect];
     
     [self.view setNeedsUpdateConstraints];// 标记更新约束
+    
+    
+    
+    
+    
+    
     
 }
 -(void)updateViewConstraints
@@ -285,22 +303,31 @@ static NSString *IDTwo = @"GzwResutTwoCell";
         VC.LoadadvDesc = NO;
         [self.navigationController pushViewController:VC animated:YES];
     }else {
+        NSArray *ary = self.dataTwo[indexPath.row][@"detail"];
         
+        NSMutableArray *marray = [NSMutableArray array];
+        [ary enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            GzwEventsVC *vc = [[GzwEventsVC alloc]init];
+            vc.url = obj[@"html"];
+            vc.titleText = obj[@"title"];
+            vc.bg = self.dataTwo[indexPath.row][@"bg"];
+            self.defaultImage= [UIImage imageNamed:vc.bg];
+            [marray addObject:vc];
+        }];
 
-        GzwEventsVC *vc = [[GzwEventsVC alloc]initWithStyle:0];
         GzwDetaillVC *pager = [[GzwDetaillVC alloc] init];
-        [pager setViewControllers:@[vc,vc,vc]];
+        [pager setViewControllers:marray];
         pager.segmentMiniTopInset = 64;
-        pager.headerHeight = 200;
+        pager.headerHeight = 150;
         pager.freezenHeaderWhenReachMaxHeaderHeight = YES;
         @weakify(self)
         [RACObserve(pager, segmentToInset) subscribeNext:^(id x) {
             @strongify(self)
             if (!pager.headerView.imageView.image) {
                 pager.headerView.imageView.image = self.defaultImage;
-                UIButton *btn = [UIButton buttonWithType:5];
-                btn.y = 100;
-                [pager.headerView.imageView addSubview:btn];
+//                UIButton *btn = [UIButton buttonWithType:5];
+//                btn.y = 100;
+//                [pager.headerView.imageView addSubview:btn];
             }
         }];
         [self.navigationController pushViewController:pager animated:YES];
