@@ -15,7 +15,7 @@
 #import "WMCollectionViewController.h"
 
 #import "GzwResultVC.h"
-
+#import "GzwExpertVC.h"
 @interface DiscoverVC ()
 @property (weak, nonatomic) IBOutlet UITableViewCell *historyCell;
 @property (weak, nonatomic) IBOutlet UITableViewCell *expertCell;
@@ -55,8 +55,22 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    
-    [self.navigationController pushViewController:[[GzwResultVC alloc]init] animated:YES];
+    switch (indexPath.section) {
+        case 0:
+        {
+             [self.navigationController pushViewController:[[GzwResultVC alloc]init] animated:YES];
+        }
+            break;
+        case 1:
+        {
+            [self.navigationController pushViewController:[[GzwExpertVC alloc]initWithStyle:0] animated:YES];
+        }
+            break;
+            
+        default:
+            break;
+    }
+   
     return;
     
     

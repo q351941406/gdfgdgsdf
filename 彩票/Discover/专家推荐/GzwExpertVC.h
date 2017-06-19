@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GzwExpertVCTableViewController : UITableViewController
+@interface GzwExpertVC : UITableViewController
 
 @end

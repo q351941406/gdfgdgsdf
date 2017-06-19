@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0411E40B1EF81879008092C8 /* GzwExpertCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0411E4091EF81879008092C8 /* GzwExpertCell.m */; };
+		0411E40C1EF81879008092C8 /* GzwExpertCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0411E40A1EF81879008092C8 /* GzwExpertCell.xib */; };
 		042E31701E978B5D0004F1DC /* mainSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 042E316F1E978B5D0004F1DC /* mainSB.storyboard */; };
 		044C46B91EF0461200C04D90 /* WMCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044C46B21EF0461100C04D90 /* WMCollectionViewController.m */; };
 		044C46BA1EF0461200C04D90 /* WMSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044C46B41EF0461200C04D90 /* WMSecondViewController.m */; };
@@ -100,7 +102,7 @@
 		CF6E02621EF7C331000F05DC /* CYloginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6E02601EF7C331000F05DC /* CYloginRegisterViewController.m */; };
 		CF6E02631EF7C331000F05DC /* CYloginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF6E02611EF7C331000F05DC /* CYloginRegisterViewController.xib */; };
 		CF6E02661EF7D36D000F05DC /* CYLoginRegisterTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6E02651EF7D36D000F05DC /* CYLoginRegisterTextField.m */; };
-		CF6E026A1EF7DBA8000F05DC /* GzwExpertVCTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6E02691EF7DBA8000F05DC /* GzwExpertVCTableViewController.m */; };
+		CF6E026A1EF7DBA8000F05DC /* GzwExpertVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6E02691EF7DBA8000F05DC /* GzwExpertVC.m */; };
 		CF6FDC2F1EEFECBA005DCF6E /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF6FDC2E1EEFECBA005DCF6E /* Discover.storyboard */; };
 		CF7E96471EF3D3D90095CE22 /* GzwEventsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CF7E96461EF3D3D90095CE22 /* GzwEventsVC.m */; };
 		CF7E964A1EF3D90F0095CE22 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = CF7E96491EF3D90F0095CE22 /* UIImage+ImageEffects.m */; };
@@ -114,6 +116,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0411E4081EF81879008092C8 /* GzwExpertCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GzwExpertCell.h; sourceTree = "<group>"; };
+		0411E4091EF81879008092C8 /* GzwExpertCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GzwExpertCell.m; sourceTree = "<group>"; };
+		0411E40A1EF81879008092C8 /* GzwExpertCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GzwExpertCell.xib; sourceTree = "<group>"; };
 		042E316F1E978B5D0004F1DC /* mainSB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = mainSB.storyboard; sourceTree = "<group>"; };
 		044C46B11EF0461100C04D90 /* WMCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMCollectionViewController.h; sourceTree = "<group>"; };
 		044C46B21EF0461100C04D90 /* WMCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMCollectionViewController.m; sourceTree = "<group>"; };
@@ -287,8 +292,8 @@
 		CF6E02611EF7C331000F05DC /* CYloginRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CYloginRegisterViewController.xib; sourceTree = "<group>"; };
 		CF6E02641EF7D36D000F05DC /* CYLoginRegisterTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYLoginRegisterTextField.h; sourceTree = "<group>"; };
 		CF6E02651EF7D36D000F05DC /* CYLoginRegisterTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYLoginRegisterTextField.m; sourceTree = "<group>"; };
-		CF6E02681EF7DBA8000F05DC /* GzwExpertVCTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GzwExpertVCTableViewController.h; sourceTree = "<group>"; };
-		CF6E02691EF7DBA8000F05DC /* GzwExpertVCTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GzwExpertVCTableViewController.m; sourceTree = "<group>"; };
+		CF6E02681EF7DBA8000F05DC /* GzwExpertVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GzwExpertVC.h; sourceTree = "<group>"; };
+		CF6E02691EF7DBA8000F05DC /* GzwExpertVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GzwExpertVC.m; sourceTree = "<group>"; };
 		CF6FDC2E1EEFECBA005DCF6E /* Discover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Discover.storyboard; sourceTree = "<group>"; };
 		CF7E96451EF3D3D90095CE22 /* GzwEventsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GzwEventsVC.h; sourceTree = "<group>"; };
 		CF7E96461EF3D3D90095CE22 /* GzwEventsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GzwEventsVC.m; sourceTree = "<group>"; };
@@ -661,8 +666,8 @@
 		CF6E02671EF7DB67000F05DC /* 专家推荐 */ = {
 			isa = PBXGroup;
 			children = (
-				CF6E02681EF7DBA8000F05DC /* GzwExpertVCTableViewController.h */,
-				CF6E02691EF7DBA8000F05DC /* GzwExpertVCTableViewController.m */,
+				CF6E02681EF7DBA8000F05DC /* GzwExpertVC.h */,
+				CF6E02691EF7DBA8000F05DC /* GzwExpertVC.m */,
 			);
 			path = "专家推荐";
 			sourceTree = "<group>";
@@ -720,6 +725,9 @@
 				0450BCDB1EF1974D00AD4BF3 /* GzwResutTwoCell.h */,
 				0450BCDC1EF1974D00AD4BF3 /* GzwResutTwoCell.m */,
 				0450BCDD1EF1974D00AD4BF3 /* GzwResutTwoCell.xib */,
+				0411E4081EF81879008092C8 /* GzwExpertCell.h */,
+				0411E4091EF81879008092C8 /* GzwExpertCell.m */,
+				0411E40A1EF81879008092C8 /* GzwExpertCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -830,6 +838,7 @@
 				0450F3B21E9CE41C00D8E0D0 /* WMProductsListCell.xib in Resources */,
 				0450F3A81E9CE3FD00D8E0D0 /* WMVenueTitle2CollectionViewCell.xib in Resources */,
 				046D07F11E9CE77E00D6F5B6 /* PaiLieWu.plist in Resources */,
+				0411E40C1EF81879008092C8 /* GzwExpertCell.xib in Resources */,
 				CF6300051EF7B03B005222B9 /* GzwInfoVC.storyboard in Resources */,
 				CF6FDC2F1EEFECBA005DCF6E /* Discover.storyboard in Resources */,
 				CF6E02631EF7C331000F05DC /* CYloginRegisterViewController.xib in Resources */,
@@ -943,6 +952,7 @@
 				044C46C21EF046A200C04D90 /* WMImageViewCell.m in Sources */,
 				0450F3A21E9CE3E800D8E0D0 /* WMVenueTitle1CollectionViewCell.m in Sources */,
 				CF7E96471EF3D3D90095CE22 /* GzwEventsVC.m in Sources */,
+				0411E40B1EF81879008092C8 /* GzwExpertCell.m in Sources */,
 				CF68FD281EF11A5B00748711 /* GzwResutCell.m in Sources */,
 				0450F3831E9CDC6800D8E0D0 /* WMROOTViewController.m in Sources */,
 				0452F0EA1E968EDE0006F3C4 /* ViewController.m in Sources */,
@@ -957,7 +967,7 @@
 				044C46BC1EF0461200C04D90 /* WMViewController.m in Sources */,
 				CF6300181EF7B618005222B9 /* GzwHUDTool.m in Sources */,
 				044C46BB1EF0461200C04D90 /* WMTableViewController.m in Sources */,
-				CF6E026A1EF7DBA8000F05DC /* GzwExpertVCTableViewController.m in Sources */,
+				CF6E026A1EF7DBA8000F05DC /* GzwExpertVC.m in Sources */,
 				044C46BA1EF0461200C04D90 /* WMSecondViewController.m in Sources */,
 				046D07F51E9CE94A00D6F5B6 /* GzwNotificationTool.m in Sources */,
 				0452F1721E9698D00006F3C4 /* GzwFlashSaleCell.m in Sources */,
