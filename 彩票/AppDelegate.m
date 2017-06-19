@@ -17,6 +17,7 @@
 #import "GzwCouponsVC.h"
 #import "GzwNewsVC.h"
 #import "AFNetworking.h"
+#import "HSSetTableInfoController.h"
 @interface AppDelegate ()
 
 @end
@@ -73,8 +74,7 @@
     c3.tabBarItem.image=[UIImage imageNamed:@"icons8-Idea_50"];
     IWNavigationController *nav3 = [[IWNavigationController alloc]initWithRootViewController:c3];
     
-    
-    UIViewController *c4=[[UIViewController alloc]init];
+    UIViewController *c4 = [UIStoryboard storyboardWithName:@"GzwInfoVC" bundle:nil].instantiateInitialViewController;
     c4.tabBarItem.title=@"用户中心";
     c4.tabBarItem.image=[UIImage imageNamed:@"icons8-User_50"];
     IWNavigationController *nav4 = [[IWNavigationController alloc]initWithRootViewController:c4];

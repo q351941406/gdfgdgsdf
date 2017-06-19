@@ -11,7 +11,7 @@
 @implementation GzwThemeTool
 +(void)setup
 {
-    [Chameleon setGlobalThemeUsingPrimaryColor:FlatPurple withSecondaryColor:FlatBrown andContentStyle:UIContentStyleContrast];
+    [Chameleon setGlobalThemeUsingPrimaryColor:FlatPurple withSecondaryColor:nil andContentStyle:UIContentStyleContrast];
     [[UIButton appearanceWhenContainedInInstancesOfClasses:@[[UITableView class]]] setBackgroundColor:[UIColor clearColor]];
 }
 +(UIColor *)theme

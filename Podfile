@@ -18,5 +18,6 @@ target '彩票' do
   pod 'WMPageController'
   pod 'ARSegmentPager', '~> 1.1.2'
   pod 'ReactiveCocoa', '2.5'
+  pod 'HSSetTableViewController', '~> 1.1.3'
 end
 

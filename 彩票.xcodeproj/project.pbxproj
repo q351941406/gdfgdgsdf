@@ -84,9 +84,23 @@
 		04FD1F8B1EF036B80016AACF /* DiscoverVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 04FD1F8A1EF036B80016AACF /* DiscoverVC.m */; };
 		73660D6DB104AEE1B58AE75E /* libPods-彩票.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B11A23295900A88492918E5C /* libPods-彩票.a */; };
 		CF61BF631EF26EB900B2A17B /* GzwResultLotteryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CF61BF621EF26EB900B2A17B /* GzwResultLotteryVC.m */; };
+		CF6300001EF7764F005222B9 /* GzwHeadSelectTool.m in Sources */ = {isa = PBXBuildFile; fileRef = CF63FFFF1EF7764F005222B9 /* GzwHeadSelectTool.m */; };
+		CF6300041EF7B03B005222B9 /* GzwInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6300021EF7B03B005222B9 /* GzwInfoVC.m */; };
+		CF6300051EF7B03B005222B9 /* GzwInfoVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF6300031EF7B03B005222B9 /* GzwInfoVC.storyboard */; };
+		CF63000A1EF7B08C005222B9 /* XBSettingItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6300071EF7B08C005222B9 /* XBSettingItemModel.m */; };
+		CF63000B1EF7B08C005222B9 /* XBSettingSectionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6300091EF7B08C005222B9 /* XBSettingSectionModel.m */; };
+		CF63000E1EF7B096005222B9 /* XBSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF63000D1EF7B096005222B9 /* XBSettingCell.m */; };
+		CF6300111EF7B09B005222B9 /* DemoSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6300101EF7B09B005222B9 /* DemoSettingController.m */; };
+		CF6300151EF7B0C9005222B9 /* UIView+XBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6300141EF7B0C9005222B9 /* UIView+XBExtension.m */; };
+		CF6300181EF7B618005222B9 /* GzwHUDTool.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6300171EF7B618005222B9 /* GzwHUDTool.m */; };
+		CF63FFFD1EF77575005222B9 /* HSSetTableInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF63FFFC1EF77575005222B9 /* HSSetTableInfoController.m */; };
 		CF68FD241EF0D48100748711 /* GzwResultVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CF68FD231EF0D48100748711 /* GzwResultVC.m */; };
 		CF68FD281EF11A5B00748711 /* GzwResutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF68FD261EF11A5A00748711 /* GzwResutCell.m */; };
 		CF68FD291EF11A5B00748711 /* GzwResutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF68FD271EF11A5B00748711 /* GzwResutCell.xib */; };
+		CF6E02621EF7C331000F05DC /* CYloginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6E02601EF7C331000F05DC /* CYloginRegisterViewController.m */; };
+		CF6E02631EF7C331000F05DC /* CYloginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF6E02611EF7C331000F05DC /* CYloginRegisterViewController.xib */; };
+		CF6E02661EF7D36D000F05DC /* CYLoginRegisterTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6E02651EF7D36D000F05DC /* CYLoginRegisterTextField.m */; };
+		CF6E026A1EF7DBA8000F05DC /* GzwExpertVCTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6E02691EF7DBA8000F05DC /* GzwExpertVCTableViewController.m */; };
 		CF6FDC2F1EEFECBA005DCF6E /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF6FDC2E1EEFECBA005DCF6E /* Discover.storyboard */; };
 		CF7E96471EF3D3D90095CE22 /* GzwEventsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CF7E96461EF3D3D90095CE22 /* GzwEventsVC.m */; };
 		CF7E964A1EF3D90F0095CE22 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = CF7E96491EF3D90F0095CE22 /* UIImage+ImageEffects.m */; };
@@ -243,11 +257,38 @@
 		B11A23295900A88492918E5C /* libPods-彩票.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-彩票.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF61BF611EF26EB900B2A17B /* GzwResultLotteryVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GzwResultLotteryVC.h; sourceTree = "<group>"; };
 		CF61BF621EF26EB900B2A17B /* GzwResultLotteryVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GzwResultLotteryVC.m; sourceTree = "<group>"; };
+		CF6300011EF7B03B005222B9 /* GzwInfoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GzwInfoVC.h; sourceTree = "<group>"; };
+		CF6300021EF7B03B005222B9 /* GzwInfoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GzwInfoVC.m; sourceTree = "<group>"; };
+		CF6300031EF7B03B005222B9 /* GzwInfoVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GzwInfoVC.storyboard; sourceTree = "<group>"; };
+		CF6300061EF7B08C005222B9 /* XBSettingItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBSettingItemModel.h; sourceTree = "<group>"; };
+		CF6300071EF7B08C005222B9 /* XBSettingItemModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBSettingItemModel.m; sourceTree = "<group>"; };
+		CF6300081EF7B08C005222B9 /* XBSettingSectionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBSettingSectionModel.h; sourceTree = "<group>"; };
+		CF6300091EF7B08C005222B9 /* XBSettingSectionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBSettingSectionModel.m; sourceTree = "<group>"; };
+		CF63000C1EF7B096005222B9 /* XBSettingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XBSettingCell.h; sourceTree = "<group>"; };
+		CF63000D1EF7B096005222B9 /* XBSettingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XBSettingCell.m; sourceTree = "<group>"; };
+		CF63000F1EF7B09B005222B9 /* DemoSettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoSettingController.h; sourceTree = "<group>"; };
+		CF6300101EF7B09B005222B9 /* DemoSettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoSettingController.m; sourceTree = "<group>"; };
+		CF6300121EF7B0AD005222B9 /* XBConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XBConst.h; sourceTree = "<group>"; };
+		CF6300131EF7B0C9005222B9 /* UIView+XBExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XBExtension.h"; sourceTree = "<group>"; };
+		CF6300141EF7B0C9005222B9 /* UIView+XBExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XBExtension.m"; sourceTree = "<group>"; };
+		CF6300161EF7B618005222B9 /* GzwHUDTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GzwHUDTool.h; sourceTree = "<group>"; };
+		CF6300171EF7B618005222B9 /* GzwHUDTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GzwHUDTool.m; sourceTree = "<group>"; };
+		CF63FFFB1EF77575005222B9 /* HSSetTableInfoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HSSetTableInfoController.h; sourceTree = "<group>"; };
+		CF63FFFC1EF77575005222B9 /* HSSetTableInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSSetTableInfoController.m; sourceTree = "<group>"; };
+		CF63FFFE1EF7764F005222B9 /* GzwHeadSelectTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GzwHeadSelectTool.h; sourceTree = "<group>"; };
+		CF63FFFF1EF7764F005222B9 /* GzwHeadSelectTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GzwHeadSelectTool.m; sourceTree = "<group>"; };
 		CF68FD221EF0D48100748711 /* GzwResultVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GzwResultVC.h; sourceTree = "<group>"; };
 		CF68FD231EF0D48100748711 /* GzwResultVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GzwResultVC.m; sourceTree = "<group>"; };
 		CF68FD251EF11A5A00748711 /* GzwResutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GzwResutCell.h; sourceTree = "<group>"; };
 		CF68FD261EF11A5A00748711 /* GzwResutCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GzwResutCell.m; sourceTree = "<group>"; };
 		CF68FD271EF11A5B00748711 /* GzwResutCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GzwResutCell.xib; sourceTree = "<group>"; };
+		CF6E025F1EF7C331000F05DC /* CYloginRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYloginRegisterViewController.h; sourceTree = "<group>"; };
+		CF6E02601EF7C331000F05DC /* CYloginRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYloginRegisterViewController.m; sourceTree = "<group>"; };
+		CF6E02611EF7C331000F05DC /* CYloginRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CYloginRegisterViewController.xib; sourceTree = "<group>"; };
+		CF6E02641EF7D36D000F05DC /* CYLoginRegisterTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYLoginRegisterTextField.h; sourceTree = "<group>"; };
+		CF6E02651EF7D36D000F05DC /* CYLoginRegisterTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYLoginRegisterTextField.m; sourceTree = "<group>"; };
+		CF6E02681EF7DBA8000F05DC /* GzwExpertVCTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GzwExpertVCTableViewController.h; sourceTree = "<group>"; };
+		CF6E02691EF7DBA8000F05DC /* GzwExpertVCTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GzwExpertVCTableViewController.m; sourceTree = "<group>"; };
 		CF6FDC2E1EEFECBA005DCF6E /* Discover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Discover.storyboard; sourceTree = "<group>"; };
 		CF7E96451EF3D3D90095CE22 /* GzwEventsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GzwEventsVC.h; sourceTree = "<group>"; };
 		CF7E96461EF3D3D90095CE22 /* GzwEventsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GzwEventsVC.m; sourceTree = "<group>"; };
@@ -396,6 +437,7 @@
 		0452F0E11E968EDE0006F3C4 /* 彩票 */ = {
 			isa = PBXGroup;
 			children = (
+				CF63FFFA1EF77504005222B9 /* 个人中心 */,
 				CF7E96441EF3CFD90095CE22 /* Detaill */,
 				CF6FDC2D1EEFEC3F005DCF6E /* Discover */,
 				CF91DEC21EEE90AE005BEBC6 /* News */,
@@ -467,6 +509,8 @@
 		04D1EF9E1EEC078B004B02A3 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				CF6300161EF7B618005222B9 /* GzwHUDTool.h */,
+				CF6300171EF7B618005222B9 /* GzwHUDTool.m */,
 				04D1EFA21EEC3373004B02A3 /* MyTool */,
 				04D1EF9F1EEC07B9004B02A3 /* GzwThemeTool.h */,
 				04D1EFA01EEC07B9004B02A3 /* GzwThemeTool.m */,
@@ -584,9 +628,49 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CF63FFFA1EF77504005222B9 /* 个人中心 */ = {
+			isa = PBXGroup;
+			children = (
+				CF6E025E1EF7C30F000F05DC /* 登录注册 */,
+				CF6300011EF7B03B005222B9 /* GzwInfoVC.h */,
+				CF6300021EF7B03B005222B9 /* GzwInfoVC.m */,
+				CF6300031EF7B03B005222B9 /* GzwInfoVC.storyboard */,
+				CF63FFFB1EF77575005222B9 /* HSSetTableInfoController.h */,
+				CF63FFFC1EF77575005222B9 /* HSSetTableInfoController.m */,
+				CF63FFFE1EF7764F005222B9 /* GzwHeadSelectTool.h */,
+				CF63FFFF1EF7764F005222B9 /* GzwHeadSelectTool.m */,
+				CF63000F1EF7B09B005222B9 /* DemoSettingController.h */,
+				CF6300101EF7B09B005222B9 /* DemoSettingController.m */,
+				CF6300121EF7B0AD005222B9 /* XBConst.h */,
+				CF6300131EF7B0C9005222B9 /* UIView+XBExtension.h */,
+				CF6300141EF7B0C9005222B9 /* UIView+XBExtension.m */,
+			);
+			path = "个人中心";
+			sourceTree = "<group>";
+		};
+		CF6E025E1EF7C30F000F05DC /* 登录注册 */ = {
+			isa = PBXGroup;
+			children = (
+				CF6E025F1EF7C331000F05DC /* CYloginRegisterViewController.h */,
+				CF6E02601EF7C331000F05DC /* CYloginRegisterViewController.m */,
+				CF6E02611EF7C331000F05DC /* CYloginRegisterViewController.xib */,
+			);
+			path = "登录注册";
+			sourceTree = "<group>";
+		};
+		CF6E02671EF7DB67000F05DC /* 专家推荐 */ = {
+			isa = PBXGroup;
+			children = (
+				CF6E02681EF7DBA8000F05DC /* GzwExpertVCTableViewController.h */,
+				CF6E02691EF7DBA8000F05DC /* GzwExpertVCTableViewController.m */,
+			);
+			path = "专家推荐";
+			sourceTree = "<group>";
+		};
 		CF6FDC2D1EEFEC3F005DCF6E /* Discover */ = {
 			isa = PBXGroup;
 			children = (
+				CF6E02671EF7DB67000F05DC /* 专家推荐 */,
 				044C46AF1EF03E0A00C04D90 /* 开奖结果 */,
 				CF6FDC2E1EEFECBA005DCF6E /* Discover.storyboard */,
 				04FD1F891EF036B80016AACF /* DiscoverVC.h */,
@@ -618,6 +702,10 @@
 		CF91DEB51EEE64B0005BEBC6 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CF6E02641EF7D36D000F05DC /* CYLoginRegisterTextField.h */,
+				CF6E02651EF7D36D000F05DC /* CYLoginRegisterTextField.m */,
+				CF63000C1EF7B096005222B9 /* XBSettingCell.h */,
+				CF63000D1EF7B096005222B9 /* XBSettingCell.m */,
 				04FD1F841EEED4D60016AACF /* GzwAddressCell.h */,
 				04FD1F851EEED4D60016AACF /* GzwAddressCell.m */,
 				04FD1F861EEED4D60016AACF /* GzwAddressCell.xib */,
@@ -639,6 +727,10 @@
 		CF91DEBE1EEE680F005BEBC6 /* ObjectModal */ = {
 			isa = PBXGroup;
 			children = (
+				CF6300061EF7B08C005222B9 /* XBSettingItemModel.h */,
+				CF6300071EF7B08C005222B9 /* XBSettingItemModel.m */,
+				CF6300081EF7B08C005222B9 /* XBSettingSectionModel.h */,
+				CF6300091EF7B08C005222B9 /* XBSettingSectionModel.m */,
 				CF91DEBF1EEE6820005BEBC6 /* HomeM.h */,
 				CF91DEC01EEE6820005BEBC6 /* HomeM.m */,
 			);
@@ -738,7 +830,9 @@
 				0450F3B21E9CE41C00D8E0D0 /* WMProductsListCell.xib in Resources */,
 				0450F3A81E9CE3FD00D8E0D0 /* WMVenueTitle2CollectionViewCell.xib in Resources */,
 				046D07F11E9CE77E00D6F5B6 /* PaiLieWu.plist in Resources */,
+				CF6300051EF7B03B005222B9 /* GzwInfoVC.storyboard in Resources */,
 				CF6FDC2F1EEFECBA005DCF6E /* Discover.storyboard in Resources */,
+				CF6E02631EF7C331000F05DC /* CYloginRegisterViewController.xib in Resources */,
 				0452F1731E9698D00006F3C4 /* GzwFlashSaleCell.xib in Resources */,
 				04FD1F881EEED4D60016AACF /* GzwAddressCell.xib in Resources */,
 				046D07EB1E9CE77E00D6F5B6 /* SevenStarData.plist in Resources */,
@@ -812,6 +906,7 @@
 				0450F3991E9CE3C300D8E0D0 /* WMProductsListVCData.m in Sources */,
 				044C46C31EF046A200C04D90 /* WMLoopView.m in Sources */,
 				0450F3871E9CE30800D8E0D0 /* OTSSize.m in Sources */,
+				CF6300111EF7B09B005222B9 /* DemoSettingController.m in Sources */,
 				0450F3931E9CE3A700D8E0D0 /* WMCollectionViewCell.m in Sources */,
 				04D1EFEC1EEC3373004B02A3 /* UITextField+Gzw.m in Sources */,
 				04D1EFE81EEC3373004B02A3 /* UIImage+Gzw.m in Sources */,
@@ -824,6 +919,7 @@
 				CF7E964D1EF3E8690095CE22 /* GzwDetaillVC.m in Sources */,
 				0450F3AC1E9CE40900D8E0D0 /* WMVenueTitle3CollectionViewCell.m in Sources */,
 				04D1EFEA1EEC3373004B02A3 /* UILabel+Extended.m in Sources */,
+				CF6300151EF7B0C9005222B9 /* UIView+XBExtension.m in Sources */,
 				04D1EFEE1EEC3373004B02A3 /* UIWebView+Gzw.m in Sources */,
 				04D1EFE31EEC3373004B02A3 /* NSString+Emoji.m in Sources */,
 				04D1EFA11EEC07B9004B02A3 /* GzwThemeTool.m in Sources */,
@@ -833,7 +929,9 @@
 				04D1EFE01EEC3373004B02A3 /* NSDictionary+Gzw.m in Sources */,
 				04D1EFE51EEC3373004B02A3 /* UIBarButtonItem+MJ.m in Sources */,
 				044C46B91EF0461200C04D90 /* WMCollectionViewController.m in Sources */,
+				CF6E02661EF7D36D000F05DC /* CYLoginRegisterTextField.m in Sources */,
 				CF61BF631EF26EB900B2A17B /* GzwResultLotteryVC.m in Sources */,
+				CF63000A1EF7B08C005222B9 /* XBSettingItemModel.m in Sources */,
 				0452F16E1E9697D80006F3C4 /* GzwTableView.m in Sources */,
 				04D1EFE11EEC3373004B02A3 /* NSMutableAttributedString+Extends.m in Sources */,
 				CF68FD241EF0D48100748711 /* GzwResultVC.m in Sources */,
@@ -850,14 +948,21 @@
 				0452F0EA1E968EDE0006F3C4 /* ViewController.m in Sources */,
 				04D1EFDE1EEC3373004B02A3 /* NSData+Gzw.m in Sources */,
 				0450F3B51E9CE44700D8E0D0 /* ProductModel.m in Sources */,
+				CF6E02621EF7C331000F05DC /* CYloginRegisterViewController.m in Sources */,
+				CF6300001EF7764F005222B9 /* GzwHeadSelectTool.m in Sources */,
 				0450F39D1E9CE3D600D8E0D0 /* WMBanerCollectionViewCell.m in Sources */,
+				CF63FFFD1EF77575005222B9 /* HSSetTableInfoController.m in Sources */,
 				0450F3981E9CE3C300D8E0D0 /* WMProductsListVC.m in Sources */,
+				CF6300041EF7B03B005222B9 /* GzwInfoVC.m in Sources */,
 				044C46BC1EF0461200C04D90 /* WMViewController.m in Sources */,
+				CF6300181EF7B618005222B9 /* GzwHUDTool.m in Sources */,
 				044C46BB1EF0461200C04D90 /* WMTableViewController.m in Sources */,
+				CF6E026A1EF7DBA8000F05DC /* GzwExpertVCTableViewController.m in Sources */,
 				044C46BA1EF0461200C04D90 /* WMSecondViewController.m in Sources */,
 				046D07F51E9CE94A00D6F5B6 /* GzwNotificationTool.m in Sources */,
 				0452F1721E9698D00006F3C4 /* GzwFlashSaleCell.m in Sources */,
 				CF91DEB41EEE6480005BEBC6 /* GzwCouponsVC.m in Sources */,
+				CF63000E1EF7B096005222B9 /* XBSettingCell.m in Sources */,
 				04D1EFE21EEC3373004B02A3 /* NSObject+Gzw.m in Sources */,
 				04FD1F8B1EF036B80016AACF /* DiscoverVC.m in Sources */,
 				0452F0E71E968EDE0006F3C4 /* AppDelegate.m in Sources */,
@@ -867,6 +972,7 @@
 				CF91DEB91EEE64C2005BEBC6 /* GzwCouponsCell.m in Sources */,
 				0452F0E41E968EDE0006F3C4 /* main.m in Sources */,
 				CF91DEC51EEE90D5005BEBC6 /* GzwNewsVC.m in Sources */,
+				CF63000B1EF7B08C005222B9 /* XBSettingSectionModel.m in Sources */,
 				0452F11A1E9691D80006F3C4 /* IWNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -47,7 +47,7 @@ static  NSString  * const headerID = @"GzwCouponsHeadView";
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
     CGFloat itemW  = 0;
     itemW = ViewW/2 - 2;
-    layout.sectionInset = UIEdgeInsetsMake(0 , 0 ,0, 0);
+    layout.sectionInset = UIEdgeInsetsMake(35 , 0 ,0, 0);
     layout.itemSize = CGSizeMake(itemW, 80);
     layout.minimumInteritemSpacing = 2;
     layout.minimumLineSpacing = 5;
@@ -133,7 +133,7 @@ static  NSString  * const headerID = @"GzwCouponsHeadView";
 }
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section{
     //    CGFloat height = 112;
-    CGSize size={ViewW,110};
+    CGSize size={ViewW,100};
     return size;
 }
 
@@ -209,9 +209,9 @@ static  NSString  * const headerID = @"GzwCouponsHeadView";
             //        [chatViewManager pushMQChatViewControllerInViewController:self];
         };
         HomeM *m7 = [[HomeM alloc]init];
-        m7.iconName = @"pai5";
-        m7.subTitle = @"小排列大奖金，2元赢取10万";
-        m7.title = @"十一运夺金";
+        m7.iconName = @"logo_竞彩足球";
+        m7.subTitle = @"德国首秀点到即止";
+        m7.title = @"竞彩足球";
         m7.block = ^(NSObject *view,NSObject *index){
             
             //        GzwWebVC *vc = [[GzwWebVC alloc]init];
@@ -227,19 +227,19 @@ static  NSString  * const headerID = @"GzwCouponsHeadView";
             //        GzwShakeVC *vc = [[GzwShakeVC alloc]init];
             //        [self.navigationController pushViewController:vc animated:YES];
         };
-        HomeM *m9 = [[HomeM alloc]init];
-        m9.iconName = @"list_cpiconx11x5";
-        m9.subTitle = @"10分钟一期，返奖率高达59%";
-        m9.title = @"新疆11选5";
-        m9.block = ^(NSObject *view,NSObject *index){
-            
-        };
+//        HomeM *m9 = [[HomeM alloc]init];
+//        m9.iconName = @"list_cpiconx11x5";
+//        m9.subTitle = @"10分钟一期，返奖率高达59%";
+//        m9.title = @"新疆11选5";
+//        m9.block = ^(NSObject *view,NSObject *index){
+//            
+//        };
         
         HomeM *m10 = [[HomeM alloc]init];
-        m10.iconName = @"江西11选5";
-        m10.subTitle = @"10分钟一期，返奖率高达59%";
-        m10.title = @"广东11选5";
-        _data = @[m1,m2,m3,m4,m5,m6,m7,m8,m9,m10];
+        m10.iconName = @"logo_竞彩篮球";
+        m10.subTitle = @"神秘主场迎战";
+        m10.title = @"竞彩篮球";
+        _data = @[m1,m2,m3,m4,m5,m6,m7,m8,m10];
         
         
     }
