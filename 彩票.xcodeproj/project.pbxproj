@@ -96,6 +96,9 @@
 		CF6300151EF7B0C9005222B9 /* UIView+XBExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6300141EF7B0C9005222B9 /* UIView+XBExtension.m */; };
 		CF6300181EF7B618005222B9 /* GzwHUDTool.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6300171EF7B618005222B9 /* GzwHUDTool.m */; };
 		CF63FFFD1EF77575005222B9 /* HSSetTableInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF63FFFC1EF77575005222B9 /* HSSetTableInfoController.m */; };
+		CF64A20D1EF910320065ACE8 /* GzwExpertDetallVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CF64A20C1EF910320065ACE8 /* GzwExpertDetallVC.m */; };
+		CF64A2111EF910B20065ACE8 /* GzwExpertDetaillCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF64A20F1EF910B20065ACE8 /* GzwExpertDetaillCell.m */; };
+		CF64A2121EF910B20065ACE8 /* GzwExpertDetaillCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF64A2101EF910B20065ACE8 /* GzwExpertDetaillCell.xib */; };
 		CF68FD241EF0D48100748711 /* GzwResultVC.m in Sources */ = {isa = PBXBuildFile; fileRef = CF68FD231EF0D48100748711 /* GzwResultVC.m */; };
 		CF68FD281EF11A5B00748711 /* GzwResutCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF68FD261EF11A5A00748711 /* GzwResutCell.m */; };
 		CF68FD291EF11A5B00748711 /* GzwResutCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF68FD271EF11A5B00748711 /* GzwResutCell.xib */; };
@@ -282,6 +285,11 @@
 		CF63FFFC1EF77575005222B9 /* HSSetTableInfoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HSSetTableInfoController.m; sourceTree = "<group>"; };
 		CF63FFFE1EF7764F005222B9 /* GzwHeadSelectTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GzwHeadSelectTool.h; sourceTree = "<group>"; };
 		CF63FFFF1EF7764F005222B9 /* GzwHeadSelectTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GzwHeadSelectTool.m; sourceTree = "<group>"; };
+		CF64A20B1EF910320065ACE8 /* GzwExpertDetallVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GzwExpertDetallVC.h; sourceTree = "<group>"; };
+		CF64A20C1EF910320065ACE8 /* GzwExpertDetallVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GzwExpertDetallVC.m; sourceTree = "<group>"; };
+		CF64A20E1EF910B20065ACE8 /* GzwExpertDetaillCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GzwExpertDetaillCell.h; sourceTree = "<group>"; };
+		CF64A20F1EF910B20065ACE8 /* GzwExpertDetaillCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GzwExpertDetaillCell.m; sourceTree = "<group>"; };
+		CF64A2101EF910B20065ACE8 /* GzwExpertDetaillCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GzwExpertDetaillCell.xib; sourceTree = "<group>"; };
 		CF68FD221EF0D48100748711 /* GzwResultVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GzwResultVC.h; sourceTree = "<group>"; };
 		CF68FD231EF0D48100748711 /* GzwResultVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GzwResultVC.m; sourceTree = "<group>"; };
 		CF68FD251EF11A5A00748711 /* GzwResutCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GzwResutCell.h; sourceTree = "<group>"; };
@@ -668,6 +676,8 @@
 			children = (
 				CF6E02681EF7DBA8000F05DC /* GzwExpertVC.h */,
 				CF6E02691EF7DBA8000F05DC /* GzwExpertVC.m */,
+				CF64A20B1EF910320065ACE8 /* GzwExpertDetallVC.h */,
+				CF64A20C1EF910320065ACE8 /* GzwExpertDetallVC.m */,
 			);
 			path = "专家推荐";
 			sourceTree = "<group>";
@@ -728,6 +738,9 @@
 				0411E4081EF81879008092C8 /* GzwExpertCell.h */,
 				0411E4091EF81879008092C8 /* GzwExpertCell.m */,
 				0411E40A1EF81879008092C8 /* GzwExpertCell.xib */,
+				CF64A20E1EF910B20065ACE8 /* GzwExpertDetaillCell.h */,
+				CF64A20F1EF910B20065ACE8 /* GzwExpertDetaillCell.m */,
+				CF64A2101EF910B20065ACE8 /* GzwExpertDetaillCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -821,6 +834,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF64A2121EF910B20065ACE8 /* GzwExpertDetaillCell.xib in Resources */,
 				044D101F1E976466005C4AA0 /* LaunchScreen.storyboard in Resources */,
 				0450BCDF1EF1974D00AD4BF3 /* GzwResutTwoCell.xib in Resources */,
 				0450F3A31E9CE3E800D8E0D0 /* WMVenueTitle1CollectionViewCell.xib in Resources */,
@@ -954,6 +968,7 @@
 				CF7E96471EF3D3D90095CE22 /* GzwEventsVC.m in Sources */,
 				0411E40B1EF81879008092C8 /* GzwExpertCell.m in Sources */,
 				CF68FD281EF11A5B00748711 /* GzwResutCell.m in Sources */,
+				CF64A2111EF910B20065ACE8 /* GzwExpertDetaillCell.m in Sources */,
 				0450F3831E9CDC6800D8E0D0 /* WMROOTViewController.m in Sources */,
 				0452F0EA1E968EDE0006F3C4 /* ViewController.m in Sources */,
 				04D1EFDE1EEC3373004B02A3 /* NSData+Gzw.m in Sources */,
@@ -983,6 +998,7 @@
 				0452F0E41E968EDE0006F3C4 /* main.m in Sources */,
 				CF91DEC51EEE90D5005BEBC6 /* GzwNewsVC.m in Sources */,
 				CF63000B1EF7B08C005222B9 /* XBSettingSectionModel.m in Sources */,
+				CF64A20D1EF910320065ACE8 /* GzwExpertDetallVC.m in Sources */,
 				0452F11A1E9691D80006F3C4 /* IWNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
