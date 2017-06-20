@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '738391BF2CF83BB7C6092F8AC0BCD9EA'
+               BlueprintIdentifier = '910623EC7155260D0F50C54FAA26D527'
                BlueprintName = 'UIView+FDCollapsibleConstraints'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libUIView+FDCollapsibleConstraints.a'>

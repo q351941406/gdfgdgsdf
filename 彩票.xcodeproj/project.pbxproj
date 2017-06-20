@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0411E40B1EF81879008092C8 /* GzwExpertCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0411E4091EF81879008092C8 /* GzwExpertCell.m */; };
 		0411E40C1EF81879008092C8 /* GzwExpertCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0411E40A1EF81879008092C8 /* GzwExpertCell.xib */; };
+		0411E4101EF9602E008092C8 /* GzwMyOrderLogisticsHeaderV.m in Sources */ = {isa = PBXBuildFile; fileRef = 0411E40E1EF9602E008092C8 /* GzwMyOrderLogisticsHeaderV.m */; };
+		0411E4111EF9602E008092C8 /* GzwMyOrderLogisticsHeaderV.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0411E40F1EF9602E008092C8 /* GzwMyOrderLogisticsHeaderV.xib */; };
 		042E31701E978B5D0004F1DC /* mainSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 042E316F1E978B5D0004F1DC /* mainSB.storyboard */; };
 		044C46B91EF0461200C04D90 /* WMCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044C46B21EF0461100C04D90 /* WMCollectionViewController.m */; };
 		044C46BA1EF0461200C04D90 /* WMSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044C46B41EF0461200C04D90 /* WMSecondViewController.m */; };
@@ -122,6 +124,9 @@
 		0411E4081EF81879008092C8 /* GzwExpertCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GzwExpertCell.h; sourceTree = "<group>"; };
 		0411E4091EF81879008092C8 /* GzwExpertCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GzwExpertCell.m; sourceTree = "<group>"; };
 		0411E40A1EF81879008092C8 /* GzwExpertCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GzwExpertCell.xib; sourceTree = "<group>"; };
+		0411E40D1EF9602E008092C8 /* GzwMyOrderLogisticsHeaderV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GzwMyOrderLogisticsHeaderV.h; sourceTree = "<group>"; };
+		0411E40E1EF9602E008092C8 /* GzwMyOrderLogisticsHeaderV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GzwMyOrderLogisticsHeaderV.m; sourceTree = "<group>"; };
+		0411E40F1EF9602E008092C8 /* GzwMyOrderLogisticsHeaderV.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GzwMyOrderLogisticsHeaderV.xib; sourceTree = "<group>"; };
 		042E316F1E978B5D0004F1DC /* mainSB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = mainSB.storyboard; sourceTree = "<group>"; };
 		044C46B11EF0461100C04D90 /* WMCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMCollectionViewController.h; sourceTree = "<group>"; };
 		044C46B21EF0461100C04D90 /* WMCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMCollectionViewController.m; sourceTree = "<group>"; };
@@ -741,6 +746,9 @@
 				CF64A20E1EF910B20065ACE8 /* GzwExpertDetaillCell.h */,
 				CF64A20F1EF910B20065ACE8 /* GzwExpertDetaillCell.m */,
 				CF64A2101EF910B20065ACE8 /* GzwExpertDetaillCell.xib */,
+				0411E40D1EF9602E008092C8 /* GzwMyOrderLogisticsHeaderV.h */,
+				0411E40E1EF9602E008092C8 /* GzwMyOrderLogisticsHeaderV.m */,
+				0411E40F1EF9602E008092C8 /* GzwMyOrderLogisticsHeaderV.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -855,6 +863,7 @@
 				0411E40C1EF81879008092C8 /* GzwExpertCell.xib in Resources */,
 				CF6300051EF7B03B005222B9 /* GzwInfoVC.storyboard in Resources */,
 				CF6FDC2F1EEFECBA005DCF6E /* Discover.storyboard in Resources */,
+				0411E4111EF9602E008092C8 /* GzwMyOrderLogisticsHeaderV.xib in Resources */,
 				CF6E02631EF7C331000F05DC /* CYloginRegisterViewController.xib in Resources */,
 				0452F1731E9698D00006F3C4 /* GzwFlashSaleCell.xib in Resources */,
 				04FD1F881EEED4D60016AACF /* GzwAddressCell.xib in Resources */,
@@ -983,6 +992,7 @@
 				CF6300181EF7B618005222B9 /* GzwHUDTool.m in Sources */,
 				044C46BB1EF0461200C04D90 /* WMTableViewController.m in Sources */,
 				CF6E026A1EF7DBA8000F05DC /* GzwExpertVC.m in Sources */,
+				0411E4101EF9602E008092C8 /* GzwMyOrderLogisticsHeaderV.m in Sources */,
 				044C46BA1EF0461200C04D90 /* WMSecondViewController.m in Sources */,
 				046D07F51E9CE94A00D6F5B6 /* GzwNotificationTool.m in Sources */,
 				0452F1721E9698D00006F3C4 /* GzwFlashSaleCell.m in Sources */,

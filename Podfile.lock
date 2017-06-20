@@ -46,6 +46,8 @@ PODS:
   - NJKWebViewProgress/ProgressView (0.2.3)
   - NYSegmentedControl (1.1.0)
   - ODRefreshControl (1.2)
+  - PNChart (0.8.9):
+    - UICountingLabel (~> 1.2.0)
   - PureLayout (3.0.2)
   - ReactiveCocoa (2.5):
     - ReactiveCocoa/UI (= 2.5)
@@ -60,6 +62,7 @@ PODS:
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
   - SVProgressHUD (2.1.2)
+  - UICountingLabel (1.2.0)
   - UIView+FDCollapsibleConstraints (1.1)
   - WMPageController (2.3.0)
 
@@ -76,6 +79,7 @@ DEPENDENCIES:
   - NJKWebViewProgress (= 0.2.3)
   - NYSegmentedControl (~> 1.1.0)
   - ODRefreshControl (= 1.2)
+  - PNChart (~> 0.8.9)
   - PureLayout
   - ReactiveCocoa (= 2.5)
   - SDCycleScrollView (~> 1.66)
@@ -97,14 +101,16 @@ SPEC CHECKSUMS:
   NJKWebViewProgress: f481fd424cb5ecc27eacae11b5397db92fba9a4d
   NYSegmentedControl: a92726c9e459919549f94328389ffcdaecefebfe
   ODRefreshControl: 907e6149d72dde488d5917ccfabee5bd8d711a20
+  PNChart: 84774d225c2126ded6c93d4dbe6ae98c3a73c2d2
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   SDCycleScrollView: e3ade90e9b3159bec04330b208fbfd81c3f3b671
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
+  UICountingLabel: 1db4e7d023e1762171eb226d6dff47a7a84f27aa
   UIView+FDCollapsibleConstraints: 9357eaf03b4e088263ab74a3b86a382a64ce38dd
   WMPageController: 9f219bb8912a1a1f51af11fde61e2682a7b7e7f2
 
-PODFILE CHECKSUM: 4359e6b1a8e759c3900e70aa8f605cb760cfba13
+PODFILE CHECKSUM: 15484978e75e7b3df3bcdbbf5e7e601be19d79e4
 
 COCOAPODS: 1.2.0

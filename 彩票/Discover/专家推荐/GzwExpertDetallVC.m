@@ -9,12 +9,20 @@
 #import "GzwExpertDetallVC.h"
 #import "GzwThemeTool.h"
 #import "GzwExpertDetaillCell.h"
+#import "GzwMyOrderLogisticsHeaderV.h"
 @interface GzwExpertDetallVC ()
 @property (nonatomic, strong) NSArray *data;
+@property (nonatomic, strong) GzwMyOrderLogisticsHeaderV *headView;
 @end
 
 @implementation GzwExpertDetallVC
-
+-(GzwMyOrderLogisticsHeaderV *)headView
+{
+    if (!_headView) {
+        _headView = [GzwMyOrderLogisticsHeaderV myOrderLogisticsHeaderV];
+    }
+    return _headView;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -25,7 +33,8 @@
         self.tableView.rowHeight = UITableViewAutomaticDimension;
     [self.tableView registerNib:[UINib nibWithNibName:GzwExpertDetaillCell.description bundle:nil] forCellReuseIdentifier:GzwExpertDetaillCell.description];
     self.clearsSelectionOnViewWillAppear = YES;
-    
+    self.headView.model = @{@"rate":self.dict[@"detaill"][@"rate"],@"figure":self.dict[@"detaill"][@"figure"]};
+    self.tableView.tableHeaderView = self.headView;
     self.data = self.dict[@"detaill"][@"list"];
     [self.tableView reloadData];
     
@@ -34,12 +43,10 @@
 
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
     return self.data.count;
 }
 
