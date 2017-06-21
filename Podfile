@@ -21,5 +21,6 @@ target '彩票' do
   pod 'HSSetTableViewController', '~> 1.1.3'
   pod 'PNChart', '~> 0.8.9'
   pod 'Meiqia', '~> 3.3.4.1'
+  pod 'SDVersion', '~> 4.0.2'
 end
 

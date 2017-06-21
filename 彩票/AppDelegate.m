@@ -51,12 +51,14 @@
     //a.初始化一个tabBar控制器
     UITabBarController *tb=[[UITabBarController alloc]init];
     [[UITabBar appearance] setBackgroundImage:[[UIImage alloc]init]];
-    [[UITabBar appearance] setBackgroundColor:[GzwThemeTool theme]];
+    [[UITabBar appearance] setBackgroundColor:[GzwThemeTool tabBarBackgroudTheme]];
     [[UITabBar appearance] setTintColor:[UIColor redColor]];
     [[UITabBar appearance] setBarTintColor:[UIColor redColor]];
+//
+//    [[UITabBarItem appearance] setTitleTextAttributes:@{ NSForegroundColorAttributeName:[UIColor whiteColor]} forState:UIControlStateNormal];
+    [[UITabBarItem appearance] setTitleTextAttributes:@{ NSForegroundColorAttributeName:[UIColor whiteColor]} forState:UIControlStateSelected];
     
-    [[UITabBarItem appearance] setTitleTextAttributes:@{ NSForegroundColorAttributeName:[UIColor whiteColor]} forState:UIControlStateNormal];
-    [[UITabBarItem appearance] setTitleTextAttributes:@{ NSForegroundColorAttributeName:[UIColor blackColor]} forState:UIControlStateSelected];
+    
     //b.创建子控制器
 
     GzwCouponsVC *c1=[[GzwCouponsVC alloc]init];
@@ -91,7 +93,16 @@
     IWNavigationController *nav4 = [[IWNavigationController alloc]initWithRootViewController:c4];
 
     tb.viewControllers=@[nav1,nav2,nav3,nav4];
-    
+    UITabBar *tabBar = tb.tabBar;
+    UITabBarItem *item0 = [tabBar.items objectAtIndex:0];
+    UITabBarItem *item1 = [tabBar.items objectAtIndex:1];
+    UITabBarItem *item2 = [tabBar.items objectAtIndex:2];
+    UITabBarItem *item3 = [tabBar.items objectAtIndex:3];
+    // 对item设置相应地图片
+    item0.selectedImage = [[[UIImage imageNamed:@"icons8-Dog House_50"] gzw_imageWithColor:[UIColor whiteColor]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    item1.selectedImage = [[[UIImage imageNamed:@"icons8-News_50"] gzw_imageWithColor:[UIColor whiteColor]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    item2.selectedImage = [[[UIImage imageNamed:@"icons8-Idea_50"] gzw_imageWithColor:[UIColor whiteColor]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    item3.selectedImage = [[[UIImage imageNamed:@"icons8-User_50"] gzw_imageWithColor:[UIColor whiteColor]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
 //    tb.tabBar.backgroundColor = [UIColor redColor];
 //    [[UITabBar appearance] setShadowImage:[[UIImage alloc]init]];

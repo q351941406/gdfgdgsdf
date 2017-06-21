@@ -64,6 +64,7 @@ PODS:
     - ReactiveCocoa/Core
   - SDCycleScrollView (1.66):
     - SDWebImage (~> 4.0.0)
+  - SDVersion (4.0.2)
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
@@ -90,6 +91,7 @@ DEPENDENCIES:
   - PureLayout
   - ReactiveCocoa (= 2.5)
   - SDCycleScrollView (~> 1.66)
+  - SDVersion (~> 4.0.2)
   - SDWebImage (~> 4.0.0)
   - SVProgressHUD
   - UIView+FDCollapsibleConstraints
@@ -113,12 +115,13 @@ SPEC CHECKSUMS:
   PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   SDCycleScrollView: e3ade90e9b3159bec04330b208fbfd81c3f3b671
+  SDVersion: 7b472a749907c29fcba04dadb8ecb4eb9a9aeeab
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
   UICountingLabel: 1db4e7d023e1762171eb226d6dff47a7a84f27aa
   UIView+FDCollapsibleConstraints: 9357eaf03b4e088263ab74a3b86a382a64ce38dd
   WMPageController: 9f219bb8912a1a1f51af11fde61e2682a7b7e7f2
 
-PODFILE CHECKSUM: ec02eec5d1a1ca354b516883f5d9e88b3ca1e974
+PODFILE CHECKSUM: 29a867ac845171ef47491e27df6cab2bb0989206
 
 COCOAPODS: 1.2.0

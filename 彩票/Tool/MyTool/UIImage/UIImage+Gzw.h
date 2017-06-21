@@ -144,4 +144,6 @@
  *  @return 新的图片
  */
 - (UIImage *)gzw_imageWithBlendColor:(UIColor *)blendColor;
+// 改变图片线条颜色
+- (UIImage *)gzw_imageWithColor:(UIColor *)color;
 @end

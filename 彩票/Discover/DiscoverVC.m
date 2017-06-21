@@ -13,7 +13,7 @@
 #import "WMTableViewController.h"
 #import "WMViewController.h"
 #import "WMCollectionViewController.h"
-
+#import "GZWTool.h"
 #import "GzwResultVC.h"
 #import "GzwExpertVC.h"
 @interface DiscoverVC ()
@@ -37,16 +37,43 @@
     self.historyCell.textLabel.font = [UIFont systemFontOfSize:13];
     self.expertCell.textLabel.font = self.historyCell.textLabel.font;
     
-    // Uncomment the following line to preserve selection between presentations.
+    self.historyCell.imageView.image = [[[UIImage imageNamed:@"icons8-Open Window_50"] gzw_imageWithColor:[UIColor whiteColor]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    self.historyCell.imageView.image = [[[UIImage imageNamed:@"icons8-Personal Trainer_50"] gzw_imageWithColor:[UIColor whiteColor]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    
+    self.historyCell.textLabel.textColor = [GzwThemeTool titleTextTheme];
+    self.expertCell.textLabel.textColor = [GzwThemeTool titleTextTheme];
+    
+    self.historyCell.textLabel.backgroundColor = [UIColor clearColor];
+    self.expertCell.textLabel.backgroundColor = [UIColor clearColor];
+    
+    
+    self.historyCell.backgroundColor = [GzwThemeTool cellBackgroudTheme];
+    self.expertCell.backgroundColor = [GzwThemeTool cellBackgroudTheme];
      self.clearsSelectionOnViewWillAppear = YES;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+// cell分割线的左边到尽头
+-(void)viewDidLayoutSubviews {
+    // 判断有没有实现这个方法
+    if ([self.tableView respondsToSelector:@selector(setSeparatorInset:)]) {
+        // 然后清零。
+        [self.tableView setSeparatorInset:UIEdgeInsetsZero];
+        
+    }
+    if ([self.tableView respondsToSelector:@selector(setLayoutMargins:)])  {
+        [self.tableView setLayoutMargins:UIEdgeInsetsZero];
+    }
+}
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPat{
+    if ([cell respondsToSelector:@selector(setLayoutMargins:)]) {
+        [cell setLayoutMargins:UIEdgeInsetsZero];
+    }
+    if ([cell respondsToSelector:@selector(setSeparatorInset:)]){
+        [cell setSeparatorInset:UIEdgeInsetsZero];
+    }
 }
 
 #pragma mark - Table view data source

@@ -44,7 +44,10 @@
         self.name.text = [self flattenHTML:model[@"article_title"] trimWhiteSpace:NO];
         
         NSDate *currentTime = [NSDate dateWithTimeIntervalSince1970:[model[@"crt_time"] integerValue]/1000];
-        self.region.text = [NSString stringWithFormat:@"%@",currentTime];
+        
+        NSString*string = [NSString stringWithFormat:@"%@",currentTime];
+
+        self.region.text = [string substringToIndex:[string rangeOfString:@"+"].location];
     }
 }
 -(NSString *)flattenHTML:(NSString *)html trimWhiteSpace:(BOOL)trim

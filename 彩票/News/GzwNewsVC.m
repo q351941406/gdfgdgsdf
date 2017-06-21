@@ -207,7 +207,7 @@ static NSString *ID = @"GzwAddressCell";
 }
 - (NYSegmentedControl *)blueSegmentedControl {
     NYSegmentedControl *blueSegmentedControl = [[NYSegmentedControl alloc] initWithItems:@[@"中奖福地", @"足球资讯"]];
-    blueSegmentedControl.titleTextColor = [UIColor colorWithRed:0.38f green:0.68f blue:0.93f alpha:1.0f];
+    blueSegmentedControl.titleTextColor = [GzwThemeTool theme];
     blueSegmentedControl.selectedTitleTextColor = [UIColor whiteColor];
     blueSegmentedControl.segmentIndicatorBackgroundColor = [GzwThemeTool theme];// 滑块背景
     blueSegmentedControl.backgroundColor = [GzwThemeTool backgroudTheme];// 背景

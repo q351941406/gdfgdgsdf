@@ -32,6 +32,7 @@
 - (void)awakeFromNib {
     self.goodsName.textColor = [GzwThemeTool titleTextTheme];
     self.currentPrice.textColor = [GzwThemeTool subTitleTextTheme];
+    self.backgroundColor = [GzwThemeTool cellBackgroudTheme];
 }
 #pragma mark Set
 -(void)setModel:(HomeM *)model

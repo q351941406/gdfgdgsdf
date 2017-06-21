@@ -8,11 +8,19 @@
 
 #import "GzwThemeTool.h"
 #import "Chameleon.h"
-static NSArray *colorArray;
+static NSArray *colorComplementary;
+static NSArray *colorTriadic;
+static NSArray *colorAnalogous;
+static NSArray *colorForText;
 @implementation GzwThemeTool
 +(void)setup
 {
-    colorArray = [NSArray arrayOfColorsWithColorScheme:ColorSchemeComplementary usingColor:FlatPurple withFlatScheme:YES];
+    colorComplementary = [NSArray arrayOfColorsWithColorScheme:ColorSchemeComplementary usingColor:FlatPurple withFlatScheme:YES];
+    colorTriadic = [NSArray arrayOfColorsWithColorScheme:ColorSchemeTriadic usingColor:FlatPurple withFlatScheme:YES];
+    colorAnalogous = [NSArray arrayOfColorsWithColorScheme:ColorSchemeAnalogous usingColor:FlatPurple withFlatScheme:YES];
+    
+    
+    colorForText = [NSArray arrayOfColorsWithColorScheme:ColorSchemeAnalogous usingColor:FlatBlackDark withFlatScheme:YES];
     [Chameleon setGlobalThemeUsingPrimaryColor:FlatPurple withSecondaryColor:nil andContentStyle:UIContentStyleContrast];
     [[UIButton appearanceWhenContainedInInstancesOfClasses:@[[UITableView class]]] setBackgroundColor:[UIColor clearColor]];
     
@@ -25,20 +33,19 @@ static NSArray *colorArray;
 }
 +(UIColor *)backgroudTheme
 {
-    return colorArray[1];
+    return colorComplementary[1];
 }
 +(UIColor *)cellBackgroudTheme
 {
-    NSArray *a = [NSArray arrayOfColorsWithColorScheme:ColorSchemeComplementary usingColor:colorArray[1] withFlatScheme:YES];
-    return FlatForestGreen;
+    return [UIColor colorWithRed:0 green:0 blue:0 alpha:0.1];
 }
 +(UIColor *)tabBarBackgroudTheme
 {
-    return FlatSand;
+    return FlatPurple;
 }
 +(UIColor *)titleTextTheme;
 {
-    return FlatSkyBlue;
+    return colorAnalogous[1];
 }
 +(UIColor *)subTitleTextTheme
 {

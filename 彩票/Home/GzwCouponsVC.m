@@ -22,7 +22,7 @@
 #import "ReactiveCocoa.h"
 #import <MeiQiaSDK/MeiQiaSDK.h>
 #import "MQChatViewManager.h"
-
+#import "SDVersion.h"
 #import "UIViewController+Chameleon.h"
 static NSString *ID = @"GzwCouponsCell";
 
@@ -55,11 +55,21 @@ static  NSString  * const headerID = @"GzwCouponsHeadView";
 {
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
     CGFloat itemW  = 0;
-    itemW = ViewW/2 - 2;
-    layout.sectionInset = UIEdgeInsetsMake(35 , 0 ,0, 0);
+    itemW = ViewW/2 - 1;
+    int i = 0;
+    if ([SDVersion deviceSize] == Screen3Dot5inch)
+        NSLog(@"You got the iPhone 7. Sweet 🍭!");
+    else if ([SDVersion deviceSize] == Screen4inch)
+        NSLog(@"You got the iPhone 7. Sweet 🍭!");
+    else if ([SDVersion deviceSize] == Screen4Dot7inch)
+        i = 40;
+    else if ([SDVersion deviceSize] == Screen5Dot5inch)
+        i = 40;
+
+    layout.sectionInset = UIEdgeInsetsMake(i , 0 ,0, 0);
     layout.itemSize = CGSizeMake(itemW, 80);
-    layout.minimumInteritemSpacing = 2;
-    layout.minimumLineSpacing = 5;
+    layout.minimumInteritemSpacing = 1;
+    layout.minimumLineSpacing = 1;
     GzwCouponsVC *VC = [super initWithCollectionViewLayout:layout];
 
     return VC;
@@ -185,7 +195,7 @@ static  NSString  * const headerID = @"GzwCouponsHeadView";
 }
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section{
     //    CGFloat height = 112;
-    CGSize size={ViewW,100};
+    CGSize size={ViewW,110};
     return size;
 }
 
