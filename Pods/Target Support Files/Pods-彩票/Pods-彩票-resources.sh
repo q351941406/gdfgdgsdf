@@ -79,11 +79,13 @@ EOM
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "HSSetTableViewController/HSSetTableViewController/HSSetTableViewController.bundle"
   install_resource "MJRefresh/MJRefresh/MJRefresh.bundle"
+  install_resource "Meiqia/Meiqia-SDK-files/MQChatViewController/Assets/MQChatViewAsset.bundle"
   install_resource "SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "HSSetTableViewController/HSSetTableViewController/HSSetTableViewController.bundle"
   install_resource "MJRefresh/MJRefresh/MJRefresh.bundle"
+  install_resource "Meiqia/Meiqia-SDK-files/MQChatViewController/Assets/MQChatViewAsset.bundle"
   install_resource "SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
 fi
 

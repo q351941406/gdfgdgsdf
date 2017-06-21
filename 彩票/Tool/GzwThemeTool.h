@@ -13,6 +13,8 @@
 
 +(UIColor *)theme;
 +(UIColor *)backgroudTheme;
++(UIColor *)tabBarBackgroudTheme;
++(UIColor *)cellBackgroudTheme;
 +(UIColor *)tintTheme;
 +(UIColor *)textTheme;
 +(UIColor *)titleTextTheme;

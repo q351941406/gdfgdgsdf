@@ -10,9 +10,11 @@
 #import "WMProductsListCell.h"
 #import "WMROOTViewController.h"
 #import "WMProductsListHeadView.h"
-
+#import "CYloginRegisterViewController.h"
 #import "ProductModel.h"
 #import <BlocksKit+UIKit.h>
+#import "GzwHUDTool.h"
+#import "GZWTool.h"
 static NSString *cellIdentifier = @"WMProductsListCellcellIdentifier";
 static NSString *cellHeaderViewIdentifier = @"WMProductsListHeadViewIdentifier";
 
@@ -95,11 +97,11 @@ static NSString *cellHeaderViewIdentifier = @"WMProductsListHeadViewIdentifier";
     [bottomButton bk_addEventHandler:^(id sender) {
         UIButton *button = (UIButton *)sender;
         if ([button.titleLabel.text isEqualToString:@"快速机选"]) {
-            //更换右边视图 选择机选注数 更换标标题为取消机选
-            [button setTitle:@"取消机选" forState:UIControlStateNormal];
-            [weakSelf.infoLabel removeFromSuperview];
-            [weakSelf.sureButton removeFromSuperview];
-            [weakSelf.bottomView addSubview:weakSelf.chooseButtons];
+//            //更换右边视图 选择机选注数 更换标标题为取消机选
+//            [button setTitle:@"取消机选" forState:UIControlStateNormal];
+//            [weakSelf.infoLabel removeFromSuperview];
+//            [weakSelf.sureButton removeFromSuperview];
+//            [weakSelf.bottomView addSubview:weakSelf.chooseButtons];
         } else if ([button.titleLabel.text isEqualToString:@"取消机选"]) {
             //更换右边视图 更换标题位快速机选
             [button setTitle:@"快速机选" forState:UIControlStateNormal];
@@ -137,8 +139,17 @@ static NSString *cellHeaderViewIdentifier = @"WMProductsListHeadViewIdentifier";
             
             [self.collectionView reloadData];
             [self calTicketNumber];
-        } else {
-            
+        } else {// 选择完成
+            NSNumber *n = [[NSUserDefaults standardUserDefaults] valueForKey:@"isLogin"];
+            if (n.boolValue) {
+                [GzwHUDTool showWithStatus:nil];
+                [NSObject gzw_performAfter:2 block:^{
+                    [GzwHUDTool showSuccessWithStatus:@"预购买成功"];
+                }];
+            }else {
+                CYloginRegisterViewController *loginRegister = [[CYloginRegisterViewController alloc] init];
+                [self presentViewController:loginRegister animated:YES completion:nil];
+            }
         }
     } forControlEvents:UIControlEventTouchUpInside];
     [bottomView addSubview:sureButton];

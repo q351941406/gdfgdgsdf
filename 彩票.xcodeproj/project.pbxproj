@@ -146,8 +146,8 @@
 		0450BCDD1EF1974D00AD4BF3 /* GzwResutTwoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GzwResutTwoCell.xib; sourceTree = "<group>"; };
 		0450F37E1E9CDAC600D8E0D0 /* WMBaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMBaseVC.h; sourceTree = "<group>"; };
 		0450F37F1E9CDAC600D8E0D0 /* WMBaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMBaseVC.m; sourceTree = "<group>"; };
-		0450F3811E9CDC6800D8E0D0 /* WMROOTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMROOTViewController.h; sourceTree = "<group>"; };
-		0450F3821E9CDC6800D8E0D0 /* WMROOTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMROOTViewController.m; sourceTree = "<group>"; };
+		0450F3811E9CDC6800D8E0D0 /* WMROOTViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WMROOTViewController.h; path = ../WMROOTViewController.h; sourceTree = "<group>"; };
+		0450F3821E9CDC6800D8E0D0 /* WMROOTViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WMROOTViewController.m; path = ../WMROOTViewController.m; sourceTree = "<group>"; };
 		0450F3841E9CE2E300D8E0D0 /* WMPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMPrefixHeader.pch; sourceTree = "<group>"; };
 		0450F3851E9CE30800D8E0D0 /* OTSSize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OTSSize.h; sourceTree = "<group>"; };
 		0450F3861E9CE30800D8E0D0 /* OTSSize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OTSSize.m; sourceTree = "<group>"; };
@@ -158,8 +158,8 @@
 		0450F38E1E9CE39600D8E0D0 /* WMVenueCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WMVenueCollectionViewCell.xib; sourceTree = "<group>"; };
 		0450F3911E9CE3A700D8E0D0 /* WMCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMCollectionViewCell.h; sourceTree = "<group>"; };
 		0450F3921E9CE3A700D8E0D0 /* WMCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMCollectionViewCell.m; sourceTree = "<group>"; };
-		0450F3941E9CE3C300D8E0D0 /* WMProductsListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMProductsListVC.h; sourceTree = "<group>"; };
-		0450F3951E9CE3C300D8E0D0 /* WMProductsListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMProductsListVC.m; sourceTree = "<group>"; };
+		0450F3941E9CE3C300D8E0D0 /* WMProductsListVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WMProductsListVC.h; path = ../WMProductsListVC.h; sourceTree = "<group>"; };
+		0450F3951E9CE3C300D8E0D0 /* WMProductsListVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WMProductsListVC.m; path = ../WMProductsListVC.m; sourceTree = "<group>"; };
 		0450F3961E9CE3C300D8E0D0 /* WMProductsListVCData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMProductsListVCData.h; sourceTree = "<group>"; };
 		0450F3971E9CE3C300D8E0D0 /* WMProductsListVCData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMProductsListVCData.m; sourceTree = "<group>"; };
 		0450F39A1E9CE3D600D8E0D0 /* WMBanerCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMBanerCollectionViewCell.h; sourceTree = "<group>"; };
@@ -203,14 +203,14 @@
 		0452F1711E9698D00006F3C4 /* GzwFlashSaleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GzwFlashSaleCell.xib; sourceTree = "<group>"; };
 		0452F1741E96B5EC0006F3C4 /* GzwWebAdvertVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GzwWebAdvertVC.h; sourceTree = "<group>"; };
 		0452F1751E96B5EC0006F3C4 /* GzwWebAdvertVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GzwWebAdvertVC.m; sourceTree = "<group>"; };
-		046D07E31E9CE77E00D6F5B6 /* SevenStarData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SevenStarData.plist; sourceTree = "<group>"; };
-		046D07E41E9CE77E00D6F5B6 /* DaLeTou.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DaLeTou.plist; sourceTree = "<group>"; };
-		046D07E51E9CE77E00D6F5B6 /* ShuangSeQiu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ShuangSeQiu.plist; sourceTree = "<group>"; };
-		046D07E61E9CE77E00D6F5B6 /* FuCai3D.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = FuCai3D.plist; sourceTree = "<group>"; };
-		046D07E71E9CE77E00D6F5B6 /* QiLeCai.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = QiLeCai.plist; sourceTree = "<group>"; };
-		046D07E81E9CE77E00D6F5B6 /* PaiLieSan.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PaiLieSan.plist; sourceTree = "<group>"; };
-		046D07E91E9CE77E00D6F5B6 /* PaiLieWu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = PaiLieWu.plist; sourceTree = "<group>"; };
-		046D07EA1E9CE77E00D6F5B6 /* ShiYiYun.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ShiYiYun.plist; sourceTree = "<group>"; };
+		046D07E31E9CE77E00D6F5B6 /* SevenStarData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = SevenStarData.plist; path = ../SevenStarData.plist; sourceTree = "<group>"; };
+		046D07E41E9CE77E00D6F5B6 /* DaLeTou.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = DaLeTou.plist; path = ../DaLeTou.plist; sourceTree = "<group>"; };
+		046D07E51E9CE77E00D6F5B6 /* ShuangSeQiu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = ShuangSeQiu.plist; path = ../ShuangSeQiu.plist; sourceTree = "<group>"; };
+		046D07E61E9CE77E00D6F5B6 /* FuCai3D.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = FuCai3D.plist; path = ../FuCai3D.plist; sourceTree = "<group>"; };
+		046D07E71E9CE77E00D6F5B6 /* QiLeCai.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = QiLeCai.plist; path = ../QiLeCai.plist; sourceTree = "<group>"; };
+		046D07E81E9CE77E00D6F5B6 /* PaiLieSan.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PaiLieSan.plist; path = ../PaiLieSan.plist; sourceTree = "<group>"; };
+		046D07E91E9CE77E00D6F5B6 /* PaiLieWu.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PaiLieWu.plist; path = ../PaiLieWu.plist; sourceTree = "<group>"; };
+		046D07EA1E9CE77E00D6F5B6 /* ShiYiYun.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = ShiYiYun.plist; path = ../ShiYiYun.plist; sourceTree = "<group>"; };
 		046D07F31E9CE94A00D6F5B6 /* GzwNotificationTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GzwNotificationTool.h; sourceTree = "<group>"; };
 		046D07F41E9CE94A00D6F5B6 /* GzwNotificationTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GzwNotificationTool.m; sourceTree = "<group>"; };
 		046D07F61E9CE97500D6F5B6 /* Singleton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
@@ -382,14 +382,6 @@
 		0450F3881E9CE32100D8E0D0 /* New Group */ = {
 			isa = PBXGroup;
 			children = (
-				046D07E31E9CE77E00D6F5B6 /* SevenStarData.plist */,
-				046D07E41E9CE77E00D6F5B6 /* DaLeTou.plist */,
-				046D07E51E9CE77E00D6F5B6 /* ShuangSeQiu.plist */,
-				046D07E61E9CE77E00D6F5B6 /* FuCai3D.plist */,
-				046D07E71E9CE77E00D6F5B6 /* QiLeCai.plist */,
-				046D07E81E9CE77E00D6F5B6 /* PaiLieSan.plist */,
-				046D07E91E9CE77E00D6F5B6 /* PaiLieWu.plist */,
-				046D07EA1E9CE77E00D6F5B6 /* ShiYiYun.plist */,
 				0450F3B61E9CE53C00D8E0D0 /* WMProductsListHeadView.h */,
 				0450F3B71E9CE53C00D8E0D0 /* WMProductsListHeadView.m */,
 				0450F3B81E9CE53C00D8E0D0 /* WMProductsListHeadView.xib */,
@@ -410,8 +402,6 @@
 				0450F39A1E9CE3D600D8E0D0 /* WMBanerCollectionViewCell.h */,
 				0450F39B1E9CE3D600D8E0D0 /* WMBanerCollectionViewCell.m */,
 				0450F39C1E9CE3D600D8E0D0 /* WMBanerCollectionViewCell.xib */,
-				0450F3941E9CE3C300D8E0D0 /* WMProductsListVC.h */,
-				0450F3951E9CE3C300D8E0D0 /* WMProductsListVC.m */,
 				0450F3961E9CE3C300D8E0D0 /* WMProductsListVCData.h */,
 				0450F3971E9CE3C300D8E0D0 /* WMProductsListVCData.m */,
 				0450F3911E9CE3A700D8E0D0 /* WMCollectionViewCell.h */,
@@ -424,8 +414,6 @@
 				0450F3851E9CE30800D8E0D0 /* OTSSize.h */,
 				0450F3861E9CE30800D8E0D0 /* OTSSize.m */,
 				0450F3841E9CE2E300D8E0D0 /* WMPrefixHeader.pch */,
-				0450F3811E9CDC6800D8E0D0 /* WMROOTViewController.h */,
-				0450F3821E9CDC6800D8E0D0 /* WMROOTViewController.m */,
 				0450F37E1E9CDAC600D8E0D0 /* WMBaseVC.h */,
 				0450F37F1E9CDAC600D8E0D0 /* WMBaseVC.m */,
 			);
@@ -715,6 +703,18 @@
 			children = (
 				CF91DEB21EEE6480005BEBC6 /* GzwCouponsVC.h */,
 				CF91DEB31EEE6480005BEBC6 /* GzwCouponsVC.m */,
+				0450F3811E9CDC6800D8E0D0 /* WMROOTViewController.h */,
+				0450F3821E9CDC6800D8E0D0 /* WMROOTViewController.m */,
+				0450F3941E9CE3C300D8E0D0 /* WMProductsListVC.h */,
+				0450F3951E9CE3C300D8E0D0 /* WMProductsListVC.m */,
+				046D07E31E9CE77E00D6F5B6 /* SevenStarData.plist */,
+				046D07E41E9CE77E00D6F5B6 /* DaLeTou.plist */,
+				046D07E51E9CE77E00D6F5B6 /* ShuangSeQiu.plist */,
+				046D07E61E9CE77E00D6F5B6 /* FuCai3D.plist */,
+				046D07E71E9CE77E00D6F5B6 /* QiLeCai.plist */,
+				046D07E81E9CE77E00D6F5B6 /* PaiLieSan.plist */,
+				046D07E91E9CE77E00D6F5B6 /* PaiLieWu.plist */,
+				046D07EA1E9CE77E00D6F5B6 /* ShiYiYun.plist */,
 			);
 			path = Home;
 			sourceTree = "<group>";

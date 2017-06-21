@@ -10,6 +10,8 @@
 #import "GzwThemeTool.h"
 #import "GzwExpertDetaillCell.h"
 #import "GzwMyOrderLogisticsHeaderV.h"
+#import "ReactiveCocoa.h"
+
 @interface GzwExpertDetallVC ()
 @property (nonatomic, strong) NSArray *data;
 @property (nonatomic, strong) GzwMyOrderLogisticsHeaderV *headView;
@@ -26,7 +28,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
- 
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:nil action:nil];
+    self.navigationItem.rightBarButtonItem.rac_command = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
+        
+        NSMutableArray *items = [[NSMutableArray alloc] init];
+        [items addObject:@"分享的title"];
+//        [items addObject:[UIImage imageNamed:@"ic_refund_busine"]];
+        [items addObject:@"https://www.baidu.com"];
+        
+        UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:items applicationActivities:nil];
+        NSMutableArray *excludedActivityTypes =  [NSMutableArray arrayWithArray:@[UIActivityTypeAirDrop, UIActivityTypeCopyToPasteboard, UIActivityTypeAssignToContact, UIActivityTypePrint, UIActivityTypeMail, UIActivityTypePostToTencentWeibo, UIActivityTypeSaveToCameraRoll, UIActivityTypeMessage, UIActivityTypePostToTwitter]];
+        activityViewController.excludedActivityTypes = excludedActivityTypes;
+        [self presentViewController:activityViewController animated:YES completion:nil];
+        activityViewController.completionWithItemsHandler = ^(UIActivityType __nullable activityType, BOOL completed, NSArray * __nullable returnedItems, NSError * __nullable activityError){
+            NSLog(@"%@  ----   %@", activityType, returnedItems);
+        };
+        return [RACSignal empty];
+    }];
     self.tableView.backgroundColor = [GzwThemeTool backgroudTheme];
 //    self.tableView.rowHeight = 80;
         self.tableView.estimatedRowHeight = 70; // 设置估算高度

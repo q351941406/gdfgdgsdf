@@ -38,6 +38,12 @@ PODS:
     - SDWebImage
   - JSONModel (1.7.0)
   - Masonry (1.0.0)
+  - Meiqia (3.3.4.1):
+    - Meiqia/MeiqiaSDK (= 3.3.4.1)
+    - Meiqia/MQChatViewController (= 3.3.4.1)
+  - Meiqia/MeiqiaSDK (3.3.4.1)
+  - Meiqia/MQChatViewController (3.3.4.1):
+    - Meiqia/MeiqiaSDK
   - MJRefresh (3.1.12)
   - NJKWebViewProgress (0.2.3):
     - NJKWebViewProgress/Core (= 0.2.3)
@@ -75,6 +81,7 @@ DEPENDENCIES:
   - HSSetTableViewController (~> 1.1.3)
   - JSONModel (~> 1.1)
   - Masonry (= 1.0.0)
+  - Meiqia (~> 3.3.4.1)
   - MJRefresh (~> 3.1.12)
   - NJKWebViewProgress (= 0.2.3)
   - NYSegmentedControl (~> 1.1.0)
@@ -97,6 +104,7 @@ SPEC CHECKSUMS:
   HSSetTableViewController: 4a406d2ac36ccee8d09b382a0f308ad39543b97f
   JSONModel: 840bc0fcffb24b8454d2c026bf26fea454b8e98d
   Masonry: b529bb169217897b6354d4b56b1fada6d475b13d
+  Meiqia: 2be3baaf2b023484b8cd3985bc2dad6db36732a1
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   NJKWebViewProgress: f481fd424cb5ecc27eacae11b5397db92fba9a4d
   NYSegmentedControl: a92726c9e459919549f94328389ffcdaecefebfe
@@ -111,6 +119,6 @@ SPEC CHECKSUMS:
   UIView+FDCollapsibleConstraints: 9357eaf03b4e088263ab74a3b86a382a64ce38dd
   WMPageController: 9f219bb8912a1a1f51af11fde61e2682a7b7e7f2
 
-PODFILE CHECKSUM: 15484978e75e7b3df3bcdbbf5e7e601be19d79e4
+PODFILE CHECKSUM: ec02eec5d1a1ca354b516883f5d9e88b3ca1e974
 
 COCOAPODS: 1.2.0

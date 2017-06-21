@@ -12,5 +12,6 @@
 @property(nonatomic,copy)NSString *iconName;
 @property(nonatomic,copy)NSString *title;
 @property(nonatomic,copy)NSString *subTitle;
+
 @property(nonatomic,copy) void (^block)(NSObject *view,NSObject *index);
 @end

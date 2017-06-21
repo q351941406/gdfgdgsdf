@@ -18,10 +18,11 @@
 @implementation GzwAddressCell
 
 - (void)awakeFromNib {
-    self.decorationView.backgroundColor = [GzwThemeTool backgroudTheme];
+    self.decorationView.backgroundColor = [GzwThemeTool random];
     self.region.textColor = [GzwThemeTool subTitleTextTheme];
+    self.name.textColor = [GzwThemeTool titleTextTheme];
     self.accessoryView.backgroundColor = [UIColor blackColor];
-    
+    self.backgroundColor = [GzwThemeTool cellBackgroudTheme];
 }
 -(void)layoutSubviews
 {

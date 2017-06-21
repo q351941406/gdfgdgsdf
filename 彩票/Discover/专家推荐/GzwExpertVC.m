@@ -13,18 +13,7 @@
 @interface GzwExpertVC ()
 @property (nonatomic, strong) NSArray *data;
 @end
-//NSMutableArray *items = [[NSMutableArray alloc] init];
-//[items addObject:@"分享的title"];
-//[items addObject:[UIImage imageNamed:@"ic_refund_busine"]];
-//[items addObject:@"https://www.baidu.com"];
-//
-//UIActivityViewController *activityViewController = [[UIActivityViewController alloc] initWithActivityItems:items applicationActivities:nil];
-////NSMutableArray *excludedActivityTypes =  [NSMutableArray arrayWithArray:@[UIActivityTypeAirDrop, UIActivityTypeCopyToPasteboard, UIActivityTypeAssignToContact, UIActivityTypePrint, UIActivityTypeMail, UIActivityTypePostToTencentWeibo, UIActivityTypeSaveToCameraRoll, UIActivityTypeMessage, UIActivityTypePostToTwitter]];
-////activityViewController.excludedActivityTypes = excludedActivityTypes;
-//[self presentViewController:activityViewController animated:YES completion:nil];
-//activityViewController.completionWithItemsHandler = ^(UIActivityType __nullable activityType, BOOL completed, NSArray * __nullable returnedItems, NSError * __nullable activityError){
-//    NSLog(@"%@  ----   %@", activityType, returnedItems);
-//};
+
 @implementation GzwExpertVC
 
 - (void)viewDidLoad {
@@ -74,7 +63,7 @@
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    GzwExpertDetallVC *vc = [[GzwExpertDetallVC alloc]initWithStyle:1];
+    GzwExpertDetallVC *vc = [[GzwExpertDetallVC alloc]initWithStyle:0];
     vc.dict = self.data[indexPath.row];
     [self.navigationController pushViewController:vc animated:YES];
 }

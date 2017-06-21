@@ -18,6 +18,8 @@
 #import "GzwNewsVC.h"
 #import "AFNetworking.h"
 #import "HSSetTableInfoController.h"
+#import <MeiQiaSDK/MeiQiaSDK.h>
+#import "GzwThemeTool.h"
 @interface AppDelegate ()
 
 @end
@@ -30,6 +32,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    [MQManager initWithAppkey:@"5979a4368c7786c76b58306036952553" completion:^(NSString *clientId, NSError *error) {
+    }];
+    [GzwThemeTool setup];
     [GzwNotificationTool registRemotePushNotification];
     [GzwNotificationTool application:application didFinishLaunchingWithOptions:launchOptions];
     [GzwNotificationTool cancelAllLocalNotifications];
@@ -45,7 +50,13 @@
     
     //a.初始化一个tabBar控制器
     UITabBarController *tb=[[UITabBarController alloc]init];
-
+    [[UITabBar appearance] setBackgroundImage:[[UIImage alloc]init]];
+    [[UITabBar appearance] setBackgroundColor:[GzwThemeTool theme]];
+    [[UITabBar appearance] setTintColor:[UIColor redColor]];
+    [[UITabBar appearance] setBarTintColor:[UIColor redColor]];
+    
+    [[UITabBarItem appearance] setTitleTextAttributes:@{ NSForegroundColorAttributeName:[UIColor whiteColor]} forState:UIControlStateNormal];
+    [[UITabBarItem appearance] setTitleTextAttributes:@{ NSForegroundColorAttributeName:[UIColor blackColor]} forState:UIControlStateSelected];
     //b.创建子控制器
 
     GzwCouponsVC *c1=[[GzwCouponsVC alloc]init];
@@ -61,7 +72,7 @@
 //    UIImageView *g = [[UIImageView alloc]initWithImage:i];
 //    g.frame = CGRectMake(10, 80, 300, 300);
 //    [c1.view addSubview:g];
-    
+//    tb.tabBarItem
     GzwNewsVC *c2=[[GzwNewsVC alloc]init];
     c2.title=@"资讯";
     c2.tabBarItem.image=[UIImage imageNamed:@"icons8-News_50"];
@@ -107,6 +118,7 @@
 //                }else {
 //                    self.window.rootViewController                 = [[IWNavigationController alloc]initWithRootViewController:[[GzwTableView alloc] initWithStyle:UITableViewStyleGrouped]];
     
+    
                     self.window.rootViewController                 = tb;
 //                }
 //                
@@ -115,7 +127,7 @@
 //    }];
     
     
-    [GzwThemeTool setup];
+    
     [AppDelegate getCookie];
     return YES;
 }
