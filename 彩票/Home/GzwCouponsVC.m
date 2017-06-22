@@ -109,10 +109,11 @@ static  NSString  * const headerID = @"GzwCouponsHeadView";
     [mar POST:@"http://mapi.yjcp.com/center/homePageInfo" parameters:nil progress:^(NSProgress * _Nonnull uploadProgress) {
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        self.adURL = [responseObject[@"lunboList"] valueForKeyPath:@"linkAddress"];
-        NSArray *dd = [responseObject[@"lunboList"] valueForKeyPath:@"linkAddress"];
-        self.headView.cycleScrollView.imageURLStringsGroup = [responseObject[@"lunboList"] valueForKeyPath:@"mapAddress"];
         
+        self.adURL = [responseObject[@"lunboList"] valueForKeyPath:@"linkAddress"];
+        self.headView.cycleScrollView.imageURLStringsGroup = [responseObject[@"lunboList"] valueForKeyPath:@"mapAddress"];
+        self.headView.cycleScrollView.imageURLStringsGroup = @[@"http://www.zycpimg.com/img/banner/1496246400/1496975415112891725.jpg"];
+//        self.headView.cycleScrollView.localizationImageNamesGroup = @[@"1"];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"%@",error);
         

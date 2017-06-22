@@ -11,6 +11,7 @@
 		0411E40C1EF81879008092C8 /* GzwExpertCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0411E40A1EF81879008092C8 /* GzwExpertCell.xib */; };
 		0411E4101EF9602E008092C8 /* GzwMyOrderLogisticsHeaderV.m in Sources */ = {isa = PBXBuildFile; fileRef = 0411E40E1EF9602E008092C8 /* GzwMyOrderLogisticsHeaderV.m */; };
 		0411E4111EF9602E008092C8 /* GzwMyOrderLogisticsHeaderV.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0411E40F1EF9602E008092C8 /* GzwMyOrderLogisticsHeaderV.xib */; };
+		0411E4141EFC0297008092C8 /* File.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0411E4161EFC0297008092C8 /* File.strings */; };
 		042E31701E978B5D0004F1DC /* mainSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 042E316F1E978B5D0004F1DC /* mainSB.storyboard */; };
 		044C46B91EF0461200C04D90 /* WMCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044C46B21EF0461100C04D90 /* WMCollectionViewController.m */; };
 		044C46BA1EF0461200C04D90 /* WMSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044C46B41EF0461200C04D90 /* WMSecondViewController.m */; };
@@ -127,6 +128,9 @@
 		0411E40D1EF9602E008092C8 /* GzwMyOrderLogisticsHeaderV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GzwMyOrderLogisticsHeaderV.h; sourceTree = "<group>"; };
 		0411E40E1EF9602E008092C8 /* GzwMyOrderLogisticsHeaderV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GzwMyOrderLogisticsHeaderV.m; sourceTree = "<group>"; };
 		0411E40F1EF9602E008092C8 /* GzwMyOrderLogisticsHeaderV.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GzwMyOrderLogisticsHeaderV.xib; sourceTree = "<group>"; };
+		0411E4151EFC0297008092C8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/File.strings; sourceTree = "<group>"; };
+		0411E4171EFC029C008092C8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/File.strings; sourceTree = "<group>"; };
+		0411E4181EFC02A3008092C8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/File.strings"; sourceTree = "<group>"; };
 		042E316F1E978B5D0004F1DC /* mainSB.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = mainSB.storyboard; sourceTree = "<group>"; };
 		044C46B11EF0461100C04D90 /* WMCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMCollectionViewController.h; sourceTree = "<group>"; };
 		044C46B21EF0461100C04D90 /* WMCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMCollectionViewController.m; sourceTree = "<group>"; };
@@ -423,6 +427,7 @@
 		0452F0D61E968EDE0006F3C4 = {
 			isa = PBXGroup;
 			children = (
+				0411E4161EFC0297008092C8 /* File.strings */,
 				0452F0E11E968EDE0006F3C4 /* 彩票 */,
 				0452F0FE1E968EDF0006F3C4 /* 彩票Tests */,
 				0452F1091E968EDF0006F3C4 /* 彩票UITests */,
@@ -443,6 +448,8 @@
 		0452F0E11E968EDE0006F3C4 /* 彩票 */ = {
 			isa = PBXGroup;
 			children = (
+				0452F0E51E968EDE0006F3C4 /* AppDelegate.h */,
+				0452F0E61E968EDE0006F3C4 /* AppDelegate.m */,
 				CF63FFFA1EF77504005222B9 /* 个人中心 */,
 				CF7E96441EF3CFD90095CE22 /* Detaill */,
 				CF6FDC2D1EEFEC3F005DCF6E /* Discover */,
@@ -450,8 +457,6 @@
 				CF91DEBE1EEE680F005BEBC6 /* ObjectModal */,
 				CF91DEB51EEE64B0005BEBC6 /* View */,
 				CF91DEA21EEE4810005BEBC6 /* Home */,
-				0452F0E51E968EDE0006F3C4 /* AppDelegate.h */,
-				0452F0E61E968EDE0006F3C4 /* AppDelegate.m */,
 				04D1EF9E1EEC078B004B02A3 /* Tool */,
 				04D1EF9D1EEBD96A004B02A3 /* Main */,
 				046D07F71E9CEAF700D6F5B6 /* 彩票.entitlements */,
@@ -809,7 +814,7 @@
 				TargetAttributes = {
 					0452F0DE1E968EDE0006F3C4 = {
 						CreatedOnToolsVersion = 8.3;
-						DevelopmentTeam = 79LSPUHT82;
+						DevelopmentTeam = KM37GDXB4V;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Push = {
@@ -826,6 +831,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 0452F0D61E968EDE0006F3C4;
 			productRefGroup = 0452F0E01E968EDE0006F3C4 /* Products */;
@@ -856,6 +862,7 @@
 				046D07EC1E9CE77E00D6F5B6 /* DaLeTou.plist in Resources */,
 				046D07F21E9CE77E00D6F5B6 /* ShiYiYun.plist in Resources */,
 				042E31701E978B5D0004F1DC /* mainSB.storyboard in Resources */,
+				0411E4141EFC0297008092C8 /* File.strings in Resources */,
 				046D07ED1E9CE77E00D6F5B6 /* ShuangSeQiu.plist in Resources */,
 				0450F3B21E9CE41C00D8E0D0 /* WMProductsListCell.xib in Resources */,
 				0450F3A81E9CE3FD00D8E0D0 /* WMVenueTitle2CollectionViewCell.xib in Resources */,
@@ -1015,11 +1022,25 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		0411E4161EFC0297008092C8 /* File.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0411E4151EFC0297008092C8 /* Base */,
+				0411E4171EFC029C008092C8 /* en */,
+				0411E4181EFC02A3008092C8 /* zh-Hans */,
+			);
+			name = File.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		0452F10D1E968EDF0006F3C4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -1068,6 +1089,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -1112,10 +1134,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "彩票/彩票.entitlements";
-				DEVELOPMENT_TEAM = 79LSPUHT82;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = KM37GDXB4V;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "彩票/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -1152,8 +1175,9 @@
 					"-framework",
 					"\"SystemConfiguration\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.guesslive.caixia;
+				PRODUCT_BUNDLE_IDENTIFIER = ghjghjghj464647;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -1163,10 +1187,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "彩票/彩票.entitlements";
-				DEVELOPMENT_TEAM = 79LSPUHT82;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = KM37GDXB4V;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "彩票/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
@@ -1203,8 +1229,9 @@
 					"-framework",
 					"\"SystemConfiguration\"",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.guesslive.caixia;
+				PRODUCT_BUNDLE_IDENTIFIER = ghjghjghj464647;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};

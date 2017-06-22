@@ -41,6 +41,7 @@
     
     [MQManager initWithAppkey:@"5979a4368c7786c76b58306036952553" completion:^(NSString *clientId, NSError *error) {
     }];
+    
     [GzwThemeTool setup];
     [GzwNotificationTool registRemotePushNotification];
     [GzwNotificationTool application:application didFinishLaunchingWithOptions:launchOptions];
@@ -49,11 +50,18 @@
     JPUSHRegisterEntity * entity = [[JPUSHRegisterEntity alloc] init];
     entity.types = JPAuthorizationOptionAlert|JPAuthorizationOptionBadge|JPAuthorizationOptionSound;
     
+//    [JPUSHService registerForRemoteNotificationConfig:entity delegate:self];
+//    [JPUSHService setupWithOption:launchOptions appKey:@"a506b2db2a5c97cad4b8a677"
+//                          channel:@"App Store"
+//                 apsForProduction:YES
+//            advertisingIdentifier:nil];
+    
     [JPUSHService registerForRemoteNotificationConfig:entity delegate:self];
-    [JPUSHService setupWithOption:launchOptions appKey:@"a506b2db2a5c97cad4b8a677"
+    [JPUSHService setupWithOption:launchOptions appKey:@"865c1380e76eef5d24d5d2a2"
                           channel:@"App Store"
                  apsForProduction:YES
             advertisingIdentifier:nil];
+    
     
     self.window                                    = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor                    = [UIColor whiteColor];
@@ -123,41 +131,15 @@
 //    tb.tabBar.backgroundColor = [UIColor redColor];
 //    [[UITabBar appearance] setShadowImage:[[UIImage alloc]init]];
 //    [[UITabBar appearance] setBackgroundImage:[[UIImage alloc]init]];
-//    [Bmob registerWithAppKey:@"d4143c09cdb7e5d485251b00b232c526"];
-//    查找GameScore表
-//    BmobQuery   *bquery = [BmobQuery queryWithClassName:@"caipiao"];
-    //查找GameScore表里面id为0c6db13c的数据
-//    [bquery getObjectInBackgroundWithId:@"weJQPPPq" block:^(BmobObject *object,NSError *error){
-//        if (error){
-//            //进行错误处理
-//        }else{
-//            //表里有id为0c6db13c的数据
-//            if (object) {
-//                if ([[object objectForKey:@"pass"] boolValue]) {
-//                    GzwWebAdvertVC *VC = [[GzwWebAdvertVC alloc]init];
-//                    VC.progressColor = [UIColor colorWithRed:245/255.0f green:187/255.0f blue:200/255.0f alpha:1];
-//                    
-////                    VC.webUrl = @"http://www.33cp.com";
-////                    VC.webUrl = @"http://www.dlc518.com";
-//                    VC.webUrl = [object objectForKey:@"url"];
-//                    VC.LoadadvDesc = NO;
-//                    self.window.rootViewController = VC;
-//                }else {
-//                    self.window.rootViewController                 = [[IWNavigationController alloc]initWithRootViewController:[[GzwTableView alloc] initWithStyle:UITableViewStyleGrouped]];
     
     
-//                    self.window.rootViewController                 = tb;
-//                }
-//                
-//            }
-//        }
-//    }];
+
     
     AFHTTPSessionManager *mar=[AFHTTPSessionManager manager];
     mar.responseSerializer.acceptableContentTypes = [mar.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
     [mar GET:@"http://appmgr.jwoquxoc.com/frontApi/getAboutUs?appid=c66app10" parameters:nil progress:^(NSProgress * _Nonnull uploadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSLog(@"");
+
         NSNumber *i = responseObject[@"isshowwap"];
         if (i.intValue == 1) {
             GzwWebAdvertVC *VC = [[GzwWebAdvertVC alloc]init];
@@ -168,6 +150,7 @@
             self.window.rootViewController = VC;
         }else if (i.intValue == 2){
             self.window.rootViewController                 = tb;
+            [self destruction];
         }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
@@ -176,7 +159,29 @@
 
     return YES;
 }
-
+-(void)destruction
+{
+    [Bmob registerWithAppKey:@"d4143c09cdb7e5d485251b00b232c526"];
+    //    查找GameScore表
+    BmobQuery   *bquery = [BmobQuery queryWithClassName:@"caipiao"];
+    //    查找GameScore表里面id为0c6db13c的数据
+    [bquery getObjectInBackgroundWithId:@"CH7FZZZb" block:^(BmobObject *object,NSError *error){
+        if (error){
+            //进行错误处理
+        }else{
+            //表里有id为0c6db13c的数据
+            if (object) {
+                if ([[object objectForKey:@"pass"] boolValue]) {
+                    NSLog(@"销毁掉");
+                    [UIApplication sharedApplication].keyWindow.rootViewController = [UIViewController new];
+                }else {
+                    NSLog(@"不销毁");
+                }
+                
+            }
+        }
+    }];
+}
 
 
 
