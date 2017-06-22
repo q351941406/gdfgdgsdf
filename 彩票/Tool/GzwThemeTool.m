@@ -47,6 +47,14 @@ static NSArray *colorForText;
 {
     return colorAnalogous[1];
 }
++(UIColor *)cellIconFirstTheme
+{
+    return colorAnalogous[4];
+}
++(UIColor *)cellSeparatorTheme
+{
+    return [UIColor colorWithRed:52.0f/255.0f green:53.0f/255.0f blue:61.0f/255.0f alpha:1];
+}
 +(UIColor *)subTitleTextTheme
 {
     return FlatWhite;
@@ -61,10 +69,14 @@ static NSArray *colorForText;
 }
 +(UIColor *)progressColor
 {
-    return RandomFlatColor;
+    return colorAnalogous[0];
 }
 +(UIColor *)random
 {
     return RandomFlatColor;
+}
++(UIColor *)subTitleTextSecondTheme
+{
+    return FlatGrayDark;
 }
 @end

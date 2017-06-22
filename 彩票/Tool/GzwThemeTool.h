@@ -14,11 +14,16 @@
 +(UIColor *)theme;
 +(UIColor *)backgroudTheme;
 +(UIColor *)tabBarBackgroudTheme;
+
 +(UIColor *)cellBackgroudTheme;
++(UIColor *)cellSeparatorTheme;// cell分割线
++(UIColor *)cellIconFirstTheme;
+
 +(UIColor *)tintTheme;
 +(UIColor *)textTheme;
 +(UIColor *)titleTextTheme;
-+(UIColor *)subTitleTextTheme;
++(UIColor *)subTitleTextTheme;// 一级子标题
++(UIColor *)subTitleTextSecondTheme; // 二级子标题
 +(UIColor *)titleTheme;
 +(UIColor *)positiveTheme;
 +(UIColor *)negativeTheme;

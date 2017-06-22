@@ -26,7 +26,7 @@
 //    self.tableView.rowHeight = UITableViewAutomaticDimension;
     [self.tableView registerNib:[UINib nibWithNibName:GzwExpertCell.description bundle:nil] forCellReuseIdentifier:GzwExpertCell.description];
      self.clearsSelectionOnViewWillAppear = YES;
-    
+    self.tableView.separatorColor = [GzwThemeTool cellSeparatorTheme];
     [self.tableView reloadData];
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
@@ -45,12 +45,10 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
     return self.data.count;
 }
 

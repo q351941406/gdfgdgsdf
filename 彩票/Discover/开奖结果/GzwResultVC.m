@@ -178,6 +178,7 @@ static NSString *IDTwo = @"GzwResutTwoCell";
         _two.delegate = self;
         _two.dataSource = self;
         _two.tableFooterView = [UIView new];
+        _two.separatorColor = [GzwThemeTool cellSeparatorTheme];
         
     }
     return _two;
@@ -195,6 +196,7 @@ static NSString *IDTwo = @"GzwResutTwoCell";
         _one.contentInset               = UIEdgeInsetsMake(64, 0, 0, 0);
         _one.scrollIndicatorInsets = UIEdgeInsetsMake(64, 0, 0, 0);
         _one.tableFooterView = [UIView new];
+        _one.separatorColor = [GzwThemeTool cellSeparatorTheme];
     }
     return _one;
 }
@@ -346,7 +348,7 @@ static NSString *IDTwo = @"GzwResutTwoCell";
 
 - (NYSegmentedControl *)blueSegmentedControl {
     NYSegmentedControl *blueSegmentedControl = [[NYSegmentedControl alloc] initWithItems:@[@"彩票", @"体育"]];
-    blueSegmentedControl.titleTextColor = [UIColor colorWithRed:0.38f green:0.68f blue:0.93f alpha:1.0f];
+    blueSegmentedControl.titleTextColor = [GzwThemeTool theme];
     blueSegmentedControl.selectedTitleTextColor = [UIColor whiteColor];
     blueSegmentedControl.segmentIndicatorBackgroundColor = [GzwThemeTool theme];// 滑块背景
     blueSegmentedControl.backgroundColor = [GzwThemeTool backgroudTheme];// 背景

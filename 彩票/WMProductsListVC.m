@@ -15,6 +15,8 @@
 #import <BlocksKit+UIKit.h>
 #import "GzwHUDTool.h"
 #import "GZWTool.h"
+#import "GzwThemeTool.h"
+#import "Chameleon.h"
 static NSString *cellIdentifier = @"WMProductsListCellcellIdentifier";
 static NSString *cellHeaderViewIdentifier = @"WMProductsListHeadViewIdentifier";
 
@@ -65,9 +67,12 @@ static NSString *cellHeaderViewIdentifier = @"WMProductsListHeadViewIdentifier";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+
     self.arrayData = [NSMutableArray arrayWithCapacity:0];
     self.numberOfPay = 0;
-    self.view.backgroundColor = [OTSColor colorWithRGB:0xeeeeee];
+    self.view.backgroundColor = [GzwThemeTool backgroudTheme];
     [self.view addSubview:self.collectionView];
     self.collectionView.frame =CGRectMake(0,64,Width,Height-64-40);
     
@@ -79,19 +84,19 @@ static NSString *cellHeaderViewIdentifier = @"WMProductsListHeadViewIdentifier";
 - (void)addButtomView {
     UIView *bottomView = [[UIView alloc]init];
     bottomView.frame = CGRectMake(0,Height - 40,Width,40);
-    bottomView.backgroundColor = [OTSColor whiteColor];
+    bottomView.backgroundColor = [GzwThemeTool theme];
     [self.view addSubview:bottomView];
     self.bottomView = bottomView;
     
     UIView *line = [[UIView alloc]init];
     line.frame = CGRectMake(0, 0, Width, 1);
     line.backgroundColor = [UIColor lightTextColor];
-    [bottomView addSubview:line];
+//    [bottomView addSubview:line];
     
     UIButton *bottomButton = [UIButton buttonWithType:UIButtonTypeCustom];
     bottomButton.frame = CGRectMake(8, 5, 60, 30);
     [bottomButton setTitle:@"快速机选" forState:UIControlStateNormal];
-    [bottomButton setTitleColor:[OTSColor paleRedColor] forState:UIControlStateNormal];
+    [bottomButton setTitleColor:[GzwThemeTool titleTextTheme] forState:UIControlStateNormal];
     bottomButton.titleLabel.font = [UIFont boldSystemFontOfSize:13];
     __weak WMProductsListVC* weakSelf = self;
     [bottomButton bk_addEventHandler:^(id sender) {
@@ -120,7 +125,7 @@ static NSString *cellHeaderViewIdentifier = @"WMProductsListHeadViewIdentifier";
     
     UIButton *sureButton = [UIButton buttonWithType:UIButtonTypeCustom];
     sureButton.frame = CGRectMake(Width - 60, 0, 60, 40);
-    sureButton.backgroundColor = [UIColor redColor];
+    sureButton.backgroundColor = FlatRed;
     [sureButton setTitle:@"确定" forState:UIControlStateNormal];
     sureButton.titleLabel.font = [UIFont boldSystemFontOfSize:13];
     [sureButton bk_addEventHandler:^(id sender) {
@@ -196,6 +201,7 @@ static NSString *cellHeaderViewIdentifier = @"WMProductsListHeadViewIdentifier";
     frame.origin = CGPointMake((Width - frame.size.width) / 2, (40 - frame.size.height) / 2);
     //NSLog(@"%@",NSStringFromCGRect(frame));
     _infoLabel.frame = frame;
+    _infoLabel.textColor = ComplementaryFlatColor([GzwThemeTool theme]);
 }
 
 - (void)loadData {
@@ -255,6 +261,9 @@ static NSString *cellHeaderViewIdentifier = @"WMProductsListHeadViewIdentifier";
         WMProductsListHeadView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:cellHeaderViewIdentifier forIndexPath:indexPath];
         ProductModel *model = self.arrayData[indexPath.section];
         headerView.titleLabel.text = model.title;
+        headerView.backgroundColor = [GzwThemeTool theme];
+        headerView.titleLabel.textColor = ComplementaryFlatColor([GzwThemeTool theme]);
+        
         reusableview = headerView;
     }
     

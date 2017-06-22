@@ -20,7 +20,14 @@
 #import "HSSetTableInfoController.h"
 #import <MeiQiaSDK/MeiQiaSDK.h>
 #import "GzwThemeTool.h"
-@interface AppDelegate ()
+
+// 引入JPush功能所需头文件
+#import "JPUSHService.h"
+// iOS10注册APNs所需头文件
+#ifdef NSFoundationVersionNumber_iOS_9_x_Max
+#import <UserNotifications/UserNotifications.h>
+#endif
+@interface AppDelegate ()<JPUSHRegisterDelegate>
 
 @end
 
@@ -38,7 +45,16 @@
     [GzwNotificationTool registRemotePushNotification];
     [GzwNotificationTool application:application didFinishLaunchingWithOptions:launchOptions];
     [GzwNotificationTool cancelAllLocalNotifications];
-//    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault animated:YES];
+    
+    JPUSHRegisterEntity * entity = [[JPUSHRegisterEntity alloc] init];
+    entity.types = JPAuthorizationOptionAlert|JPAuthorizationOptionBadge|JPAuthorizationOptionSound;
+    
+    [JPUSHService registerForRemoteNotificationConfig:entity delegate:self];
+    [JPUSHService setupWithOption:launchOptions appKey:@"a506b2db2a5c97cad4b8a677"
+                          channel:@"App Store"
+                 apsForProduction:YES
+            advertisingIdentifier:nil];
+    
     self.window                                    = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor                    = [UIColor whiteColor];
     
@@ -107,9 +123,9 @@
 //    tb.tabBar.backgroundColor = [UIColor redColor];
 //    [[UITabBar appearance] setShadowImage:[[UIImage alloc]init]];
 //    [[UITabBar appearance] setBackgroundImage:[[UIImage alloc]init]];
-    [Bmob registerWithAppKey:@"d4143c09cdb7e5d485251b00b232c526"];
-    //查找GameScore表
-    BmobQuery   *bquery = [BmobQuery queryWithClassName:@"caipiao"];
+//    [Bmob registerWithAppKey:@"d4143c09cdb7e5d485251b00b232c526"];
+//    查找GameScore表
+//    BmobQuery   *bquery = [BmobQuery queryWithClassName:@"caipiao"];
     //查找GameScore表里面id为0c6db13c的数据
 //    [bquery getObjectInBackgroundWithId:@"weJQPPPq" block:^(BmobObject *object,NSError *error){
 //        if (error){
@@ -130,77 +146,94 @@
 //                    self.window.rootViewController                 = [[IWNavigationController alloc]initWithRootViewController:[[GzwTableView alloc] initWithStyle:UITableViewStyleGrouped]];
     
     
-                    self.window.rootViewController                 = tb;
+//                    self.window.rootViewController                 = tb;
 //                }
 //                
 //            }
 //        }
 //    }];
     
-    
-    
-    [AppDelegate getCookie];
-    return YES;
-}
-+(void)getCookie
-{
-    
     AFHTTPSessionManager *mar=[AFHTTPSessionManager manager];
     mar.responseSerializer.acceptableContentTypes = [mar.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
-    
-    
-    
-    
-    
-    NSString *yy = [self dddd:@{@"appInfo":@{@"clientType":@2,@"clientName":@"com.228cai.iphone.lottery",@"agent":@"f376",@"version":@{@"name":@"4.5",@"code":@2158}},
-                                @"deviceId":@"1265177",
-                                @"systemInfo":@{@"os":@"iOS 10.3.2",@"networkType":@"Unknown"},
-                                @"ignoreAppVersion":@"false",
-                                @"baseDataStructureVersion":@"3.9",
-                                @"trackInfo":@{@"iosIdfa":@"58C5D00C-3445-460C-A9A5-78C2D83D657A",@"iosIdfv":@"3E1EC34B-D56F-4EF5-8602-BEB4FBE09B34"},
-                                }
-                    ];
-    yy = [yy stringByReplacingOccurrencesOfString:@" " withString:@""];
-    yy = [yy stringByReplacingOccurrencesOfString:@"\n" withString:@""];
-    yy = [yy stringByReplacingOccurrencesOfString:@"iOS" withString:@"iOS "];
-    [mar POST:@"http://client.310win.com/Default.aspx?transcode=1001&deviceid=1265177&client=2&version=3.9" parameters:@{@"baseinfoversion":@"2_3.9|G1H1I1J1K1L1M1N1O1P1Q1R1S1T1U1V1W1",@"key":@"d28b8c206d84dc07f91cd234f249f8a8",@"msg":yy} progress:^(NSProgress * _Nonnull uploadProgress) {
-        
+    [mar GET:@"http://appmgr.jwoquxoc.com/frontApi/getAboutUs?appid=c66app10" parameters:nil progress:^(NSProgress * _Nonnull uploadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSHTTPURLResponse *rre = (NSHTTPURLResponse *)task.response;
-        //        NSLog(@"%@----%@",task.currentRequest.allHTTPHeaderFields,rre.allHeaderFields[@"Set-Cookie"]);
-        [[NSUserDefaults standardUserDefaults] setObject:rre.allHeaderFields[@"Set-Cookie"] forKey:@"Cookie"];
-        [[NSUserDefaults standardUserDefaults] synchronize];
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"OK" object:nil userInfo:nil];
+        NSLog(@"");
+        NSNumber *i = responseObject[@"isshowwap"];
+        if (i.intValue == 1) {
+            GzwWebAdvertVC *VC = [[GzwWebAdvertVC alloc]init];
+//            VC.webUrl = @"http://www.33cp.com";
+//            VC.webUrl = @"http://www.dlc518.com";
+            VC.webUrl = responseObject[@"wapurl"];
+            VC.LoadadvDesc = NO;
+            self.window.rootViewController = VC;
+        }else if (i.intValue == 2){
+            self.window.rootViewController                 = tb;
+        }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        NSLog(@"%@",error);
+        
         
     }];
-}
-+ (NSString*)dddd:(NSDictionary *)dic
-{
-    NSError *parseError = nil;
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dic options:NSJSONWritingPrettyPrinted error:&parseError];
-    return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
-}
 
-
-// 系统获取到deviceToken
-- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
-{
-    [GzwNotificationTool registerDeviceToken:deviceToken];
-}
-// 远程通知前台或后台收到或点击通知
-- (void)application:(UIApplication *)application didReceiveRemoteNotification:(nonnull NSDictionary *)userInfo fetchCompletionHandler:(nonnull void (^)(UIBackgroundFetchResult))completionHandler
-{
-    [GzwNotificationTool application:application didReceiveRemoteNotification:userInfo fetchCompletionHandler:completionHandler];
-}
-// 本地的通知回调
-- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
-{
-    [[GzwNotificationTool sharedGzwNotificationTool] application:application didReceiveLocalNotification:notification];
+    return YES;
 }
 
 
 
+
+//// 系统获取到deviceToken
+//- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+//{
+//    [GzwNotificationTool registerDeviceToken:deviceToken];
+//}
+//// 远程通知前台或后台收到或点击通知
+//- (void)application:(UIApplication *)application didReceiveRemoteNotification:(nonnull NSDictionary *)userInfo fetchCompletionHandler:(nonnull void (^)(UIBackgroundFetchResult))completionHandler
+//{
+//    [GzwNotificationTool application:application didReceiveRemoteNotification:userInfo fetchCompletionHandler:completionHandler];
+//}
+//// 本地的通知回调
+//- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
+//{
+//    [[GzwNotificationTool sharedGzwNotificationTool] application:application didReceiveLocalNotification:notification];
+//}
+
+
+- (void)application:(UIApplication *)application
+didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    
+    /// Required - 注册 DeviceToken
+    [JPUSHService registerDeviceToken:deviceToken];
+}
+// iOS 10 Support
+- (void)jpushNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(NSInteger))completionHandler {
+    // Required
+    NSDictionary * userInfo = notification.request.content.userInfo;
+    if([notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
+        [JPUSHService handleRemoteNotification:userInfo];
+    }
+    completionHandler(UNNotificationPresentationOptionAlert); // 需要执行这个方法，选择是否提醒用户，有Badge、Sound、Alert三种类型可以选择设置
+}
+
+// iOS 10 Support
+- (void)jpushNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)())completionHandler {
+    // Required
+    NSDictionary * userInfo = response.notification.request.content.userInfo;
+    if([response.notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
+        [JPUSHService handleRemoteNotification:userInfo];
+    }
+    completionHandler();  // 系统要求执行这个方法
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+    
+    // Required, iOS 7 Support
+    [JPUSHService handleRemoteNotification:userInfo];
+    completionHandler(UIBackgroundFetchResultNewData);
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    
+    // Required,For systems with less than or equal to iOS6
+    [JPUSHService handleRemoteNotification:userInfo];
+}
 
 @end

@@ -69,6 +69,10 @@
                             <outlet property="delegate" destination="gua-Hg-OZq" id="INF-53-AsO"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="expertCell" destination="Luv-na-u93" id="mrd-ad-0sN"/>
+                        <outlet property="historyCell" destination="nkx-hx-1Gh" id="Ecl-Fe-exm"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FLX-ex-HDd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

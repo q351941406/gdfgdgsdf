@@ -62,7 +62,7 @@ static  NSString  * const headerID = @"GzwCouponsHeadView";
     else if ([SDVersion deviceSize] == Screen4inch)
         NSLog(@"You got the iPhone 7. Sweet 🍭!");
     else if ([SDVersion deviceSize] == Screen4Dot7inch)
-        i = 40;
+        i = 25;
     else if ([SDVersion deviceSize] == Screen5Dot5inch)
         i = 40;
 

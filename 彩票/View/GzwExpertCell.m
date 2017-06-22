@@ -13,28 +13,6 @@
 #import "UIImageView+WebCache.h"
 @interface GzwExpertCell ()
 
-/**
- *  视图 控件  CGRectMake
- */
-#define Frame(x,y,w,h)  CGRectMake(x, y, w, h)
-
-/*** 控件的x坐标 ***/
-#define FrameX(v)       v.frame.origin.x
-
-/*** 控件的y坐标 ***/
-#define FrameY(v)       v.frame.origin.y
-
-/*** 控件的宽 ***/
-#define FrameW(v)       v.frame.size.width
-
-/*** 控件的高 ***/
-#define FrameH(v)       v.frame.size.height
-
-/*** 控件的x+宽坐标 ***/
-#define FrameXW(v)      (v.frame.origin.x + v.frame.size.width)
-
-/*** 控件的y+高坐标 ***/
-#define FrameYH(v)      (v.frame.origin.y + v.frame.size.height)
 @property (weak, nonatomic) IBOutlet UILabel *name;
 @property (weak, nonatomic) IBOutlet UILabel *region;
 @property (weak, nonatomic) IBOutlet UIView *decorationView;
@@ -48,11 +26,14 @@
 
 - (void)awakeFromNib {
     self.decorationView.backgroundColor = [GzwThemeTool backgroudTheme];
-    self.region.textColor = [GzwThemeTool subTitleTextTheme];
+    self.region.textColor = [GzwThemeTool subTitleTextSecondTheme];
     self.number.textColor = [GzwThemeTool subTitleTextTheme];;
 
     self.icon.layer.cornerRadius = 20;
     self.icon.layer.masksToBounds = YES;
+    self.backgroundColor = [GzwThemeTool cellBackgroudTheme];
+    self.name.textColor = [GzwThemeTool titleTextTheme];
+    
 }
 -(void)layoutSubviews
 {

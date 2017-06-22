@@ -22,5 +22,6 @@ target '彩票' do
   pod 'PNChart', '~> 0.8.9'
   pod 'Meiqia', '~> 3.3.4.1'
   pod 'SDVersion', '~> 4.0.2'
+  pod 'JPush', '~> 3.0.5'
 end
 

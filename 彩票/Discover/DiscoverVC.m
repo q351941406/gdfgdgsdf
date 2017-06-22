@@ -26,19 +26,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-//    http://client.310win.com/Default.aspx?transcode=500&deviceid=1265177&client=2&version=3.9   热门
-//    http://client.310win.com/Default.aspx?transcode=500&deviceid=1265177&client=2&version=3.9
+
     self.title = @"发现";
     self.view.backgroundColor = [GzwThemeTool backgroudTheme];
     
-//    self.historyCell.imageView.tintColor = [GzwThemeTool random];
-//    self.expertCell.imageView.tintColor = [GzwThemeTool random];
-    
-    self.historyCell.textLabel.font = [UIFont systemFontOfSize:13];
+
+    self.tableView.separatorColor = [GzwThemeTool cellSeparatorTheme];
+    self.historyCell.textLabel.font = [UIFont systemFontOfSize:15];
     self.expertCell.textLabel.font = self.historyCell.textLabel.font;
     
-    self.historyCell.imageView.image = [[[UIImage imageNamed:@"icons8-Open Window_50"] gzw_imageWithColor:[UIColor whiteColor]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    self.historyCell.imageView.image = [[[UIImage imageNamed:@"icons8-Personal Trainer_50"] gzw_imageWithColor:[UIColor whiteColor]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    self.historyCell.imageView.image = [[[UIImage imageNamed:@"icons8-Open Window_50"] gzw_imageWithColor:[GzwThemeTool cellIconFirstTheme]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    self.expertCell.imageView.image = [[[UIImage imageNamed:@"icons8-Personal Trainer_50"] gzw_imageWithColor:[GzwThemeTool cellIconFirstTheme]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
     self.historyCell.textLabel.textColor = [GzwThemeTool titleTextTheme];
     self.expertCell.textLabel.textColor = [GzwThemeTool titleTextTheme];
@@ -51,8 +49,7 @@
     self.expertCell.backgroundColor = [GzwThemeTool cellBackgroudTheme];
      self.clearsSelectionOnViewWillAppear = YES;
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+
 }
 
 // cell分割线的左边到尽头

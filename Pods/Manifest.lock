@@ -36,6 +36,9 @@ PODS:
   - ChameleonFramework/Default (2.1.0)
   - HSSetTableViewController (1.1.3):
     - SDWebImage
+  - JCore (1.1.3)
+  - JPush (3.0.5):
+    - JCore (~> 1.1.1)
   - JSONModel (1.7.0)
   - Masonry (1.0.0)
   - Meiqia (3.3.4.1):
@@ -80,6 +83,7 @@ DEPENDENCIES:
   - BmobSDK
   - ChameleonFramework (~> 2.1.0)
   - HSSetTableViewController (~> 1.1.3)
+  - JPush (~> 3.0.5)
   - JSONModel (~> 1.1)
   - Masonry (= 1.0.0)
   - Meiqia (~> 3.3.4.1)
@@ -104,6 +108,8 @@ SPEC CHECKSUMS:
   BmobSDK: 23cbfbde2a7cfaeb0c8a946953a266fe5211e7f6
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   HSSetTableViewController: 4a406d2ac36ccee8d09b382a0f308ad39543b97f
+  JCore: dff3c50e9a7522a508cd9096ca79165968e1aed3
+  JPush: dd0b776998aa705a6242b947bf72e5a640387cfe
   JSONModel: 840bc0fcffb24b8454d2c026bf26fea454b8e98d
   Masonry: b529bb169217897b6354d4b56b1fada6d475b13d
   Meiqia: 2be3baaf2b023484b8cd3985bc2dad6db36732a1
@@ -122,6 +128,6 @@ SPEC CHECKSUMS:
   UIView+FDCollapsibleConstraints: 9357eaf03b4e088263ab74a3b86a382a64ce38dd
   WMPageController: 9f219bb8912a1a1f51af11fde61e2682a7b7e7f2
 
-PODFILE CHECKSUM: 29a867ac845171ef47491e27df6cab2bb0989206
+PODFILE CHECKSUM: 5861e560dc086390547f2d7038ce656e2a5a472c
 
 COCOAPODS: 1.2.0

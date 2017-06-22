@@ -10,6 +10,7 @@
 #import "XBSettingItemModel.h"
 #import "UIView+XBExtension.h"
 #import "XBConst.h"
+#import "GzwThemeTool.h"
 @interface XBSettingCell()
 @property (strong, nonatomic) UILabel *funcNameLabel;
 @property (nonatomic,strong) UIImageView *imgView;
@@ -59,11 +60,13 @@
         [self setupDetailImage];
     }
 
-    //bottomLine
-    UIView *line = [[UIView alloc]initWithFrame:CGRectMake(0, self.height - 1, XBScreenWidth, 1)];
-    line.backgroundColor = XBMakeColorWithRGB(234, 234, 234, 1);
-    [self.contentView addSubview:line];
+
+
     
+    self.backgroundColor = [GzwThemeTool cellBackgroudTheme];
+    self.funcNameLabel.textColor = [GzwThemeTool titleTextTheme];
+    self.aswitch.tintColor = [GzwThemeTool cellIconFirstTheme];
+    self.aswitch.onTintColor = self.aswitch.tintColor;
 }
 
 -(void)setupDetailImage

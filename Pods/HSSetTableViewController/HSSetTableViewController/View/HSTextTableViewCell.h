@@ -10,6 +10,6 @@
 
 //右边有文本（箭头可显示也可隐藏）
 @interface HSTextTableViewCell : HSBaseTableViewCell
-
+@property (nonatomic, weak)UILabel *detailLabel;  ///<详细文本内容
 
 @end

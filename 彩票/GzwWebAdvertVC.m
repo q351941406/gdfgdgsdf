@@ -9,7 +9,7 @@
 #import "GzwWebAdvertVC.h"
 #import "NJKWebViewProgress.h"
 #import "NJKWebViewProgressView.h"
-
+#import "GzwThemeTool.h"
 
 @interface GzwWebAdvertVC ()<UIWebViewDelegate,NJKWebViewProgressDelegate>
 
@@ -52,7 +52,7 @@
         [self.webView loadRequest:requst];
         
     }
-    
+    self.webView.backgroundColor = [GzwThemeTool backgroudTheme];
     self.webView.frame = self.view.frame;
     [self.view addSubview:self.webView];
     [self.view setNeedsUpdateConstraints];// 标记更新约束

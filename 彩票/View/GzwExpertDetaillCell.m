@@ -37,6 +37,17 @@
 //
 //    self.icon.layer.cornerRadius = 20;
 //    self.icon.layer.masksToBounds = YES;
+    self.backgroundColor = [GzwThemeTool cellBackgroudTheme];
+    self.left.textColor = [GzwThemeTool titleTextTheme];
+    self.title.textColor = [GzwThemeTool cellIconFirstTheme];
+    
+    self.recommend.textColor = [GzwThemeTool subTitleTextTheme];
+    self.two.textColor = [GzwThemeTool subTitleTextTheme];
+    self.one.textColor = [GzwThemeTool subTitleTextTheme];
+    self.descriptions.textColor = [GzwThemeTool subTitleTextTheme];
+    self.date.textColor = [GzwThemeTool subTitleTextSecondTheme];
+    
+    
 }
 -(void)layoutSubviews
 {
@@ -56,10 +67,10 @@
 //    self.icon = [self.icon imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate];
     if (model[@"isWon"]) {
         self.icon.image = [UIImage imageNamed:@"icons8-Happy_50"];
-        self.icon.tintColor = FlatRed;
+        self.icon.tintColor = FlatYellow;
     }else {
         self.icon.image = [UIImage imageNamed:@"icons8-Sad_50"];
-        self.icon.tintColor = FlatBlackDark;
+        self.icon.tintColor = [GzwThemeTool subTitleTextSecondTheme];
     }
 }
 

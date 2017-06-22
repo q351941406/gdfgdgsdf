@@ -21,12 +21,14 @@
 @implementation GzwResutTwoCell
 
 - (void)awakeFromNib {
-    self.decorationView.backgroundColor = [GzwThemeTool backgroudTheme];
+    self.decorationView.backgroundColor = [GzwThemeTool random];
     self.region.textColor = [GzwThemeTool subTitleTextTheme];
-    self.number.textColor = FlatRed;
+
     self.bgView.backgroundColor = [GzwThemeTool backgroudTheme];
     self.bgView.layer.cornerRadius = 13;
     self.bgView.layer.masksToBounds = YES;
+    self.backgroundColor = [GzwThemeTool cellBackgroudTheme];
+    self.name.textColor = [GzwThemeTool titleTextTheme];
 }
 -(void)layoutSubviews
 {
@@ -37,7 +39,7 @@
 {
     _model = model;
     
-
+    self.number.textColor = FlatGreen;
     NSString *str;
     if ([model[@"type"] isEqualToString:@"dcspf"]){
         str = @"足球单场";
@@ -55,12 +57,13 @@
         str = @"竞彩篮球";
         self.region.text = [NSString stringWithFormat:@"客队VS主队 %@",model[@"matchDay"]];
         self.number.text = [NSString stringWithFormat:@"%@      %@      %@",model[@"teamA"],model[@"scores"],model[@"teamB"]];
+        self.number.textColor = FlatYellow;
     }
     if ([model[@"type"] isEqualToString:@"jczq"]){
         str = @"竞彩足球";
         self.region.text = [NSString stringWithFormat:@"客队VS主队 %@",model[@"matchDay"]];
         self.number.text = [NSString stringWithFormat:@"%@      %@      %@",model[@"teamA"],model[@"scores"],model[@"teamB"]];
-
+        self.bgView.backgroundColor = [GzwThemeTool backgroudTheme];
     }
     self.name.text = str;
     

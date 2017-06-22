@@ -13,7 +13,7 @@
 #import "UIImageView+WebCache.h"
 @interface HSImageTableViewCell()
 
-@property (nonatomic, weak)UIImageView *bigImageView;  ///<右边图片显示
+
 @property (nonatomic, weak) NSLayoutConstraint *bigImageRightConstraint;  ///<大图约束
 @property (nonatomic, weak)NSLayoutConstraint *bigImageWidthConstraint;  ///<大图宽度
 @property (nonatomic, weak)NSLayoutConstraint *bigImageHeightConstaint;  ///<

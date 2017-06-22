@@ -11,6 +11,8 @@
 #import "GzwHeadSelectTool.h"
 #import "ReactiveCocoa.h"
 #import "GzwThemeTool.h"
+#import "HSTextTableViewCell.h"
+#import "HSImageTableViewCell.h"
 #define ViewW [UIScreen mainScreen].bounds.size.width
 #define viewH [UIScreen mainScreen].bounds.size.height
 @interface HSSetTableInfoController ()
@@ -29,6 +31,29 @@
         _tool.size = CGSizeMake(ViewW, ViewW);
     }
     return _tool;
+}
+-(void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPat{
+//    self.historyCell.imageView.image = [[[UIImage imageNamed:@"icons8-Open Window_50"] gzw_imageWithColor:[GzwThemeTool cellIconFirstTheme]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+//    self.expertCell.imageView.image = [[[UIImage imageNamed:@"icons8-Personal Trainer_50"] gzw_imageWithColor:[GzwThemeTool cellIconFirstTheme]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    
+    cell.textLabel.textColor = [GzwThemeTool titleTextTheme];
+    
+    cell.textLabel.backgroundColor = [UIColor clearColor];
+    cell.backgroundColor = [GzwThemeTool cellBackgroudTheme];
+    if ([cell isKindOfClass:HSTextTableViewCell.class]) {
+        HSTextTableViewCell *cell2 = cell;
+        cell2.detailLabel.textColor = [UIColor whiteColor];
+    }
+    if ([cell isKindOfClass:HSImageTableViewCell.class]) {
+        HSImageTableViewCell *cell2 = cell;
+        if ([cell2.textLabel.text isEqualToString:@"我的二维码"]) {
+            cell2.bigImageView.image = [cell2.bigImageView.image imageWithRenderingMode:(UIImageRenderingModeAlwaysTemplate)];
+            cell2.bigImageView.tintColor = [GzwThemeTool cellIconFirstTheme];
+        }
+    }
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+    self.tableView.separatorColor = [GzwThemeTool cellSeparatorTheme];
+    
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -52,6 +77,8 @@
         [self presentViewController:alertController animated:YES completion:nil];
         return [RACSignal empty];
     }];
+    
+    
     
     
     //头像
@@ -82,7 +109,7 @@
     
     
     //手机号
-    HSTextCellModel *number = [[HSTextCellModel alloc] initWithTitle:@"手机号" detailText:[user valueForKey:@""] actionBlock:^(HSBaseCellModel *model) {
+    HSTextCellModel *number = [[HSTextCellModel alloc] initWithTitle:@"手机号" detailText:[user valueForKey:@"18696004771"] actionBlock:^(HSBaseCellModel *model) {
        
     }];
     number.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -161,10 +188,7 @@
     NSLog(@"%@控制器销毁",self.class);
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
 
 
 

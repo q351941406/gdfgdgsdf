@@ -146,7 +146,7 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rst-JT-EZ2">
-                            <rect key="frame" x="193" y="133" width="192.5" height="106"/>
+                            <rect key="frame" x="193" y="138" width="192.5" height="106"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Paj-1y-uMY">
                                     <rect key="frame" x="0.0" y="0.0" width="192.5" height="91.5"/>
@@ -170,7 +170,7 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lku-9s-6xG">
-                            <rect key="frame" x="385.5" y="133" width="192.5" height="106"/>
+                            <rect key="frame" x="385.5" y="138" width="192.5" height="106"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KsV-pl-fZZ">
                                     <rect key="frame" x="0.0" y="0.0" width="192.5" height="91.5"/>
@@ -194,7 +194,7 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qX3-dz-YeZ">
-                            <rect key="frame" x="0.5" y="133" width="192.5" height="106"/>
+                            <rect key="frame" x="0.5" y="138" width="192.5" height="106"/>
                             <subviews>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dli-PL-vDy">
                                     <rect key="frame" x="0.0" y="0.0" width="192.5" height="91.5"/>
@@ -253,7 +253,7 @@
                         <constraint firstItem="l9I-FU-BBs" firstAttribute="top" secondItem="4cH-5W-xkf" secondAttribute="bottom" constant="7.5" id="skZ-3a-mRN"/>
                         <constraint firstAttribute="trailing" secondItem="lku-9s-6xG" secondAttribute="trailing" id="vZ4-UT-OdD"/>
                         <constraint firstItem="lku-9s-6xG" firstAttribute="top" secondItem="qX3-dz-YeZ" secondAttribute="top" id="vo2-Ew-lhC"/>
-                        <constraint firstItem="qX3-dz-YeZ" firstAttribute="top" secondItem="l9I-FU-BBs" secondAttribute="bottom" id="xLD-k2-x6a"/>
+                        <constraint firstItem="qX3-dz-YeZ" firstAttribute="top" secondItem="l9I-FU-BBs" secondAttribute="bottom" constant="5" id="xLD-k2-x6a"/>
                     </constraints>
                 </view>
             </subviews>
@@ -273,6 +273,7 @@
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="bottomView" destination="EEy-FY-a86" id="G4l-Pq-Uof"/>
                 <outlet property="circle1" destination="nf5-Lo-q4g" id="bKy-nQ-Nn2"/>
                 <outlet property="circle1Text" destination="Eyt-82-eWw" id="diA-8W-zFc"/>
                 <outlet property="circle2" destination="Gfa-sZ-dB4" id="gxI-QZ-qAu"/>
@@ -287,10 +288,12 @@
                 <outlet property="circle6Text" destination="crK-hR-p9h" id="hMe-zD-U1g"/>
                 <outlet property="detaill" destination="x7E-Ig-ez0" id="kbN-vv-XNJ"/>
                 <outlet property="fans" destination="yAx-XW-qQh" id="gBL-A9-Wmq"/>
+                <outlet property="line" destination="4cH-5W-xkf" id="haE-1U-UGK"/>
                 <outlet property="logo" destination="y5x-Wn-BgL" id="Whn-ri-Krp"/>
                 <outlet property="name" destination="UV7-kw-b6Q" id="zWS-js-lhK"/>
+                <outlet property="topView" destination="j0e-v8-qca" id="Ybm-ZG-R44"/>
             </connections>
-            <point key="canvasLocation" x="-270" y="-20"/>
+            <point key="canvasLocation" x="-497" y="-31"/>
         </view>
     </objects>
 </document>

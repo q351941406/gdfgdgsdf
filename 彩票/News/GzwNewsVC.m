@@ -53,6 +53,7 @@ static NSString *ID = @"GzwAddressCell";
         _two.rowHeight = UITableViewAutomaticDimension; // 告诉tableView我们cell的高度是自动的
         _two.delegate = self;
         _two.dataSource = self;
+        _two.separatorColor = [GzwThemeTool cellSeparatorTheme];
         
     }
     return _two;
@@ -69,6 +70,7 @@ static NSString *ID = @"GzwAddressCell";
         _one.dataSource = self;
         _one.contentInset               = UIEdgeInsetsMake(64, 0, 49, 0);
         _one.scrollIndicatorInsets = UIEdgeInsetsMake(64, 0, 49, 0);
+        _one.separatorColor = [GzwThemeTool cellSeparatorTheme];
     }
     return _one;
 }

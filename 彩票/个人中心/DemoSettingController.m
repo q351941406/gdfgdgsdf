@@ -28,6 +28,8 @@
     self.view.backgroundColor = XBMakeColorWithRGB(234, 234, 234, 1);
 
     self.view.backgroundColor = [GzwThemeTool backgroudTheme];
+//    self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+    self.tableView.separatorColor = [GzwThemeTool cellSeparatorTheme];
     [self setupSections];
 }
 

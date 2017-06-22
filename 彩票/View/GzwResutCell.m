@@ -50,9 +50,11 @@
 @implementation GzwResutCell
 
 - (void)awakeFromNib {
-    self.decorationView.backgroundColor = [GzwThemeTool backgroudTheme];
+    self.decorationView.backgroundColor = [GzwThemeTool random];
     self.region.textColor = [GzwThemeTool subTitleTextTheme];
     self.number.textColor = FlatRed;
+    self.backgroundColor = [GzwThemeTool cellBackgroudTheme];
+    self.name.textColor = [GzwThemeTool titleTextTheme];
 }
 -(void)layoutSubviews
 {

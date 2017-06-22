@@ -11,5 +11,5 @@
 
 //右边大图cell
 @interface HSImageTableViewCell : HSBaseTableViewCell
-
+@property (nonatomic, weak)UIImageView *bigImageView;  ///<右边图片显示
 @end

@@ -12,7 +12,7 @@
 #import "UIView+HSFrame.h"
 @interface HSTextTableViewCell()
 
-@property (nonatomic, weak)UILabel *detailLabel;  ///<详细文本内容
+
 @property (nonatomic, weak)NSLayoutConstraint *detailRightConstraint;  ///<
 @property (nonatomic, weak)NSLayoutConstraint *detailLeftConstraint;  ///<
 @end

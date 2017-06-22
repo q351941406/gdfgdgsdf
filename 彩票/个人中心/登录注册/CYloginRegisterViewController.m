@@ -10,6 +10,7 @@
 #import "CYLoginRegisterTextField.h"
 #import "GZWTool.h"
 #import "GzwHUDTool.h"
+#import "GzwThemeTool.h"
 @interface CYloginRegisterViewController ()
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *leadingSpace;
 @property (weak, nonatomic) IBOutlet CYLoginRegisterTextField *phone;
@@ -27,6 +28,7 @@
     //    [self.loginButton setValue:@5 forKeyPath:@"layer.cornerRadius"];
     //    [self.loginButton setValue:@YES forKeyPath:@"layer.masksToBounds"];
     //    self.loginButton.clipsToBounds = YES;
+    self.view.backgroundColor = [GzwThemeTool backgroudTheme];
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle

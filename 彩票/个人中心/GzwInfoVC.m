@@ -11,8 +11,10 @@
 #import "DemoSettingController.h"
 #import "GzwThemeTool.h"
 #import "CYloginRegisterViewController.h"
+#import "GZWTool.h"
 @interface GzwInfoVC ()
-
+@property (weak, nonatomic) IBOutlet UITableViewCell *historyCell;
+@property (weak, nonatomic) IBOutlet UITableViewCell *expertCell;
 @end
 
 @implementation GzwInfoVC
@@ -23,6 +25,23 @@
     self.title = @"个人中心";
     
     self.view.backgroundColor = [GzwThemeTool backgroudTheme];
+    self.tableView.separatorColor = [GzwThemeTool cellSeparatorTheme];
+    self.historyCell.textLabel.font = [UIFont systemFontOfSize:15];
+    self.expertCell.textLabel.font = self.historyCell.textLabel.font;
+    
+    self.historyCell.imageView.image = [[[UIImage imageNamed:@"icons8-User_50"] gzw_imageWithColor:[GzwThemeTool cellIconFirstTheme]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    self.expertCell.imageView.image = [[[UIImage imageNamed:@"icons8-Settings_50"] gzw_imageWithColor:[GzwThemeTool cellIconFirstTheme]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    
+    self.historyCell.textLabel.textColor = [GzwThemeTool titleTextTheme];
+    self.expertCell.textLabel.textColor = [GzwThemeTool titleTextTheme];
+    
+    self.historyCell.textLabel.backgroundColor = [UIColor clearColor];
+    self.expertCell.textLabel.backgroundColor = [UIColor clearColor];
+    
+    
+    self.historyCell.backgroundColor = [GzwThemeTool cellBackgroudTheme];
+    self.expertCell.backgroundColor = [GzwThemeTool cellBackgroudTheme];
+    self.clearsSelectionOnViewWillAppear = YES;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

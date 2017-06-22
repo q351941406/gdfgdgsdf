@@ -45,6 +45,7 @@
         };
         return [RACSignal empty];
     }];
+    self.tableView.separatorColor = [GzwThemeTool cellSeparatorTheme];
     self.tableView.backgroundColor = [GzwThemeTool backgroudTheme];
 //    self.tableView.rowHeight = 80;
         self.tableView.estimatedRowHeight = 70; // 设置估算高度
