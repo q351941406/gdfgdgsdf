@@ -137,7 +137,7 @@
 //    [[UITabBar appearance] setBackgroundImage:[[UIImage alloc]init]];
     
     
-//////
+// 主分支操作
     
     AFHTTPSessionManager *mar=[AFHTTPSessionManager manager];
     mar.responseSerializer.acceptableContentTypes = [mar.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
