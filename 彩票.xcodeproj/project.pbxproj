@@ -312,6 +312,7 @@
 		CF6E02681EF7DBA8000F05DC /* GzwExpertVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GzwExpertVC.h; sourceTree = "<group>"; };
 		CF6E02691EF7DBA8000F05DC /* GzwExpertVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GzwExpertVC.m; sourceTree = "<group>"; };
 		CF6FDC2E1EEFECBA005DCF6E /* Discover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Discover.storyboard; sourceTree = "<group>"; };
+		CF7B27941F00F3A500F4EBAB /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		CF7E96451EF3D3D90095CE22 /* GzwEventsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GzwEventsVC.h; sourceTree = "<group>"; };
 		CF7E96461EF3D3D90095CE22 /* GzwEventsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GzwEventsVC.m; sourceTree = "<group>"; };
 		CF7E96481EF3D90F0095CE22 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
@@ -448,6 +449,7 @@
 		0452F0E11E968EDE0006F3C4 /* 彩票 */ = {
 			isa = PBXGroup;
 			children = (
+				CF7B27941F00F3A500F4EBAB /* Header.h */,
 				0452F0E51E968EDE0006F3C4 /* AppDelegate.h */,
 				0452F0E61E968EDE0006F3C4 /* AppDelegate.m */,
 				CF63FFFA1EF77504005222B9 /* 个人中心 */,

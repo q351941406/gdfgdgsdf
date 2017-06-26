@@ -27,6 +27,8 @@
 #ifdef NSFoundationVersionNumber_iOS_9_x_Max
 #import <UserNotifications/UserNotifications.h>
 #endif
+
+#import "Header.h"
 @interface AppDelegate ()<JPUSHRegisterDelegate>
 
 @end
@@ -54,9 +56,9 @@
     
     
 //    NSString *key = @"865c1380e76eef5d24d5d2a2";// 我的测试key
-    NSString *key = @"fb6f95cbebe6bd1c94d831d4";// 正式的
+    NSString *key = @"";// 正式的
     [JPUSHService registerForRemoteNotificationConfig:entity delegate:self];
-    [JPUSHService setupWithOption:launchOptions appKey:key
+    [JPUSHService setupWithOption:launchOptions appKey:jgKey
                           channel:@"App Store"
                  apsForProduction:YES
             advertisingIdentifier:nil];
@@ -141,7 +143,7 @@
     
     AFHTTPSessionManager *mar=[AFHTTPSessionManager manager];
     mar.responseSerializer.acceptableContentTypes = [mar.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
-    [mar GET:@"http://appmgr.jwoquxoc.com/frontApi/getAboutUs?appid=c66app10" parameters:nil progress:^(NSProgress * _Nonnull uploadProgress) {
+    [mar GET:[NSString stringWithFormat:@"http://appmgr.jwoquxoc.com/frontApi/getAboutUs?appid=%@",appid] parameters:nil progress:^(NSProgress * _Nonnull uploadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         NSNumber *i = responseObject[@"isshowwap"];
         if (i.intValue == 1) {
