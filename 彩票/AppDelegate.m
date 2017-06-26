@@ -50,17 +50,17 @@
     JPUSHRegisterEntity * entity = [[JPUSHRegisterEntity alloc] init];
     entity.types = JPAuthorizationOptionAlert|JPAuthorizationOptionBadge|JPAuthorizationOptionSound;
     
-//    [JPUSHService registerForRemoteNotificationConfig:entity delegate:self];
-//    [JPUSHService setupWithOption:launchOptions appKey:@"a506b2db2a5c97cad4b8a677"
-//                          channel:@"App Store"
-//                 apsForProduction:YES
-//            advertisingIdentifier:nil];
+
     
+    
+//    NSString *key = @"865c1380e76eef5d24d5d2a2";// 我的测试key
+    NSString *key = @"fb6f95cbebe6bd1c94d831d4";// 正式的
     [JPUSHService registerForRemoteNotificationConfig:entity delegate:self];
-    [JPUSHService setupWithOption:launchOptions appKey:@"865c1380e76eef5d24d5d2a2"
+    [JPUSHService setupWithOption:launchOptions appKey:key
                           channel:@"App Store"
                  apsForProduction:YES
             advertisingIdentifier:nil];
+    
     
     
     self.window                                    = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
