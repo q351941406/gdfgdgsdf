@@ -8,8 +8,9 @@
 
 #import "GzwCouponsCell.h"
 #import "HomeM.h"
-
+#import "GZWTool.h"
 #import "GzwThemeTool.h"
+#import "Chameleon.h"
 @interface GzwCouponsCell ()
 /**
  *  商品图片
@@ -39,7 +40,9 @@
 {
     _model = model;
     
-    
+    UIImage *i = [UIImage imageNamed:model.iconName];
+    UIColor *color =  RandomFlatColorExcluding(@[[GzwThemeTool backgroudTheme]]);
+    i = [i gzw_imageWithBlendColor:color];
     
     self.goodsImage.image = [UIImage imageNamed:model.iconName];
     self.goodsName.text = model.title;

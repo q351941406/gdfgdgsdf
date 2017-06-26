@@ -29,7 +29,8 @@
     if (self = [super initWithFrame:frame]) {
         self.backgroundColor = [UIColor whiteColor];
         // 网络加载 --- 创建带标题的图片轮播器
-        self.cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, ViewW, ViewW) delegate:nil placeholderImage:nil];
+        self.cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, ViewW, ViewW) delegate:nil placeholderImage:[UIImage imageNamed:@"unchecked"]];
+        self.cycleScrollView.imageURLStringsGroup = @[@"http://www.zycpimg.com/img/banner/1496246400/1496975415112891725.jpg",@"http://www.zycpimg.com/img/banner/1496246400/1498440530683135919.jpg"];
         self.cycleScrollView.pageControlStyle = SDCycleScrollViewPageContolStyleClassic;
         self.cycleScrollView.pageDotColor = [GzwThemeTool pageColor];
         self.cycleScrollView.currentPageDotColor = [GzwThemeTool currentPageColor]; // 自定义分页控件小圆标颜色

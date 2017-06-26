@@ -319,6 +319,7 @@ NSString * const ID = @"cycleCell";
         }
     }];
     self.imagePathsGroup = [temp copy];
+    [self.mainView reloadData];
 }
 
 - (void)setLocalizationImageNamesGroup:(NSArray *)localizationImageNamesGroup

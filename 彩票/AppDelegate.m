@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "IWNavigationController.h"
-#import "GzwTableView.h"
+#import "GzwTableView.h"0
 #import <BmobSDK/Bmob.h>
 #import "GzwWebAdvertVC.h"
 #import "GzwNotificationTool.h"
@@ -20,7 +20,7 @@
 #import "HSSetTableInfoController.h"
 #import <MeiQiaSDK/MeiQiaSDK.h>
 #import "GzwThemeTool.h"
-
+#import "Chameleon.h"
 // 引入JPush功能所需头文件
 #import "JPUSHService.h"
 // iOS10注册APNs所需头文件
@@ -78,9 +78,11 @@
     [[UITabBar appearance] setBackgroundColor:[GzwThemeTool tabBarBackgroudTheme]];
     [[UITabBar appearance] setTintColor:[UIColor redColor]];
     [[UITabBar appearance] setBarTintColor:[UIColor redColor]];
-//
-//    [[UITabBarItem appearance] setTitleTextAttributes:@{ NSForegroundColorAttributeName:[UIColor whiteColor]} forState:UIControlStateNormal];
-    [[UITabBarItem appearance] setTitleTextAttributes:@{ NSForegroundColorAttributeName:[UIColor whiteColor]} forState:UIControlStateSelected];
+    
+    UIColor *normalColor = [UIColor colorWithContrastingBlackOrWhiteColorOn:[GzwThemeTool theme] isFlat:YES alpha:0.4];
+    UIColor *selectColor = ContrastColor([GzwThemeTool theme], YES);
+    [[UITabBarItem appearance] setTitleTextAttributes:@{ NSForegroundColorAttributeName:normalColor} forState:UIControlStateNormal];
+    [[UITabBarItem appearance] setTitleTextAttributes:@{ NSForegroundColorAttributeName:selectColor} forState:UIControlStateSelected];
     
     
     //b.创建子控制器
@@ -88,7 +90,9 @@
     GzwCouponsVC *c1=[[GzwCouponsVC alloc]init];
     c1.view.backgroundColor=[UIColor grayColor];
     c1.title=@"大厅";
-    c1.tabBarItem.image=[UIImage imageNamed:@"icons8-Dog House_50"];
+    
+
+    c1.tabBarItem.image=[[[UIImage imageNamed:@"icons8-Dog House_50"] gzw_imageWithColor:normalColor] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     IWNavigationController *nav1 = [[IWNavigationController alloc]initWithRootViewController:c1];
 
     
@@ -101,19 +105,19 @@
 //    tb.tabBarItem
     GzwNewsVC *c2=[[GzwNewsVC alloc]init];
     c2.title=@"资讯";
-    c2.tabBarItem.image=[UIImage imageNamed:@"icons8-News_50"];
+    c2.tabBarItem.image=[[[UIImage imageNamed:@"icons8-News_50"] gzw_imageWithColor:normalColor] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     IWNavigationController *nav2 = [[IWNavigationController alloc]initWithRootViewController:c2];
 
 
     
     UIViewController *c3=[UIStoryboard storyboardWithName:@"Discover" bundle:nil].instantiateInitialViewController;
     c3.tabBarItem.title=@"发现";
-    c3.tabBarItem.image=[UIImage imageNamed:@"icons8-Idea_50"];
+    c3.tabBarItem.image=[[[UIImage imageNamed:@"icons8-Idea_50"] gzw_imageWithColor:normalColor] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     IWNavigationController *nav3 = [[IWNavigationController alloc]initWithRootViewController:c3];
     
     UIViewController *c4 = [UIStoryboard storyboardWithName:@"GzwInfoVC" bundle:nil].instantiateInitialViewController;
     c4.tabBarItem.title=@"用户中心";
-    c4.tabBarItem.image=[UIImage imageNamed:@"icons8-User_50"];
+    c4.tabBarItem.image=[[[UIImage imageNamed:@"icons8-User_50"] gzw_imageWithColor:normalColor] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     IWNavigationController *nav4 = [[IWNavigationController alloc]initWithRootViewController:c4];
 
     tb.viewControllers=@[nav1,nav2,nav3,nav4];
@@ -123,10 +127,10 @@
     UITabBarItem *item2 = [tabBar.items objectAtIndex:2];
     UITabBarItem *item3 = [tabBar.items objectAtIndex:3];
     // 对item设置相应地图片
-    item0.selectedImage = [[[UIImage imageNamed:@"icons8-Dog House_50"] gzw_imageWithColor:[UIColor whiteColor]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    item1.selectedImage = [[[UIImage imageNamed:@"icons8-News_50"] gzw_imageWithColor:[UIColor whiteColor]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    item2.selectedImage = [[[UIImage imageNamed:@"icons8-Idea_50"] gzw_imageWithColor:[UIColor whiteColor]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
-    item3.selectedImage = [[[UIImage imageNamed:@"icons8-User_50"] gzw_imageWithColor:[UIColor whiteColor]] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    item0.selectedImage = [[[UIImage imageNamed:@"icons8-Dog House_50"] gzw_imageWithColor:selectColor] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    item1.selectedImage = [[[UIImage imageNamed:@"icons8-News_50"] gzw_imageWithColor:selectColor] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    item2.selectedImage = [[[UIImage imageNamed:@"icons8-Idea_50"] gzw_imageWithColor:selectColor] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    item3.selectedImage = [[[UIImage imageNamed:@"icons8-User_50"] gzw_imageWithColor:selectColor] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     
 //    tb.tabBar.backgroundColor = [UIColor redColor];
 //    [[UITabBar appearance] setShadowImage:[[UIImage alloc]init]];
@@ -139,12 +143,9 @@
     mar.responseSerializer.acceptableContentTypes = [mar.responseSerializer.acceptableContentTypes setByAddingObject:@"text/html"];
     [mar GET:@"http://appmgr.jwoquxoc.com/frontApi/getAboutUs?appid=c66app10" parameters:nil progress:^(NSProgress * _Nonnull uploadProgress) {
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-
         NSNumber *i = responseObject[@"isshowwap"];
         if (i.intValue == 1) {
             GzwWebAdvertVC *VC = [[GzwWebAdvertVC alloc]init];
-//            VC.webUrl = @"http://www.33cp.com";
-//            VC.webUrl = @"http://www.dlc518.com";
             VC.webUrl = responseObject[@"wapurl"];
             VC.LoadadvDesc = NO;
             self.window.rootViewController = VC;
@@ -182,6 +183,7 @@
         }
     }];
 }
+
 
 
 

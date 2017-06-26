@@ -15,13 +15,13 @@ static NSArray *colorForText;
 @implementation GzwThemeTool
 +(void)setup
 {
-    colorComplementary = [NSArray arrayOfColorsWithColorScheme:ColorSchemeComplementary usingColor:FlatPurple withFlatScheme:YES];
-    colorTriadic = [NSArray arrayOfColorsWithColorScheme:ColorSchemeTriadic usingColor:FlatPurple withFlatScheme:YES];
-    colorAnalogous = [NSArray arrayOfColorsWithColorScheme:ColorSchemeAnalogous usingColor:FlatPurple withFlatScheme:YES];
+    colorComplementary = [NSArray arrayOfColorsWithColorScheme:ColorSchemeComplementary usingColor:[GzwThemeTool theme] withFlatScheme:YES];
+    colorTriadic = [NSArray arrayOfColorsWithColorScheme:ColorSchemeTriadic usingColor:[GzwThemeTool theme] withFlatScheme:YES];
+    colorAnalogous = [NSArray arrayOfColorsWithColorScheme:ColorSchemeAnalogous usingColor:[GzwThemeTool theme] withFlatScheme:YES];
     
     
     colorForText = [NSArray arrayOfColorsWithColorScheme:ColorSchemeAnalogous usingColor:FlatBlackDark withFlatScheme:YES];
-    [Chameleon setGlobalThemeUsingPrimaryColor:FlatPurple withSecondaryColor:nil andContentStyle:UIContentStyleContrast];
+    [Chameleon setGlobalThemeUsingPrimaryColor:[GzwThemeTool theme] withSecondaryColor:nil andContentStyle:UIContentStyleContrast];
     [[UIButton appearanceWhenContainedInInstancesOfClasses:@[[UITableView class]]] setBackgroundColor:[UIColor clearColor]];
     
     
@@ -29,7 +29,7 @@ static NSArray *colorForText;
 }
 +(UIColor *)theme
 {
-    return FlatPurple;
+    return FlatTeal;
 }
 +(UIColor *)backgroudTheme
 {
@@ -41,7 +41,7 @@ static NSArray *colorForText;
 }
 +(UIColor *)tabBarBackgroudTheme
 {
-    return FlatPurple;
+    return [GzwThemeTool theme];
 }
 +(UIColor *)titleTextTheme;
 {

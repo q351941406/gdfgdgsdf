@@ -110,10 +110,11 @@ static  NSString  * const headerID = @"GzwCouponsHeadView";
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
-        self.adURL = [responseObject[@"lunboList"] valueForKeyPath:@"linkAddress"];
-        self.headView.cycleScrollView.imageURLStringsGroup = [responseObject[@"lunboList"] valueForKeyPath:@"mapAddress"];
-        self.headView.cycleScrollView.imageURLStringsGroup = @[@"http://www.zycpimg.com/img/banner/1496246400/1496975415112891725.jpg"];
-//        self.headView.cycleScrollView.localizationImageNamesGroup = @[@"1"];
+//        self.adURL = [responseObject[@"lunboList"] valueForKeyPath:@"linkAddress"];
+//        self.headView.cycleScrollView.imageURLStringsGroup = [responseObject[@"lunboList"] valueForKeyPath:@"mapAddress"];
+        self.adURL = @[@"http://live.zhuoyicp.com/jjbx?",@"http://news.zhuoyicp.com/h5/jczq/a/content_45517.shtml"];
+        NSLog(@"%@-----%@",self.adURL,[responseObject[@"lunboList"] valueForKeyPath:@"mapAddress"]);
+        [self.collectionView reloadData];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"%@",error);
         
