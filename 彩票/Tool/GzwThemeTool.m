@@ -29,7 +29,7 @@ static NSArray *colorForText;
 }
 +(UIColor *)theme
 {
-    return FlatTeal;
+    return FlatCoffee;
 }
 +(UIColor *)backgroudTheme
 {
