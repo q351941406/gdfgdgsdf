@@ -19,3 +19,16 @@ static NSString *const appid           = @"c66app10";
 
 //fgp405@163.com		Aa11223344   开发者账号
 //极光账号;  qq66885    密码   qq668899
+
+
+
+//2151589443@qq.com	HTFbty5d
+//极光账号	ad123
+//极光密码	abcd123
+//bmob账号	aseljla921@outlook.com
+//bmob密码	kk123890
+//
+//
+//http://buremery.com/
+
+
