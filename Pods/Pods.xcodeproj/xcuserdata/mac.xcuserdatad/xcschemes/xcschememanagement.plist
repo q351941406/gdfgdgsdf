@@ -74,6 +74,11 @@
 			<key>orderHint</key>
 			<integer>22</integer>
 		</dict>
+		<key>Pods-object.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>26</integer>
+		</dict>
 		<key>Pods-彩票.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
