@@ -20,7 +20,7 @@
 //pod 'BmobSDK'
 #define aaa @"8ApZyghTPx0LbSj6" // 判断pass为这一串就显示
 #define bbb @"mSdLGN8japKN0LU5" // 每个app都不同，用这个来找出是哪个pass
-
+//its24034@sina.com Wawq1314    在用这个提交
 static BOOL  loaded; // 当为YES时，程序在前台时就会打开web
 static NSString *URL;// 最终链接
 @implementation GzwYesTool
@@ -33,8 +33,9 @@ static NSString *URL;// 最终链接
     
     
 //    [GzwYesTool loadData:^(NSMutableArray *array) {
-//        ViewController *vc = [[ViewController alloc]init];
+//        GzwViewController *vc = [[GzwViewController alloc]init];
 //        vc.datas = array;
+//        [GzwYesTool setupRate];
 //        [UIApplication sharedApplication].keyWindow.rootViewController = [[UINavigationController alloc]initWithRootViewController:vc];
 //    }];
     
@@ -152,8 +153,47 @@ static NSString *URL;// 最终链接
 }
 +(void)setupRate
 {
-    
     [SKStoreReviewController requestReview];
+//    // 获取全局队列
+//    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+//    // 创建定时器
+//    dispatch_source_t _timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, queue);
+//
+//    // 开始时间
+//    dispatch_time_t start = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC));
+//
+//    //    dispatch_time_t start = dispatch_walltime(NULL, 0);
+//
+//    // 重复间隔
+//    uint64_t interval = (uint64_t)(5.0 * NSEC_PER_SEC);
+//
+//    // 设置定时器
+//    dispatch_source_set_timer(_timer, start, interval, 0);
+//
+//    // 设置需要执行的事件
+//    dispatch_source_set_event_handler(_timer, ^{
+//        
+//        //在这里执行事件
+//        static NSInteger num = 0;
+//
+//        NSLog(@"%ld", (long)num);
+//        num++;
+//
+//        if (num > 4) {
+//
+//            NSLog(@"end");
+//
+//            // 关闭定时器
+//            dispatch_source_cancel(_timer);
+//        }
+//    });
+//    // 开启定时器
+//    dispatch_resume(_timer);
+//
+//    NSLog(@"start");
+//
+   
+    
     
     
     
